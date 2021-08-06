@@ -9,47 +9,47 @@ import (
 	protocol "koinos/protocol"
 )
 
-type TransactionRecord struct{ capnp.Struct }
+type TransactionItem struct{ capnp.Struct }
 
-// TransactionRecord_TypeID is the unique identifier for the type TransactionRecord.
-const TransactionRecord_TypeID = 0xf814b26e1a24039e
+// TransactionItem_TypeID is the unique identifier for the type TransactionItem.
+const TransactionItem_TypeID = 0xd9285b8fd155dd07
 
-func NewTransactionRecord(s *capnp.Segment) (TransactionRecord, error) {
+func NewTransactionItem(s *capnp.Segment) (TransactionItem, error) {
 	st, err := capnp.NewStruct(s, capnp.ObjectSize{DataSize: 0, PointerCount: 2})
-	return TransactionRecord{st}, err
+	return TransactionItem{st}, err
 }
 
-func NewRootTransactionRecord(s *capnp.Segment) (TransactionRecord, error) {
+func NewRootTransactionItem(s *capnp.Segment) (TransactionItem, error) {
 	st, err := capnp.NewRootStruct(s, capnp.ObjectSize{DataSize: 0, PointerCount: 2})
-	return TransactionRecord{st}, err
+	return TransactionItem{st}, err
 }
 
-func ReadRootTransactionRecord(msg *capnp.Message) (TransactionRecord, error) {
+func ReadRootTransactionItem(msg *capnp.Message) (TransactionItem, error) {
 	root, err := msg.Root()
-	return TransactionRecord{root.Struct()}, err
+	return TransactionItem{root.Struct()}, err
 }
 
-func (s TransactionRecord) String() string {
-	str, _ := text.Marshal(0xf814b26e1a24039e, s.Struct)
+func (s TransactionItem) String() string {
+	str, _ := text.Marshal(0xd9285b8fd155dd07, s.Struct)
 	return str
 }
 
-func (s TransactionRecord) Transaction() (protocol.Transaction, error) {
+func (s TransactionItem) Transaction() (protocol.Transaction, error) {
 	p, err := s.Struct.Ptr(0)
 	return protocol.Transaction{Struct: p.Struct()}, err
 }
 
-func (s TransactionRecord) HasTransaction() bool {
+func (s TransactionItem) HasTransaction() bool {
 	return s.Struct.HasPtr(0)
 }
 
-func (s TransactionRecord) SetTransaction(v protocol.Transaction) error {
+func (s TransactionItem) SetTransaction(v protocol.Transaction) error {
 	return s.Struct.SetPtr(0, v.Struct.ToPtr())
 }
 
 // NewTransaction sets the transaction field to a newly
 // allocated protocol.Transaction struct, preferring placement in s's segment.
-func (s TransactionRecord) NewTransaction() (protocol.Transaction, error) {
+func (s TransactionItem) NewTransaction() (protocol.Transaction, error) {
 	ss, err := protocol.NewTransaction(s.Struct.Segment())
 	if err != nil {
 		return protocol.Transaction{}, err
@@ -58,22 +58,22 @@ func (s TransactionRecord) NewTransaction() (protocol.Transaction, error) {
 	return ss, err
 }
 
-func (s TransactionRecord) ContainingBlocks() (capnp.DataList, error) {
+func (s TransactionItem) ContainingBlocks() (capnp.DataList, error) {
 	p, err := s.Struct.Ptr(1)
 	return capnp.DataList{List: p.List()}, err
 }
 
-func (s TransactionRecord) HasContainingBlocks() bool {
+func (s TransactionItem) HasContainingBlocks() bool {
 	return s.Struct.HasPtr(1)
 }
 
-func (s TransactionRecord) SetContainingBlocks(v capnp.DataList) error {
+func (s TransactionItem) SetContainingBlocks(v capnp.DataList) error {
 	return s.Struct.SetPtr(1, v.List.ToPtr())
 }
 
 // NewContainingBlocks sets the containingBlocks field to a newly
 // allocated capnp.DataList, preferring placement in s's segment.
-func (s TransactionRecord) NewContainingBlocks(n int32) (capnp.DataList, error) {
+func (s TransactionItem) NewContainingBlocks(n int32) (capnp.DataList, error) {
 	l, err := capnp.NewDataList(s.Struct.Segment(), n)
 	if err != nil {
 		return capnp.DataList{}, err
@@ -82,57 +82,56 @@ func (s TransactionRecord) NewContainingBlocks(n int32) (capnp.DataList, error) 
 	return l, err
 }
 
-// TransactionRecord_List is a list of TransactionRecord.
-type TransactionRecord_List struct{ capnp.List }
+// TransactionItem_List is a list of TransactionItem.
+type TransactionItem_List struct{ capnp.List }
 
-// NewTransactionRecord creates a new list of TransactionRecord.
-func NewTransactionRecord_List(s *capnp.Segment, sz int32) (TransactionRecord_List, error) {
+// NewTransactionItem creates a new list of TransactionItem.
+func NewTransactionItem_List(s *capnp.Segment, sz int32) (TransactionItem_List, error) {
 	l, err := capnp.NewCompositeList(s, capnp.ObjectSize{DataSize: 0, PointerCount: 2}, sz)
-	return TransactionRecord_List{l}, err
+	return TransactionItem_List{l}, err
 }
 
-func (s TransactionRecord_List) At(i int) TransactionRecord {
-	return TransactionRecord{s.List.Struct(i)}
-}
+func (s TransactionItem_List) At(i int) TransactionItem { return TransactionItem{s.List.Struct(i)} }
 
-func (s TransactionRecord_List) Set(i int, v TransactionRecord) error {
+func (s TransactionItem_List) Set(i int, v TransactionItem) error {
 	return s.List.SetStruct(i, v.Struct)
 }
 
-func (s TransactionRecord_List) String() string {
-	str, _ := text.MarshalList(0xf814b26e1a24039e, s.List)
+func (s TransactionItem_List) String() string {
+	str, _ := text.MarshalList(0xd9285b8fd155dd07, s.List)
 	return str
 }
 
-// TransactionRecord_Future is a wrapper for a TransactionRecord promised by a client call.
-type TransactionRecord_Future struct{ *capnp.Future }
+// TransactionItem_Future is a wrapper for a TransactionItem promised by a client call.
+type TransactionItem_Future struct{ *capnp.Future }
 
-func (p TransactionRecord_Future) Struct() (TransactionRecord, error) {
+func (p TransactionItem_Future) Struct() (TransactionItem, error) {
 	s, err := p.Future.Struct()
-	return TransactionRecord{s}, err
+	return TransactionItem{s}, err
 }
 
-func (p TransactionRecord_Future) Transaction() protocol.Transaction_Future {
+func (p TransactionItem_Future) Transaction() protocol.Transaction_Future {
 	return protocol.Transaction_Future{Future: p.Future.Field(0, nil)}
 }
 
 const schema_9c2ddc7cabb4245b = "x\xdaD\xcd?/\x04A\x00\x86\xf1\xf7\x9d\x99\xbd=" +
-	"\x82\xdc\xe6\xae\xd2h.\xf1'\xe1\\P\x9c\x0a=\xb9" +
-	"\x91\xebDd\xcc]d\x91\x99\xcd\xee&\x0a*\xa5\xcf" +
-	" 4:\x9d\xf0\x19|\x09\xd5%\x1a\x95R7r\x85" +
-	"\xd5=\xf95\xcf\xfa\x01wD7z\xac\x03z\x18\xd5" +
-	"\xc2\x83l\xcf\xbb\x97\xd6\x0f\x92\x15\x86\xa3\xf6\xeb\xf3\xcd" +
-	"\xc7\xea=\"\x11\x03\x1b[j\xcc\xa6V1\xd0\xdcW" +
-	"W\x08\x98\x0aen\\alYK\xbd;)J\x9f" +
-	"\x8f:\x7fT\xc9\x9a5\x99\xcb\xb6\x07\xff~8\xb2\xb1" +
-	"\xcf\x87}R\xd7\xa5\x02\x14\x81d\xf9\x14\xd0K\x92z" +
-	"S0![\x9c`\xf7.\xe9-\xe8\x81\xa4\xce\x04\xab" +
-	"\x1b\xe2\xd4;6\xc2\xf1\xe2u\xef\xf6\xeb\xfc\x09 \x1b" +
-	"`\xb0\xde\x95&u)\xdd\xd9\xde\xa5\xb7\x17\x05\xa0\x15" +
-	"Ex{\xff\x9c\xee\x8c\xcd7\xb4\x12\xdc\x9d!$\xe7" +
-	"\xc0\xbe$g!&\xf9\x1b\x00\x00\xff\xffK\x88F\xcd"
+	"\x82\xdc\xe6\xf4\x1a\x89#\xe1\\P\x9c\x0a\x9d\x82\xdc$" +
+	"\xa7\xba\x88\x8cu\x91\xf5gfs;\x89\x82J\xa9\xf1" +
+	"\x05$\x1a\x9d\x96\xcf\xa0\xa6\x93\xd0H4*\xdf`\xe4" +
+	"\x0a{\xdd\x93_\xf3,\xefrC\xb4\xa2\xfb*\xa0\x8f" +
+	"\xa2J\x88?\xf7^o{\x8dw$\x0b\x0c\xbd\xd9\xa7" +
+	"\xc7\xab\x8f\xc5;D\"\x06V\xd6\xd4\x1b\xebZ\xc5@" +
+	"}G] `,\xf8\x81\xb1\x85I}%s\xf6\xa0" +
+	"\xf0n\xd0o\xfeS)K\xa9\xc9m\xbe\xde\x1d\xf9\xb6" +
+	"\xef\xf3\xbcC\xea\xaaT\x80\"\x90\xcc\x1f\x02\xba!\xa9" +
+	"W\x05\x13r\x9aCl\xdd$\xed\x19\xdd\x95\xd4\xb9`" +
+	"\xf9B\x9c9\xcbZ\xd8\x9f\xbbl_\xff\x9c<\x00d" +
+	"\x0d\x0c\xa9\xb3\xded6\xa3=\xde:s\xe9i\x01h" +
+	"E\x11\x9e_\xbe\xc7\x9b_\xe6\x17Z\x09nN\x10\x92" +
+	"S`G\x92\x93\x10\xc3\xfc\x0b\x00\x00\xff\xffW\xceF" +
+	"\xd1"
 
 func init() {
 	schemas.Register(schema_9c2ddc7cabb4245b,
-		0xf814b26e1a24039e)
+		0xd9285b8fd155dd07)
 }
