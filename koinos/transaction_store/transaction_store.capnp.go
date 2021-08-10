@@ -6,7 +6,7 @@ import (
 	capnp "capnproto.org/go/capnp/v3"
 	text "capnproto.org/go/capnp/v3/encoding/text"
 	schemas "capnproto.org/go/capnp/v3/schemas"
-	protocol "koinos/protocol"
+	protocol "github.com/koinos/koinos-proto-golang/koinos/protocol"
 )
 
 type TransactionItem struct{ capnp.Struct }

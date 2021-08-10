@@ -6,9 +6,9 @@ import (
 	capnp "capnproto.org/go/capnp/v3"
 	text "capnproto.org/go/capnp/v3/encoding/text"
 	schemas "capnproto.org/go/capnp/v3/schemas"
-	koinos "koinos"
-	protocol "koinos/protocol"
-	rpc "koinos/rpc"
+	koinos "github.com/koinos/koinos-proto-golang/koinos"
+	protocol "github.com/koinos/koinos-proto-golang/koinos/protocol"
+	rpc "github.com/koinos/koinos-proto-golang/koinos/rpc"
 	strconv "strconv"
 )
 
