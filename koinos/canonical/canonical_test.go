@@ -30,5 +30,5 @@ func TestMap(t *testing.T) {
 	tm := testMap{}
 	b, err := Marshal(&tm)
 	assert.Nil(t, b)
-	assert.Error(t, err)
+	assert.ErrorIs(t, err, ErrNoCanonical)
 }
