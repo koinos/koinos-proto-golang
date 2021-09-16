@@ -27,8 +27,15 @@ func TestCanonicalSerialization(t *testing.T) {
 }
 
 func TestMap(t *testing.T) {
+	// Ensure an object with a map gives an error when canonically serializing
 	tm := testMap{}
 	b, err := Marshal(&tm)
+	assert.Nil(t, b)
+	assert.ErrorIs(t, err, ErrNoCanonical)
+
+	// Ensure an object with a map nested inside of it gives an error when canonically serializing
+	mw := mapWrapper{}
+	b, err = Marshal(&mw)
 	assert.Nil(t, b)
 	assert.ErrorIs(t, err, ErrNoCanonical)
 }
