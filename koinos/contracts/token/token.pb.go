@@ -666,6 +666,53 @@ func (x *MintReturn) GetValue() bool {
 	return false
 }
 
+type BalanceObject struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Value uint64 `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (x *BalanceObject) Reset() {
+	*x = BalanceObject{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_contracts_token_token_proto_msgTypes[14]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *BalanceObject) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*BalanceObject) ProtoMessage() {}
+
+func (x *BalanceObject) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_contracts_token_token_proto_msgTypes[14]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use BalanceObject.ProtoReflect.Descriptor instead.
+func (*BalanceObject) Descriptor() ([]byte, []int) {
+	return file_koinos_contracts_token_token_proto_rawDescGZIP(), []int{14}
+}
+
+func (x *BalanceObject) GetValue() uint64 {
+	if x != nil {
+		return x.Value
+	}
+	return 0
+}
+
 var File_koinos_contracts_token_token_proto protoreflect.FileDescriptor
 
 var file_koinos_contracts_token_token_proto_rawDesc = []byte{
@@ -706,11 +753,14 @@ var file_koinos_contracts_token_token_proto_rawDesc = []byte{
 	0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x23, 0x0a, 0x0b, 0x6d,
 	0x69, 0x6e, 0x74, 0x5f, 0x72, 0x65, 0x74, 0x75, 0x72, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61,
 	0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x42, 0x3e, 0x5a, 0x3c, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b,
-	0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
-	0x2f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x73, 0x2f, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
-	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x22, 0x2a, 0x0a, 0x0e, 0x62, 0x61, 0x6c, 0x61, 0x6e, 0x63, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65,
+	0x63, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x3e, 0x5a, 0x3c,
+	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
+	0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67,
+	0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x63, 0x6f, 0x6e,
+	0x74, 0x72, 0x61, 0x63, 0x74, 0x73, 0x2f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -725,7 +775,7 @@ func file_koinos_contracts_token_token_proto_rawDescGZIP() []byte {
 	return file_koinos_contracts_token_token_proto_rawDescData
 }
 
-var file_koinos_contracts_token_token_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
+var file_koinos_contracts_token_token_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
 var file_koinos_contracts_token_token_proto_goTypes = []interface{}{
 	(*NameArgs)(nil),          // 0: koinos.contracts.token.name_args
 	(*NameReturn)(nil),        // 1: koinos.contracts.token.name_return
@@ -741,6 +791,7 @@ var file_koinos_contracts_token_token_proto_goTypes = []interface{}{
 	(*TransferReturn)(nil),    // 11: koinos.contracts.token.transfer_return
 	(*MintArgs)(nil),          // 12: koinos.contracts.token.mint_args
 	(*MintReturn)(nil),        // 13: koinos.contracts.token.mint_return
+	(*BalanceObject)(nil),     // 14: koinos.contracts.token.balance_object
 }
 var file_koinos_contracts_token_token_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -924,6 +975,18 @@ func file_koinos_contracts_token_token_proto_init() {
 				return nil
 			}
 		}
+		file_koinos_contracts_token_token_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*BalanceObject); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -931,7 +994,7 @@ func file_koinos_contracts_token_token_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_koinos_contracts_token_token_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   14,
+			NumMessages:   15,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
