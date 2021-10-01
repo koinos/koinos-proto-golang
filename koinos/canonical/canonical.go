@@ -30,7 +30,14 @@ func containsMap(pr protoreflect.Message) bool {
 
 		// Recurse into the field if it is a message
 		if fdesc.Kind() == protoreflect.MessageKind {
-			message := pr.Get(fdesc).Message()
+			var message protoreflect.Message
+
+			if fdesc.IsList() && pr.Get(fdesc).List().Len() > 0 {
+				message = pr.Get(fdesc).List().Get(0).Message()
+			} else {
+				message = pr.Get(fdesc).Message()
+			}
+
 			if containsMap(message) {
 				return true
 			}
