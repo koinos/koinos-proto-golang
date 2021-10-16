@@ -16,6 +16,7 @@ import (
 )
 
 var (
+	// KoinosFieldOverrides implements overriding byte fields based on the KoinosBytesType option enum
 	KoinosFieldOverrides = map[protoreflect.Kind]protojson.FieldOverride{
 		protoreflect.BytesKind: protojson.FieldOverride{
 			MarshalField: func(val protoreflect.Value, fd protoreflect.FieldDescriptor, opt protojson.MarshalOptions) ([]byte, error) {
@@ -107,6 +108,7 @@ var (
 		},
 	}
 
+	// KoinosMarshalOptions are the default Koinos JSON Marshal Options
 	KoinosMarshalOptions = protojson.MarshalOptions{
 		Multiline:      false,
 		Indent:         "",
@@ -114,16 +116,19 @@ var (
 		FieldOverrides: KoinosFieldOverrides,
 	}
 
+	// KoinosUnmarshalOptions are the default Koinos JSON Unmarshal Options
 	KoinosUnmarshalOptions = protojson.UnmarshalOptions{
 		DiscardUnknown: true,
 		FieldOverrides: KoinosFieldOverrides,
 	}
 )
 
+// Marshal encodes to JSON using KoinosMarshalOptions
 func Marshal(m proto.Message) ([]byte, error) {
 	return KoinosMarshalOptions.Marshal(m)
 }
 
+// Unmarshal decods from JSON using KoinosUnmarshalOptions
 func Unmarshal(b []byte, m proto.Message) error {
 	return KoinosUnmarshalOptions.Unmarshal(b, m)
 }
