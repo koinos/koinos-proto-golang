@@ -5,11 +5,10 @@ import (
 	"encoding/base64"
 	"encoding/hex"
 	gojson "encoding/json"
-	"fmt"
+	"reflect"
 	"testing"
 
 	"github.com/btcsuite/btcutil/base58"
-	"github.com/iancoleman/orderedmap"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -29,24 +28,22 @@ func TestByteEncodings(t *testing.T) {
 	base58Str := base58.Encode(testData)
 	base64Str := base64.URLEncoding.EncodeToString(testData)
 
-	jsonMap := orderedmap.New()
-	jsonMap.Set("base_64", base64Str)
-	jsonMap.Set("base_58", base58Str)
-	jsonMap.Set("hex", hexStr)
-	jsonMap.Set("block_id", hexStr)
-	jsonMap.Set("transaction_id", hexStr)
-	jsonMap.Set("contract_id", base58Str)
-	jsonMap.Set("address", base58Str)
-	jsonMap.Set("default", base64Str)
-
-	expectedBytes, _ := gojson.Marshal(jsonMap)
+	jsonMap := make(map[string]string)
+	expectedMap := make(map[string]string)
+	expectedMap["base_64"] = base64Str
+	expectedMap["base_58"] = base58Str
+	expectedMap["hex"] = hexStr
+	expectedMap["block_id"] = hexStr
+	expectedMap["transaction_id"] = hexStr
+	expectedMap["contract_id"] = base58Str
+	expectedMap["address"] = base58Str
+	expectedMap["default"] = base64Str
 
 	jsonBytes, err := Marshal(testObj)
 	assert.NoError(t, err)
-	assert.True(t, string(expectedBytes) == string(jsonBytes))
-
-	fmt.Printf(string(expectedBytes) + "\n")
-	fmt.Printf(string(jsonBytes) + "\n")
+	err = gojson.Unmarshal(jsonBytes, &jsonMap)
+	assert.NoError(t, err)
+	assert.True(t, reflect.DeepEqual(jsonMap, expectedMap))
 
 	unmarshalledObject := &BytesSerializationTestObject{}
 	err = Unmarshal(jsonBytes, unmarshalledObject)
@@ -60,49 +57,49 @@ func TestByteEncodings(t *testing.T) {
 	assert.True(t, bytes.Equal(testObj.Address, unmarshalledObject.Address))
 
 	// Test bad encodings
-	jsonMap.Set("base_64", hexStr)
+	jsonMap["base_64"] = hexStr
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
 
-	jsonMap.Set("base_64", base64Str)
-	jsonMap.Set("base_58", hexStr)
+	jsonMap["base_64"] = base64Str
+	jsonMap["base_58"] = hexStr
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
 
-	jsonMap.Set("base_58", base58Str)
-	jsonMap.Set("hex", base64Str)
+	jsonMap["base_58"] = base58Str
+	jsonMap["hex"] = base64Str
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
 
-	jsonMap.Set("hex", hexStr)
-	jsonMap.Set("block_id", base64Str)
+	jsonMap["hex"] = hexStr
+	jsonMap["block_id"] = base64Str
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
 
-	jsonMap.Set("block_id", hexStr)
-	jsonMap.Set("transaction_id", base64Str)
+	jsonMap["block_id"] = hexStr
+	jsonMap["transaction_id"] = base64Str
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
 
-	jsonMap.Set("transaction_id", hexStr)
-	jsonMap.Set("contract_id", hexStr)
+	jsonMap["transaction_id"] = hexStr
+	jsonMap["contract_id"] = hexStr
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
 
-	jsonMap.Set("contract_id", base58Str)
-	jsonMap.Set("address", hexStr)
+	jsonMap["contract_id"] = base58Str
+	jsonMap["address"] = hexStr
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
 
-	jsonMap.Set("address", base58Str)
-	jsonMap.Set("default", hexStr)
+	jsonMap["address"] = base58Str
+	jsonMap["default"] = hexStr
 	jsonBytes, _ = gojson.Marshal(jsonMap)
 	err = Unmarshal(jsonBytes, unmarshalledObject)
 	assert.Error(t, err)
