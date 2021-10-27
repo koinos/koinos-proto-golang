@@ -27,6 +27,8 @@ github.com/jrick/logrotate v1.0.0/go.mod h1:LNinyqDIJnpAur+b8yyulnQw/wDuN1+BYKlT
 github.com/kkdai/bstream v0.0.0-20161212061736-f391b8402d23/go.mod h1:J+Gs4SYgM6CZQHDETBtE9HaSEkGmuNXF86RwHhHUvq4=
 github.com/koinos/protobuf-go v1.27.2-0.20211016005428-adb3d63afc5e h1:e92AS0/Aklop09SUlZXIaKJKMAtFsp1bMCf8SKRdVVE=
 github.com/koinos/protobuf-go v1.27.2-0.20211016005428-adb3d63afc5e/go.mod h1:9q0QmTI4eRPtz6boOQmLYwt+qCgq0jsYwAQnmE0givc=
+github.com/koinos/protobuf-go v1.27.2-0.20211026185306-2456c83214fe h1:PJ+2AnN4ibN2WxldiClplZZosQNPnXj7S5vOeFNtV+M=
+github.com/koinos/protobuf-go v1.27.2-0.20211026185306-2456c83214fe/go.mod h1:9q0QmTI4eRPtz6boOQmLYwt+qCgq0jsYwAQnmE0givc=
 github.com/kylelemons/godebug v1.1.0/go.mod h1:9/0rRGxNHcop5bhtWyNeEfOS8JIWk580+fNqagV/RAw=
 github.com/onsi/ginkgo v1.6.0/go.mod h1:lLunBs/Ym6LB5Z9jYTR76FiuTmxDTDusOGeTQH+WWjE=
 github.com/onsi/ginkgo v1.7.0/go.mod h1:lLunBs/Ym6LB5Z9jYTR76FiuTmxDTDusOGeTQH+WWjE=
