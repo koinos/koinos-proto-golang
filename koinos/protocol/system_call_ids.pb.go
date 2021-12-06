@@ -23,41 +23,42 @@ const (
 type SystemCallId int32
 
 const (
-	SystemCallId_reserved_id                     SystemCallId = 0
-	SystemCallId_prints                          SystemCallId = 1
-	SystemCallId_apply_block                     SystemCallId = 3
-	SystemCallId_apply_transaction               SystemCallId = 4
-	SystemCallId_apply_upload_contract_operation SystemCallId = 5
-	SystemCallId_apply_call_contract_operation   SystemCallId = 6
-	SystemCallId_apply_set_system_call_operation SystemCallId = 7
-	SystemCallId_put_object                      SystemCallId = 8
-	SystemCallId_get_object                      SystemCallId = 9
-	SystemCallId_get_next_object                 SystemCallId = 10
-	SystemCallId_get_prev_object                 SystemCallId = 11
-	SystemCallId_call_contract                   SystemCallId = 12
-	SystemCallId_get_entry_point                 SystemCallId = 13
-	SystemCallId_get_contract_arguments_size     SystemCallId = 14
-	SystemCallId_get_contract_arguments          SystemCallId = 15
-	SystemCallId_set_contract_result             SystemCallId = 16
-	SystemCallId_exit_contract                   SystemCallId = 17
-	SystemCallId_get_head_info                   SystemCallId = 18
-	SystemCallId_hash                            SystemCallId = 19
-	SystemCallId_recover_public_key              SystemCallId = 20
-	SystemCallId_process_block_signature         SystemCallId = 21
-	SystemCallId_verify_merkle_root              SystemCallId = 22
-	SystemCallId_get_transaction_payer           SystemCallId = 23
-	SystemCallId_get_transaction_rc_limit        SystemCallId = 25
-	SystemCallId_get_last_irreversible_block     SystemCallId = 26
-	SystemCallId_get_caller                      SystemCallId = 27
-	SystemCallId_require_authority               SystemCallId = 28
-	SystemCallId_get_transaction_signature       SystemCallId = 29
-	SystemCallId_get_contract_id                 SystemCallId = 30
-	SystemCallId_get_account_nonce               SystemCallId = 31
-	SystemCallId_get_account_rc                  SystemCallId = 32
-	SystemCallId_consume_account_rc              SystemCallId = 33
-	SystemCallId_get_resource_limits             SystemCallId = 34
-	SystemCallId_consume_block_resources         SystemCallId = 35
-	SystemCallId_event                           SystemCallId = 36
+	SystemCallId_reserved_id                         SystemCallId = 0
+	SystemCallId_prints                              SystemCallId = 1
+	SystemCallId_apply_block                         SystemCallId = 3
+	SystemCallId_apply_transaction                   SystemCallId = 4
+	SystemCallId_apply_upload_contract_operation     SystemCallId = 5
+	SystemCallId_apply_call_contract_operation       SystemCallId = 6
+	SystemCallId_apply_set_system_call_operation     SystemCallId = 7
+	SystemCallId_put_object                          SystemCallId = 8
+	SystemCallId_get_object                          SystemCallId = 9
+	SystemCallId_get_next_object                     SystemCallId = 10
+	SystemCallId_get_prev_object                     SystemCallId = 11
+	SystemCallId_call_contract                       SystemCallId = 12
+	SystemCallId_get_entry_point                     SystemCallId = 13
+	SystemCallId_get_contract_arguments_size         SystemCallId = 14
+	SystemCallId_get_contract_arguments              SystemCallId = 15
+	SystemCallId_set_contract_result                 SystemCallId = 16
+	SystemCallId_exit_contract                       SystemCallId = 17
+	SystemCallId_get_head_info                       SystemCallId = 18
+	SystemCallId_hash                                SystemCallId = 19
+	SystemCallId_recover_public_key                  SystemCallId = 20
+	SystemCallId_process_block_signature             SystemCallId = 21
+	SystemCallId_verify_merkle_root                  SystemCallId = 22
+	SystemCallId_get_transaction_payer               SystemCallId = 23
+	SystemCallId_get_transaction_rc_limit            SystemCallId = 25
+	SystemCallId_get_last_irreversible_block         SystemCallId = 26
+	SystemCallId_get_caller                          SystemCallId = 27
+	SystemCallId_require_authority                   SystemCallId = 28
+	SystemCallId_get_transaction_signature           SystemCallId = 29
+	SystemCallId_get_contract_id                     SystemCallId = 30
+	SystemCallId_get_account_nonce                   SystemCallId = 31
+	SystemCallId_get_account_rc                      SystemCallId = 32
+	SystemCallId_consume_account_rc                  SystemCallId = 33
+	SystemCallId_get_resource_limits                 SystemCallId = 34
+	SystemCallId_consume_block_resources             SystemCallId = 35
+	SystemCallId_event                               SystemCallId = 36
+	SystemCallId_apply_set_system_contract_operation SystemCallId = 37
 )
 
 // Enum value maps for SystemCallId.
@@ -98,43 +99,45 @@ var (
 		34: "get_resource_limits",
 		35: "consume_block_resources",
 		36: "event",
+		37: "apply_set_system_contract_operation",
 	}
 	SystemCallId_value = map[string]int32{
-		"reserved_id":                     0,
-		"prints":                          1,
-		"apply_block":                     3,
-		"apply_transaction":               4,
-		"apply_upload_contract_operation": 5,
-		"apply_call_contract_operation":   6,
-		"apply_set_system_call_operation": 7,
-		"put_object":                      8,
-		"get_object":                      9,
-		"get_next_object":                 10,
-		"get_prev_object":                 11,
-		"call_contract":                   12,
-		"get_entry_point":                 13,
-		"get_contract_arguments_size":     14,
-		"get_contract_arguments":          15,
-		"set_contract_result":             16,
-		"exit_contract":                   17,
-		"get_head_info":                   18,
-		"hash":                            19,
-		"recover_public_key":              20,
-		"process_block_signature":         21,
-		"verify_merkle_root":              22,
-		"get_transaction_payer":           23,
-		"get_transaction_rc_limit":        25,
-		"get_last_irreversible_block":     26,
-		"get_caller":                      27,
-		"require_authority":               28,
-		"get_transaction_signature":       29,
-		"get_contract_id":                 30,
-		"get_account_nonce":               31,
-		"get_account_rc":                  32,
-		"consume_account_rc":              33,
-		"get_resource_limits":             34,
-		"consume_block_resources":         35,
-		"event":                           36,
+		"reserved_id":                         0,
+		"prints":                              1,
+		"apply_block":                         3,
+		"apply_transaction":                   4,
+		"apply_upload_contract_operation":     5,
+		"apply_call_contract_operation":       6,
+		"apply_set_system_call_operation":     7,
+		"put_object":                          8,
+		"get_object":                          9,
+		"get_next_object":                     10,
+		"get_prev_object":                     11,
+		"call_contract":                       12,
+		"get_entry_point":                     13,
+		"get_contract_arguments_size":         14,
+		"get_contract_arguments":              15,
+		"set_contract_result":                 16,
+		"exit_contract":                       17,
+		"get_head_info":                       18,
+		"hash":                                19,
+		"recover_public_key":                  20,
+		"process_block_signature":             21,
+		"verify_merkle_root":                  22,
+		"get_transaction_payer":               23,
+		"get_transaction_rc_limit":            25,
+		"get_last_irreversible_block":         26,
+		"get_caller":                          27,
+		"require_authority":                   28,
+		"get_transaction_signature":           29,
+		"get_contract_id":                     30,
+		"get_account_nonce":                   31,
+		"get_account_rc":                      32,
+		"consume_account_rc":                  33,
+		"get_resource_limits":                 34,
+		"consume_block_resources":             35,
+		"event":                               36,
+		"apply_set_system_contract_operation": 37,
 	}
 )
 
@@ -171,7 +174,7 @@ var file_koinos_protocol_system_call_ids_proto_rawDesc = []byte{
 	0x0a, 0x25, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f,
 	0x6c, 0x2f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x69, 0x64,
 	0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2a, 0xc0, 0x06, 0x0a, 0x0e, 0x73, 0x79, 0x73,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2a, 0xe9, 0x06, 0x0a, 0x0e, 0x73, 0x79, 0x73,
 	0x74, 0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x69, 0x64, 0x12, 0x0f, 0x0a, 0x0b, 0x72,
 	0x65, 0x73, 0x65, 0x72, 0x76, 0x65, 0x64, 0x5f, 0x69, 0x64, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06,
 	0x70, 0x72, 0x69, 0x6e, 0x74, 0x73, 0x10, 0x01, 0x12, 0x0f, 0x0a, 0x0b, 0x61, 0x70, 0x70, 0x6c,
@@ -223,11 +226,14 @@ var file_koinos_protocol_system_call_ids_proto_rawDesc = []byte{
 	0x74, 0x5f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74,
 	0x73, 0x10, 0x22, 0x12, 0x1b, 0x0a, 0x17, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x5f, 0x62,
 	0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x10, 0x23,
-	0x12, 0x09, 0x0a, 0x05, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x10, 0x24, 0x42, 0x37, 0x5a, 0x35, 0x67,
-	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
-	0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f,
-	0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x63, 0x6f, 0x6c, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x12, 0x09, 0x0a, 0x05, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x10, 0x24, 0x12, 0x27, 0x0a, 0x23, 0x61,
+	0x70, 0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f,
+	0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x10, 0x25, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63,
+	0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f,
+	0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
