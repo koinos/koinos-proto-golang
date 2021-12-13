@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	// KoinosFieldOverrides implements overriding byte fields based on the KoinosBytesType option enum
+	// KoinosFieldOverrides implements overriding byte fields based on the Btype option enum
 	KoinosFieldOverrides = map[protoreflect.Kind]prototext.FieldOverride{
 		protoreflect.BytesKind: prototext.FieldOverride{
 			MarshalField: func(val protoreflect.Value, fd protoreflect.FieldDescriptor, opt prototext.MarshalOptions) ([]byte, error) {
@@ -25,7 +25,7 @@ var (
 
 				if opts != nil {
 					fieldOpts := opts.(*descriptorpb.FieldOptions)
-					ext := koinos.E_KoinosBytesType.TypeDescriptor()
+					ext := koinos.E_Btype.TypeDescriptor()
 					enum := fieldOpts.ProtoReflect().Get(ext).Enum()
 
 					switch koinos.BytesType(enum) {
@@ -65,7 +65,7 @@ var (
 				opts := fd.Options()
 				if opts != nil {
 					fieldOpts := opts.(*descriptorpb.FieldOptions)
-					ext := koinos.E_KoinosBytesType.TypeDescriptor()
+					ext := koinos.E_Btype.TypeDescriptor()
 					enum := fieldOpts.ProtoReflect().Get(ext).Enum()
 
 					switch koinos.BytesType(enum) {
