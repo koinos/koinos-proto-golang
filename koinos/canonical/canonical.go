@@ -32,10 +32,12 @@ func containsMap(pr protoreflect.Message) bool {
 		if fdesc.Kind() == protoreflect.MessageKind {
 			var message protoreflect.Message
 
-			if fdesc.IsList() && pr.Get(fdesc).List().Len() > 0 {
+			if !fdesc.IsList() {
+				message = pr.Get(fdesc).Message()
+			} else if pr.Get(fdesc).List().Len() > 0 {
 				message = pr.Get(fdesc).List().Get(0).Message()
 			} else {
-				message = pr.Get(fdesc).Message()
+				continue
 			}
 
 			if containsMap(message) {
