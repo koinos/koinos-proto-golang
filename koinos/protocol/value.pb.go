@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.17.3
-// source: koinos/protocol/value.proto
+// source: koinos/chain/value.proto
 
 package protocol
 
@@ -21,773 +21,13 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type DoubleValue struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value float64 `protobuf:"fixed64,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *DoubleValue) Reset() {
-	*x = DoubleValue{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *DoubleValue) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*DoubleValue) ProtoMessage() {}
-
-func (x *DoubleValue) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use DoubleValue.ProtoReflect.Descriptor instead.
-func (*DoubleValue) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{0}
-}
-
-func (x *DoubleValue) GetValue() float64 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type FloatValue struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value float32 `protobuf:"fixed32,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *FloatValue) Reset() {
-	*x = FloatValue{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *FloatValue) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*FloatValue) ProtoMessage() {}
-
-func (x *FloatValue) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use FloatValue.ProtoReflect.Descriptor instead.
-func (*FloatValue) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{1}
-}
-
-func (x *FloatValue) GetValue() float32 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Int32Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value int32 `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Int32Value) Reset() {
-	*x = Int32Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Int32Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Int32Value) ProtoMessage() {}
-
-func (x *Int32Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Int32Value.ProtoReflect.Descriptor instead.
-func (*Int32Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{2}
-}
-
-func (x *Int32Value) GetValue() int32 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Int64Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value int64 `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Int64Value) Reset() {
-	*x = Int64Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Int64Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Int64Value) ProtoMessage() {}
-
-func (x *Int64Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Int64Value.ProtoReflect.Descriptor instead.
-func (*Int64Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{3}
-}
-
-func (x *Int64Value) GetValue() int64 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Uint32Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value uint32 `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Uint32Value) Reset() {
-	*x = Uint32Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Uint32Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Uint32Value) ProtoMessage() {}
-
-func (x *Uint32Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Uint32Value.ProtoReflect.Descriptor instead.
-func (*Uint32Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *Uint32Value) GetValue() uint32 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Uint64Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value uint64 `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Uint64Value) Reset() {
-	*x = Uint64Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Uint64Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Uint64Value) ProtoMessage() {}
-
-func (x *Uint64Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Uint64Value.ProtoReflect.Descriptor instead.
-func (*Uint64Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{5}
-}
-
-func (x *Uint64Value) GetValue() uint64 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Sint32Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value int32 `protobuf:"zigzag32,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Sint32Value) Reset() {
-	*x = Sint32Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Sint32Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Sint32Value) ProtoMessage() {}
-
-func (x *Sint32Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Sint32Value.ProtoReflect.Descriptor instead.
-func (*Sint32Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{6}
-}
-
-func (x *Sint32Value) GetValue() int32 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Sint64Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value int64 `protobuf:"zigzag64,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Sint64Value) Reset() {
-	*x = Sint64Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[7]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Sint64Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Sint64Value) ProtoMessage() {}
-
-func (x *Sint64Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[7]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Sint64Value.ProtoReflect.Descriptor instead.
-func (*Sint64Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{7}
-}
-
-func (x *Sint64Value) GetValue() int64 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Fixed32Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value uint32 `protobuf:"fixed32,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Fixed32Value) Reset() {
-	*x = Fixed32Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Fixed32Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Fixed32Value) ProtoMessage() {}
-
-func (x *Fixed32Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Fixed32Value.ProtoReflect.Descriptor instead.
-func (*Fixed32Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{8}
-}
-
-func (x *Fixed32Value) GetValue() uint32 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Fixed64Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value uint64 `protobuf:"fixed64,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Fixed64Value) Reset() {
-	*x = Fixed64Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Fixed64Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Fixed64Value) ProtoMessage() {}
-
-func (x *Fixed64Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Fixed64Value.ProtoReflect.Descriptor instead.
-func (*Fixed64Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{9}
-}
-
-func (x *Fixed64Value) GetValue() uint64 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Sfixed32Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value int32 `protobuf:"fixed32,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Sfixed32Value) Reset() {
-	*x = Sfixed32Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[10]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Sfixed32Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Sfixed32Value) ProtoMessage() {}
-
-func (x *Sfixed32Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[10]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Sfixed32Value.ProtoReflect.Descriptor instead.
-func (*Sfixed32Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{10}
-}
-
-func (x *Sfixed32Value) GetValue() int32 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type Sfixed64Value struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value int64 `protobuf:"fixed64,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *Sfixed64Value) Reset() {
-	*x = Sfixed64Value{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[11]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *Sfixed64Value) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*Sfixed64Value) ProtoMessage() {}
-
-func (x *Sfixed64Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[11]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use Sfixed64Value.ProtoReflect.Descriptor instead.
-func (*Sfixed64Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{11}
-}
-
-func (x *Sfixed64Value) GetValue() int64 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type BoolValue struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value bool `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *BoolValue) Reset() {
-	*x = BoolValue{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[12]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *BoolValue) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*BoolValue) ProtoMessage() {}
-
-func (x *BoolValue) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[12]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use BoolValue.ProtoReflect.Descriptor instead.
-func (*BoolValue) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{12}
-}
-
-func (x *BoolValue) GetValue() bool {
-	if x != nil {
-		return x.Value
-	}
-	return false
-}
-
-type StringValue struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value string `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *StringValue) Reset() {
-	*x = StringValue{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[13]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *StringValue) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*StringValue) ProtoMessage() {}
-
-func (x *StringValue) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[13]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use StringValue.ProtoReflect.Descriptor instead.
-func (*StringValue) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{13}
-}
-
-func (x *StringValue) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
-	return ""
-}
-
-type BytesValue struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value []byte `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *BytesValue) Reset() {
-	*x = BytesValue{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[14]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *BytesValue) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*BytesValue) ProtoMessage() {}
-
-func (x *BytesValue) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[14]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use BytesValue.ProtoReflect.Descriptor instead.
-func (*BytesValue) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{14}
-}
-
-func (x *BytesValue) GetValue() []byte {
-	if x != nil {
-		return x.Value
-	}
-	return nil
-}
-
-type EnumValue struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Name   string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Number int32  `protobuf:"varint,2,opt,name=number,proto3" json:"number,omitempty"`
-}
-
-func (x *EnumValue) Reset() {
-	*x = EnumValue{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[15]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *EnumValue) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*EnumValue) ProtoMessage() {}
-
-func (x *EnumValue) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[15]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use EnumValue.ProtoReflect.Descriptor instead.
-func (*EnumValue) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{15}
-}
-
-func (x *EnumValue) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
-
-func (x *EnumValue) GetNumber() int32 {
-	if x != nil {
-		return x.Number
-	}
-	return 0
-}
-
 type Value struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Kind:
-	//	*Value_AnyValue
+	//	*Value_MessageValue
 	//	*Value_DoubleValue
 	//	*Value_FloatValue
 	//	*Value_Int32Value
@@ -809,7 +49,7 @@ type Value struct {
 func (x *Value) Reset() {
 	*x = Value{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[16]
+		mi := &file_koinos_chain_value_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -822,7 +62,7 @@ func (x *Value) String() string {
 func (*Value) ProtoMessage() {}
 
 func (x *Value) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[16]
+	mi := &file_koinos_chain_value_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -835,7 +75,7 @@ func (x *Value) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Value.ProtoReflect.Descriptor instead.
 func (*Value) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{16}
+	return file_koinos_chain_value_proto_rawDescGZIP(), []int{0}
 }
 
 func (m *Value) GetKind() isValue_Kind {
@@ -845,9 +85,9 @@ func (m *Value) GetKind() isValue_Kind {
 	return nil
 }
 
-func (x *Value) GetAnyValue() *anypb.Any {
-	if x, ok := x.GetKind().(*Value_AnyValue); ok {
-		return x.AnyValue
+func (x *Value) GetMessageValue() *anypb.Any {
+	if x, ok := x.GetKind().(*Value_MessageValue); ok {
+		return x.MessageValue
 	}
 	return nil
 }
@@ -961,8 +201,8 @@ type isValue_Kind interface {
 	isValue_Kind()
 }
 
-type Value_AnyValue struct {
-	AnyValue *anypb.Any `protobuf:"bytes,1,opt,name=any_value,json=anyValue,proto3,oneof"`
+type Value_MessageValue struct {
+	MessageValue *anypb.Any `protobuf:"bytes,1,opt,name=message_value,json=messageValue,proto3,oneof"`
 }
 
 type Value_DoubleValue struct {
@@ -1025,7 +265,7 @@ type Value_BytesValue struct {
 	BytesValue []byte `protobuf:"bytes,16,opt,name=bytes_value,json=bytesValue,proto3,oneof"`
 }
 
-func (*Value_AnyValue) isValue_Kind() {}
+func (*Value_MessageValue) isValue_Kind() {}
 
 func (*Value_DoubleValue) isValue_Kind() {}
 
@@ -1057,6 +297,61 @@ func (*Value_StringValue) isValue_Kind() {}
 
 func (*Value_BytesValue) isValue_Kind() {}
 
+type EnumValue struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Name   string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Number int32  `protobuf:"varint,2,opt,name=number,proto3" json:"number,omitempty"`
+}
+
+func (x *EnumValue) Reset() {
+	*x = EnumValue{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_chain_value_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *EnumValue) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*EnumValue) ProtoMessage() {}
+
+func (x *EnumValue) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_chain_value_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use EnumValue.ProtoReflect.Descriptor instead.
+func (*EnumValue) Descriptor() ([]byte, []int) {
+	return file_koinos_chain_value_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *EnumValue) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *EnumValue) GetNumber() int32 {
+	if x != nil {
+		return x.Number
+	}
+	return 0
+}
+
 type ListValue struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1068,7 +363,7 @@ type ListValue struct {
 func (x *ListValue) Reset() {
 	*x = ListValue{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_protocol_value_proto_msgTypes[17]
+		mi := &file_koinos_chain_value_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1081,7 +376,7 @@ func (x *ListValue) String() string {
 func (*ListValue) ProtoMessage() {}
 
 func (x *ListValue) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_protocol_value_proto_msgTypes[17]
+	mi := &file_koinos_chain_value_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1094,7 +389,7 @@ func (x *ListValue) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListValue.ProtoReflect.Descriptor instead.
 func (*ListValue) Descriptor() ([]byte, []int) {
-	return file_koinos_protocol_value_proto_rawDescGZIP(), []int{17}
+	return file_koinos_chain_value_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *ListValue) GetValue() []*Value {
@@ -1104,345 +399,103 @@ func (x *ListValue) GetValue() []*Value {
 	return nil
 }
 
-var File_koinos_protocol_value_proto protoreflect.FileDescriptor
+var File_koinos_chain_value_proto protoreflect.FileDescriptor
 
-var file_koinos_protocol_value_proto_rawDesc = []byte{
-	0x0a, 0x1b, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f,
-	0x6c, 0x2f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0f, 0x6b,
-	0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x1a, 0x19,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f,
-	0x61, 0x6e, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x24, 0x0a, 0x0c, 0x64, 0x6f, 0x75,
-	0x62, 0x6c, 0x65, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c,
-	0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22,
-	0x23, 0x0a, 0x0b, 0x66, 0x6c, 0x6f, 0x61, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14,
-	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x02, 0x52, 0x05, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x22, 0x23, 0x0a, 0x0b, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x05, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x23, 0x0a, 0x0b, 0x69, 0x6e, 0x74,
-	0x36, 0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75,
-	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x24,
-	0x0a, 0x0c, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14,
-	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x05, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x22, 0x24, 0x0a, 0x0c, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x04, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x24, 0x0a, 0x0c, 0x73, 0x69,
-	0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x11, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x22, 0x24, 0x0a, 0x0c, 0x73, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x12, 0x52,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x25, 0x0a, 0x0d, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33,
-	0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x07, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x25, 0x0a,
-	0x0d, 0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14,
-	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x06, 0x52, 0x05, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x22, 0x26, 0x0a, 0x0e, 0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32,
-	0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x0f, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x26, 0x0a, 0x0e,
-	0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14,
-	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x10, 0x52, 0x05, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x22, 0x22, 0x0a, 0x0a, 0x62, 0x6f, 0x6f, 0x6c, 0x5f, 0x76, 0x61, 0x6c,
-	0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x08, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x24, 0x0a, 0x0c, 0x73, 0x74, 0x72, 0x69,
-	0x6e, 0x67, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75,
-	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x23,
-	0x0a, 0x0b, 0x62, 0x79, 0x74, 0x65, 0x73, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x14, 0x0a,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x05, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x22, 0x38, 0x0a, 0x0a, 0x65, 0x6e, 0x75, 0x6d, 0x5f, 0x76, 0x61, 0x6c, 0x75,
-	0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x22, 0xef, 0x04,
-	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x33, 0x0a, 0x09, 0x61, 0x6e, 0x79, 0x5f, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x14, 0x2e, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x41, 0x6e, 0x79,
-	0x48, 0x00, 0x52, 0x08, 0x61, 0x6e, 0x79, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c,
-	0x64, 0x6f, 0x75, 0x62, 0x6c, 0x65, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x01, 0x48, 0x00, 0x52, 0x0b, 0x64, 0x6f, 0x75, 0x62, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75,
-	0x65, 0x12, 0x21, 0x0a, 0x0b, 0x66, 0x6c, 0x6f, 0x61, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x18, 0x03, 0x20, 0x01, 0x28, 0x02, 0x48, 0x00, 0x52, 0x0a, 0x66, 0x6c, 0x6f, 0x61, 0x74, 0x56,
-	0x61, 0x6c, 0x75, 0x65, 0x12, 0x21, 0x0a, 0x0b, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x48, 0x00, 0x52, 0x0a, 0x69, 0x6e, 0x74,
-	0x33, 0x32, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x21, 0x0a, 0x0b, 0x69, 0x6e, 0x74, 0x36, 0x34,
-	0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x48, 0x00, 0x52, 0x0a,
-	0x69, 0x6e, 0x74, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c, 0x75, 0x69,
-	0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x0d,
-	0x48, 0x00, 0x52, 0x0b, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12,
-	0x23, 0x0a, 0x0c, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
-	0x07, 0x20, 0x01, 0x28, 0x04, 0x48, 0x00, 0x52, 0x0b, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x56,
-	0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c, 0x73, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x18, 0x08, 0x20, 0x01, 0x28, 0x11, 0x48, 0x00, 0x52, 0x0b, 0x73, 0x69,
-	0x6e, 0x74, 0x33, 0x32, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c, 0x73, 0x69, 0x6e,
-	0x74, 0x36, 0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x09, 0x20, 0x01, 0x28, 0x12, 0x48,
-	0x00, 0x52, 0x0b, 0x73, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x25,
-	0x0a, 0x0d, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
-	0x0a, 0x20, 0x01, 0x28, 0x07, 0x48, 0x00, 0x52, 0x0c, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32,
-	0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x25, 0x0a, 0x0d, 0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34,
-	0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x06, 0x48, 0x00, 0x52, 0x0c,
-	0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x27, 0x0a, 0x0e,
-	0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0c,
-	0x20, 0x01, 0x28, 0x0f, 0x48, 0x00, 0x52, 0x0d, 0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32,
-	0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x27, 0x0a, 0x0e, 0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x36,
-	0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0d, 0x20, 0x01, 0x28, 0x10, 0x48, 0x00, 0x52,
-	0x0d, 0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x1f,
-	0x0a, 0x0a, 0x62, 0x6f, 0x6f, 0x6c, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0e, 0x20, 0x01,
-	0x28, 0x08, 0x48, 0x00, 0x52, 0x09, 0x62, 0x6f, 0x6f, 0x6c, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12,
-	0x23, 0x0a, 0x0c, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
-	0x0f, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x0b, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x56,
-	0x61, 0x6c, 0x75, 0x65, 0x12, 0x21, 0x0a, 0x0b, 0x62, 0x79, 0x74, 0x65, 0x73, 0x5f, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x18, 0x10, 0x20, 0x01, 0x28, 0x0c, 0x48, 0x00, 0x52, 0x0a, 0x62, 0x79, 0x74,
-	0x65, 0x73, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x06, 0x0a, 0x04, 0x6b, 0x69, 0x6e, 0x64, 0x22,
-	0x3a, 0x0a, 0x0a, 0x6c, 0x69, 0x73, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x2c, 0x0a,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x6b,
-	0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x37, 0x5a, 0x35, 0x67,
-	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
-	0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f,
-	0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x63, 0x6f, 0x6c, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_koinos_chain_value_proto_rawDesc = []byte{
+	0x0a, 0x18, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2f, 0x76,
+	0x61, 0x6c, 0x75, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0c, 0x6b, 0x6f, 0x69, 0x6e,
+	0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x1a, 0x19, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
+	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x61, 0x6e, 0x79, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x22, 0xf7, 0x04, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x3b, 0x0a,
+	0x0d, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x14, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x41, 0x6e, 0x79, 0x48, 0x00, 0x52, 0x0c, 0x6d, 0x65,
+	0x73, 0x73, 0x61, 0x67, 0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c, 0x64, 0x6f,
+	0x75, 0x62, 0x6c, 0x65, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x01,
+	0x48, 0x00, 0x52, 0x0b, 0x64, 0x6f, 0x75, 0x62, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12,
+	0x21, 0x0a, 0x0b, 0x66, 0x6c, 0x6f, 0x61, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x02, 0x48, 0x00, 0x52, 0x0a, 0x66, 0x6c, 0x6f, 0x61, 0x74, 0x56, 0x61, 0x6c,
+	0x75, 0x65, 0x12, 0x21, 0x0a, 0x0b, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75,
+	0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x48, 0x00, 0x52, 0x0a, 0x69, 0x6e, 0x74, 0x33, 0x32,
+	0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x21, 0x0a, 0x0b, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x76,
+	0x61, 0x6c, 0x75, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x48, 0x00, 0x52, 0x0a, 0x69, 0x6e,
+	0x74, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c, 0x75, 0x69, 0x6e, 0x74,
+	0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x06, 0x20, 0x01, 0x28, 0x0d, 0x48, 0x00,
+	0x52, 0x0b, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a,
+	0x0c, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x07, 0x20,
+	0x01, 0x28, 0x04, 0x48, 0x00, 0x52, 0x0b, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x56, 0x61, 0x6c,
+	0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c, 0x73, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c,
+	0x75, 0x65, 0x18, 0x08, 0x20, 0x01, 0x28, 0x11, 0x48, 0x00, 0x52, 0x0b, 0x73, 0x69, 0x6e, 0x74,
+	0x33, 0x32, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a, 0x0c, 0x73, 0x69, 0x6e, 0x74, 0x36,
+	0x34, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x09, 0x20, 0x01, 0x28, 0x12, 0x48, 0x00, 0x52,
+	0x0b, 0x73, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x25, 0x0a, 0x0d,
+	0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0a, 0x20,
+	0x01, 0x28, 0x07, 0x48, 0x00, 0x52, 0x0c, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32, 0x56, 0x61,
+	0x6c, 0x75, 0x65, 0x12, 0x25, 0x0a, 0x0d, 0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34, 0x5f, 0x76,
+	0x61, 0x6c, 0x75, 0x65, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x06, 0x48, 0x00, 0x52, 0x0c, 0x66, 0x69,
+	0x78, 0x65, 0x64, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x27, 0x0a, 0x0e, 0x73, 0x66,
+	0x69, 0x78, 0x65, 0x64, 0x33, 0x32, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0c, 0x20, 0x01,
+	0x28, 0x0f, 0x48, 0x00, 0x52, 0x0d, 0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x33, 0x32, 0x56, 0x61,
+	0x6c, 0x75, 0x65, 0x12, 0x27, 0x0a, 0x0e, 0x73, 0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34, 0x5f,
+	0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0d, 0x20, 0x01, 0x28, 0x10, 0x48, 0x00, 0x52, 0x0d, 0x73,
+	0x66, 0x69, 0x78, 0x65, 0x64, 0x36, 0x34, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x1f, 0x0a, 0x0a,
+	0x62, 0x6f, 0x6f, 0x6c, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0e, 0x20, 0x01, 0x28, 0x08,
+	0x48, 0x00, 0x52, 0x09, 0x62, 0x6f, 0x6f, 0x6c, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x23, 0x0a,
+	0x0c, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x0f, 0x20,
+	0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x0b, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x56, 0x61, 0x6c,
+	0x75, 0x65, 0x12, 0x21, 0x0a, 0x0b, 0x62, 0x79, 0x74, 0x65, 0x73, 0x5f, 0x76, 0x61, 0x6c, 0x75,
+	0x65, 0x18, 0x10, 0x20, 0x01, 0x28, 0x0c, 0x48, 0x00, 0x52, 0x0a, 0x62, 0x79, 0x74, 0x65, 0x73,
+	0x56, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x06, 0x0a, 0x04, 0x6b, 0x69, 0x6e, 0x64, 0x22, 0x38, 0x0a,
+	0x0a, 0x65, 0x6e, 0x75, 0x6d, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e,
+	0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12,
+	0x16, 0x0a, 0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52,
+	0x06, 0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x22, 0x37, 0x0a, 0x0a, 0x6c, 0x69, 0x73, 0x74, 0x5f,
+	0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x29, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01,
+	0x20, 0x03, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68,
+	0x61, 0x69, 0x6e, 0x2e, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
+	0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b,
+	0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
-	file_koinos_protocol_value_proto_rawDescOnce sync.Once
-	file_koinos_protocol_value_proto_rawDescData = file_koinos_protocol_value_proto_rawDesc
+	file_koinos_chain_value_proto_rawDescOnce sync.Once
+	file_koinos_chain_value_proto_rawDescData = file_koinos_chain_value_proto_rawDesc
 )
 
-func file_koinos_protocol_value_proto_rawDescGZIP() []byte {
-	file_koinos_protocol_value_proto_rawDescOnce.Do(func() {
-		file_koinos_protocol_value_proto_rawDescData = protoimpl.X.CompressGZIP(file_koinos_protocol_value_proto_rawDescData)
+func file_koinos_chain_value_proto_rawDescGZIP() []byte {
+	file_koinos_chain_value_proto_rawDescOnce.Do(func() {
+		file_koinos_chain_value_proto_rawDescData = protoimpl.X.CompressGZIP(file_koinos_chain_value_proto_rawDescData)
 	})
-	return file_koinos_protocol_value_proto_rawDescData
+	return file_koinos_chain_value_proto_rawDescData
 }
 
-var file_koinos_protocol_value_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
-var file_koinos_protocol_value_proto_goTypes = []interface{}{
-	(*DoubleValue)(nil),   // 0: koinos.protocol.double_value
-	(*FloatValue)(nil),    // 1: koinos.protocol.float_value
-	(*Int32Value)(nil),    // 2: koinos.protocol.int32_value
-	(*Int64Value)(nil),    // 3: koinos.protocol.int64_value
-	(*Uint32Value)(nil),   // 4: koinos.protocol.uint32_value
-	(*Uint64Value)(nil),   // 5: koinos.protocol.uint64_value
-	(*Sint32Value)(nil),   // 6: koinos.protocol.sint32_value
-	(*Sint64Value)(nil),   // 7: koinos.protocol.sint64_value
-	(*Fixed32Value)(nil),  // 8: koinos.protocol.fixed32_value
-	(*Fixed64Value)(nil),  // 9: koinos.protocol.fixed64_value
-	(*Sfixed32Value)(nil), // 10: koinos.protocol.sfixed32_value
-	(*Sfixed64Value)(nil), // 11: koinos.protocol.sfixed64_value
-	(*BoolValue)(nil),     // 12: koinos.protocol.bool_value
-	(*StringValue)(nil),   // 13: koinos.protocol.string_value
-	(*BytesValue)(nil),    // 14: koinos.protocol.bytes_value
-	(*EnumValue)(nil),     // 15: koinos.protocol.enum_value
-	(*Value)(nil),         // 16: koinos.protocol.value
-	(*ListValue)(nil),     // 17: koinos.protocol.list_value
-	(*anypb.Any)(nil),     // 18: google.protobuf.Any
+var file_koinos_chain_value_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_koinos_chain_value_proto_goTypes = []interface{}{
+	(*Value)(nil),     // 0: koinos.chain.value
+	(*EnumValue)(nil), // 1: koinos.chain.enum_value
+	(*ListValue)(nil), // 2: koinos.chain.list_value
+	(*anypb.Any)(nil), // 3: google.protobuf.Any
 }
-var file_koinos_protocol_value_proto_depIdxs = []int32{
-	18, // 0: koinos.protocol.value.any_value:type_name -> google.protobuf.Any
-	16, // 1: koinos.protocol.list_value.value:type_name -> koinos.protocol.value
-	2,  // [2:2] is the sub-list for method output_type
-	2,  // [2:2] is the sub-list for method input_type
-	2,  // [2:2] is the sub-list for extension type_name
-	2,  // [2:2] is the sub-list for extension extendee
-	0,  // [0:2] is the sub-list for field type_name
+var file_koinos_chain_value_proto_depIdxs = []int32{
+	3, // 0: koinos.chain.value.message_value:type_name -> google.protobuf.Any
+	0, // 1: koinos.chain.list_value.value:type_name -> koinos.chain.value
+	2, // [2:2] is the sub-list for method output_type
+	2, // [2:2] is the sub-list for method input_type
+	2, // [2:2] is the sub-list for extension type_name
+	2, // [2:2] is the sub-list for extension extendee
+	0, // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_koinos_protocol_value_proto_init() }
-func file_koinos_protocol_value_proto_init() {
-	if File_koinos_protocol_value_proto != nil {
+func init() { file_koinos_chain_value_proto_init() }
+func file_koinos_chain_value_proto_init() {
+	if File_koinos_chain_value_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_koinos_protocol_value_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DoubleValue); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FloatValue); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Int32Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Int64Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Uint32Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Uint64Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Sint32Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Sint64Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Fixed32Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Fixed64Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Sfixed32Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Sfixed64Value); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BoolValue); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StringValue); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BytesValue); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*EnumValue); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_koinos_protocol_value_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_koinos_chain_value_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Value); i {
 			case 0:
 				return &v.state
@@ -1454,7 +507,19 @@ func file_koinos_protocol_value_proto_init() {
 				return nil
 			}
 		}
-		file_koinos_protocol_value_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_koinos_chain_value_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*EnumValue); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_koinos_chain_value_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ListValue); i {
 			case 0:
 				return &v.state
@@ -1467,8 +532,8 @@ func file_koinos_protocol_value_proto_init() {
 			}
 		}
 	}
-	file_koinos_protocol_value_proto_msgTypes[16].OneofWrappers = []interface{}{
-		(*Value_AnyValue)(nil),
+	file_koinos_chain_value_proto_msgTypes[0].OneofWrappers = []interface{}{
+		(*Value_MessageValue)(nil),
 		(*Value_DoubleValue)(nil),
 		(*Value_FloatValue)(nil),
 		(*Value_Int32Value)(nil),
@@ -1489,18 +554,18 @@ func file_koinos_protocol_value_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_koinos_protocol_value_proto_rawDesc,
+			RawDescriptor: file_koinos_chain_value_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   18,
+			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_koinos_protocol_value_proto_goTypes,
-		DependencyIndexes: file_koinos_protocol_value_proto_depIdxs,
-		MessageInfos:      file_koinos_protocol_value_proto_msgTypes,
+		GoTypes:           file_koinos_chain_value_proto_goTypes,
+		DependencyIndexes: file_koinos_chain_value_proto_depIdxs,
+		MessageInfos:      file_koinos_chain_value_proto_msgTypes,
 	}.Build()
-	File_koinos_protocol_value_proto = out.File
-	file_koinos_protocol_value_proto_rawDesc = nil
-	file_koinos_protocol_value_proto_goTypes = nil
-	file_koinos_protocol_value_proto_depIdxs = nil
+	File_koinos_chain_value_proto = out.File
+	file_koinos_chain_value_proto_rawDesc = nil
+	file_koinos_chain_value_proto_goTypes = nil
+	file_koinos_chain_value_proto_depIdxs = nil
 }

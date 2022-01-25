@@ -21,95 +21,6 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type Dsa int32
-
-const (
-	Dsa_ecdsa_secp256k1 Dsa = 0
-)
-
-// Enum value maps for Dsa.
-var (
-	Dsa_name = map[int32]string{
-		0: "ecdsa_secp256k1",
-	}
-	Dsa_value = map[string]int32{
-		"ecdsa_secp256k1": 0,
-	}
-)
-
-func (x Dsa) Enum() *Dsa {
-	p := new(Dsa)
-	*p = x
-	return p
-}
-
-func (x Dsa) String() string {
-	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
-}
-
-func (Dsa) Descriptor() protoreflect.EnumDescriptor {
-	return file_koinos_protocol_protocol_proto_enumTypes[0].Descriptor()
-}
-
-func (Dsa) Type() protoreflect.EnumType {
-	return &file_koinos_protocol_protocol_proto_enumTypes[0]
-}
-
-func (x Dsa) Number() protoreflect.EnumNumber {
-	return protoreflect.EnumNumber(x)
-}
-
-// Deprecated: Use Dsa.Descriptor instead.
-func (Dsa) EnumDescriptor() ([]byte, []int) {
-	return file_koinos_protocol_protocol_proto_rawDescGZIP(), []int{0}
-}
-
-type SystemAuthorizationType int32
-
-const (
-	SystemAuthorizationType_set_system_contract SystemAuthorizationType = 0
-	SystemAuthorizationType_set_system_call     SystemAuthorizationType = 1
-)
-
-// Enum value maps for SystemAuthorizationType.
-var (
-	SystemAuthorizationType_name = map[int32]string{
-		0: "set_system_contract",
-		1: "set_system_call",
-	}
-	SystemAuthorizationType_value = map[string]int32{
-		"set_system_contract": 0,
-		"set_system_call":     1,
-	}
-)
-
-func (x SystemAuthorizationType) Enum() *SystemAuthorizationType {
-	p := new(SystemAuthorizationType)
-	*p = x
-	return p
-}
-
-func (x SystemAuthorizationType) String() string {
-	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
-}
-
-func (SystemAuthorizationType) Descriptor() protoreflect.EnumDescriptor {
-	return file_koinos_protocol_protocol_proto_enumTypes[1].Descriptor()
-}
-
-func (SystemAuthorizationType) Type() protoreflect.EnumType {
-	return &file_koinos_protocol_protocol_proto_enumTypes[1]
-}
-
-func (x SystemAuthorizationType) Number() protoreflect.EnumNumber {
-	return protoreflect.EnumNumber(x)
-}
-
-// Deprecated: Use SystemAuthorizationType.Descriptor instead.
-func (SystemAuthorizationType) EnumDescriptor() ([]byte, []int) {
-	return file_koinos_protocol_protocol_proto_rawDescGZIP(), []int{1}
-}
-
 type EventData struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1438,17 +1349,11 @@ var file_koinos_protocol_protocol_proto_rawDesc = []byte{
 	0x72, 0x65, 0x63, 0x65, 0x69, 0x70, 0x74, 0x52, 0x13, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63,
 	0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x63, 0x65, 0x69, 0x70, 0x74, 0x73, 0x12, 0x12, 0x0a, 0x04,
 	0x6c, 0x6f, 0x67, 0x73, 0x18, 0x09, 0x20, 0x03, 0x28, 0x09, 0x52, 0x04, 0x6c, 0x6f, 0x67, 0x73,
-	0x2a, 0x1a, 0x0a, 0x03, 0x64, 0x73, 0x61, 0x12, 0x13, 0x0a, 0x0f, 0x65, 0x63, 0x64, 0x73, 0x61,
-	0x5f, 0x73, 0x65, 0x63, 0x70, 0x32, 0x35, 0x36, 0x6b, 0x31, 0x10, 0x00, 0x2a, 0x49, 0x0a, 0x19,
-	0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61,
-	0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x12, 0x17, 0x0a, 0x13, 0x73, 0x65, 0x74,
-	0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
-	0x10, 0x00, 0x12, 0x13, 0x0a, 0x0f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d,
-	0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x10, 0x01, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75,
-	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b, 0x6f, 0x69,
-	0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67,
-	0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
-	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b,
+	0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -1463,40 +1368,37 @@ func file_koinos_protocol_protocol_proto_rawDescGZIP() []byte {
 	return file_koinos_protocol_protocol_proto_rawDescData
 }
 
-var file_koinos_protocol_protocol_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_koinos_protocol_protocol_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_koinos_protocol_protocol_proto_goTypes = []interface{}{
-	(Dsa)(0),                           // 0: koinos.protocol.dsa
-	(SystemAuthorizationType)(0),       // 1: koinos.protocol.system_authorization_type
-	(*EventData)(nil),                  // 2: koinos.protocol.event_data
-	(*ContractCallBundle)(nil),         // 3: koinos.protocol.contract_call_bundle
-	(*SystemCallTarget)(nil),           // 4: koinos.protocol.system_call_target
-	(*UploadContractOperation)(nil),    // 5: koinos.protocol.upload_contract_operation
-	(*CallContractOperation)(nil),      // 6: koinos.protocol.call_contract_operation
-	(*SetSystemCallOperation)(nil),     // 7: koinos.protocol.set_system_call_operation
-	(*SetSystemContractOperation)(nil), // 8: koinos.protocol.set_system_contract_operation
-	(*Operation)(nil),                  // 9: koinos.protocol.operation
-	(*TransactionHeader)(nil),          // 10: koinos.protocol.transaction_header
-	(*Transaction)(nil),                // 11: koinos.protocol.transaction
-	(*TransactionReceipt)(nil),         // 12: koinos.protocol.transaction_receipt
-	(*BlockHeader)(nil),                // 13: koinos.protocol.block_header
-	(*Block)(nil),                      // 14: koinos.protocol.block
-	(*BlockReceipt)(nil),               // 15: koinos.protocol.block_receipt
+	(*EventData)(nil),                  // 0: koinos.protocol.event_data
+	(*ContractCallBundle)(nil),         // 1: koinos.protocol.contract_call_bundle
+	(*SystemCallTarget)(nil),           // 2: koinos.protocol.system_call_target
+	(*UploadContractOperation)(nil),    // 3: koinos.protocol.upload_contract_operation
+	(*CallContractOperation)(nil),      // 4: koinos.protocol.call_contract_operation
+	(*SetSystemCallOperation)(nil),     // 5: koinos.protocol.set_system_call_operation
+	(*SetSystemContractOperation)(nil), // 6: koinos.protocol.set_system_contract_operation
+	(*Operation)(nil),                  // 7: koinos.protocol.operation
+	(*TransactionHeader)(nil),          // 8: koinos.protocol.transaction_header
+	(*Transaction)(nil),                // 9: koinos.protocol.transaction
+	(*TransactionReceipt)(nil),         // 10: koinos.protocol.transaction_receipt
+	(*BlockHeader)(nil),                // 11: koinos.protocol.block_header
+	(*Block)(nil),                      // 12: koinos.protocol.block
+	(*BlockReceipt)(nil),               // 13: koinos.protocol.block_receipt
 }
 var file_koinos_protocol_protocol_proto_depIdxs = []int32{
-	3,  // 0: koinos.protocol.system_call_target.system_call_bundle:type_name -> koinos.protocol.contract_call_bundle
-	4,  // 1: koinos.protocol.set_system_call_operation.target:type_name -> koinos.protocol.system_call_target
-	5,  // 2: koinos.protocol.operation.upload_contract:type_name -> koinos.protocol.upload_contract_operation
-	6,  // 3: koinos.protocol.operation.call_contract:type_name -> koinos.protocol.call_contract_operation
-	7,  // 4: koinos.protocol.operation.set_system_call:type_name -> koinos.protocol.set_system_call_operation
-	8,  // 5: koinos.protocol.operation.set_system_contract:type_name -> koinos.protocol.set_system_contract_operation
-	10, // 6: koinos.protocol.transaction.header:type_name -> koinos.protocol.transaction_header
-	9,  // 7: koinos.protocol.transaction.operations:type_name -> koinos.protocol.operation
-	2,  // 8: koinos.protocol.transaction_receipt.events:type_name -> koinos.protocol.event_data
-	13, // 9: koinos.protocol.block.header:type_name -> koinos.protocol.block_header
-	11, // 10: koinos.protocol.block.transactions:type_name -> koinos.protocol.transaction
-	2,  // 11: koinos.protocol.block_receipt.events:type_name -> koinos.protocol.event_data
-	12, // 12: koinos.protocol.block_receipt.transaction_receipts:type_name -> koinos.protocol.transaction_receipt
+	1,  // 0: koinos.protocol.system_call_target.system_call_bundle:type_name -> koinos.protocol.contract_call_bundle
+	2,  // 1: koinos.protocol.set_system_call_operation.target:type_name -> koinos.protocol.system_call_target
+	3,  // 2: koinos.protocol.operation.upload_contract:type_name -> koinos.protocol.upload_contract_operation
+	4,  // 3: koinos.protocol.operation.call_contract:type_name -> koinos.protocol.call_contract_operation
+	5,  // 4: koinos.protocol.operation.set_system_call:type_name -> koinos.protocol.set_system_call_operation
+	6,  // 5: koinos.protocol.operation.set_system_contract:type_name -> koinos.protocol.set_system_contract_operation
+	8,  // 6: koinos.protocol.transaction.header:type_name -> koinos.protocol.transaction_header
+	7,  // 7: koinos.protocol.transaction.operations:type_name -> koinos.protocol.operation
+	0,  // 8: koinos.protocol.transaction_receipt.events:type_name -> koinos.protocol.event_data
+	11, // 9: koinos.protocol.block.header:type_name -> koinos.protocol.block_header
+	9,  // 10: koinos.protocol.block.transactions:type_name -> koinos.protocol.transaction
+	0,  // 11: koinos.protocol.block_receipt.events:type_name -> koinos.protocol.event_data
+	10, // 12: koinos.protocol.block_receipt.transaction_receipts:type_name -> koinos.protocol.transaction_receipt
 	13, // [13:13] is the sub-list for method output_type
 	13, // [13:13] is the sub-list for method input_type
 	13, // [13:13] is the sub-list for extension type_name
@@ -1694,14 +1596,13 @@ func file_koinos_protocol_protocol_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_koinos_protocol_protocol_proto_rawDesc,
-			NumEnums:      2,
+			NumEnums:      0,
 			NumMessages:   14,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
 		GoTypes:           file_koinos_protocol_protocol_proto_goTypes,
 		DependencyIndexes: file_koinos_protocol_protocol_proto_depIdxs,
-		EnumInfos:         file_koinos_protocol_protocol_proto_enumTypes,
 		MessageInfos:      file_koinos_protocol_protocol_proto_msgTypes,
 	}.Build()
 	File_koinos_protocol_protocol_proto = out.File
