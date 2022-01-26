@@ -289,6 +289,53 @@ func (x *ForkHeads) GetHeads() []*koinos.BlockTopology {
 	return nil
 }
 
+type GossipStatus struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Enabled bool `protobuf:"varint,1,opt,name=enabled,proto3" json:"enabled,omitempty"`
+}
+
+func (x *GossipStatus) Reset() {
+	*x = GossipStatus{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_broadcast_broadcast_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GossipStatus) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GossipStatus) ProtoMessage() {}
+
+func (x *GossipStatus) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_broadcast_broadcast_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GossipStatus.ProtoReflect.Descriptor instead.
+func (*GossipStatus) Descriptor() ([]byte, []int) {
+	return file_koinos_broadcast_broadcast_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *GossipStatus) GetEnabled() bool {
+	if x != nil {
+		return x.Enabled
+	}
+	return false
+}
+
 var File_koinos_broadcast_broadcast_proto protoreflect.FileDescriptor
 
 var file_koinos_broadcast_broadcast_proto_rawDesc = []byte{
@@ -335,11 +382,13 @@ var file_koinos_broadcast_broadcast_proto_rawDesc = []byte{
 	0x6f, 0x63, 0x6b, 0x12, 0x2c, 0x0a, 0x05, 0x68, 0x65, 0x61, 0x64, 0x73, 0x18, 0x02, 0x20, 0x03,
 	0x28, 0x0b, 0x32, 0x16, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x62, 0x6c, 0x6f, 0x63,
 	0x6b, 0x5f, 0x74, 0x6f, 0x70, 0x6f, 0x6c, 0x6f, 0x67, 0x79, 0x52, 0x05, 0x68, 0x65, 0x61, 0x64,
-	0x73, 0x42, 0x38, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
-	0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
-	0x73, 0x2f, 0x62, 0x72, 0x6f, 0x61, 0x64, 0x63, 0x61, 0x73, 0x74, 0x62, 0x06, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x33,
+	0x73, 0x22, 0x29, 0x0a, 0x0d, 0x67, 0x6f, 0x73, 0x73, 0x69, 0x70, 0x5f, 0x73, 0x74, 0x61, 0x74,
+	0x75, 0x73, 0x12, 0x18, 0x0a, 0x07, 0x65, 0x6e, 0x61, 0x62, 0x6c, 0x65, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x08, 0x52, 0x07, 0x65, 0x6e, 0x61, 0x62, 0x6c, 0x65, 0x64, 0x42, 0x38, 0x5a, 0x36,
+	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
+	0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67,
+	0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x62, 0x72, 0x6f,
+	0x61, 0x64, 0x63, 0x61, 0x73, 0x74, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -354,32 +403,33 @@ func file_koinos_broadcast_broadcast_proto_rawDescGZIP() []byte {
 	return file_koinos_broadcast_broadcast_proto_rawDescData
 }
 
-var file_koinos_broadcast_broadcast_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_koinos_broadcast_broadcast_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_koinos_broadcast_broadcast_proto_goTypes = []interface{}{
 	(*TransactionAccepted)(nil),         // 0: koinos.broadcast.transaction_accepted
 	(*TransactionFailed)(nil),           // 1: koinos.broadcast.transaction_failed
 	(*BlockAccepted)(nil),               // 2: koinos.broadcast.block_accepted
 	(*BlockIrreversible)(nil),           // 3: koinos.broadcast.block_irreversible
 	(*ForkHeads)(nil),                   // 4: koinos.broadcast.fork_heads
-	(*protocol.Transaction)(nil),        // 5: koinos.protocol.transaction
-	(*protocol.TransactionReceipt)(nil), // 6: koinos.protocol.transaction_receipt
-	(*protocol.Block)(nil),              // 7: koinos.protocol.block
-	(*protocol.BlockReceipt)(nil),       // 8: koinos.protocol.block_receipt
-	(*koinos.BlockTopology)(nil),        // 9: koinos.block_topology
+	(*GossipStatus)(nil),                // 5: koinos.broadcast.gossip_status
+	(*protocol.Transaction)(nil),        // 6: koinos.protocol.transaction
+	(*protocol.TransactionReceipt)(nil), // 7: koinos.protocol.transaction_receipt
+	(*protocol.Block)(nil),              // 8: koinos.protocol.block
+	(*protocol.BlockReceipt)(nil),       // 9: koinos.protocol.block_receipt
+	(*koinos.BlockTopology)(nil),        // 10: koinos.block_topology
 }
 var file_koinos_broadcast_broadcast_proto_depIdxs = []int32{
-	5, // 0: koinos.broadcast.transaction_accepted.transaction:type_name -> koinos.protocol.transaction
-	6, // 1: koinos.broadcast.transaction_accepted.receipt:type_name -> koinos.protocol.transaction_receipt
-	7, // 2: koinos.broadcast.block_accepted.block:type_name -> koinos.protocol.block
-	8, // 3: koinos.broadcast.block_accepted.receipt:type_name -> koinos.protocol.block_receipt
-	9, // 4: koinos.broadcast.block_irreversible.topology:type_name -> koinos.block_topology
-	9, // 5: koinos.broadcast.fork_heads.last_irreversible_block:type_name -> koinos.block_topology
-	9, // 6: koinos.broadcast.fork_heads.heads:type_name -> koinos.block_topology
-	7, // [7:7] is the sub-list for method output_type
-	7, // [7:7] is the sub-list for method input_type
-	7, // [7:7] is the sub-list for extension type_name
-	7, // [7:7] is the sub-list for extension extendee
-	0, // [0:7] is the sub-list for field type_name
+	6,  // 0: koinos.broadcast.transaction_accepted.transaction:type_name -> koinos.protocol.transaction
+	7,  // 1: koinos.broadcast.transaction_accepted.receipt:type_name -> koinos.protocol.transaction_receipt
+	8,  // 2: koinos.broadcast.block_accepted.block:type_name -> koinos.protocol.block
+	9,  // 3: koinos.broadcast.block_accepted.receipt:type_name -> koinos.protocol.block_receipt
+	10, // 4: koinos.broadcast.block_irreversible.topology:type_name -> koinos.block_topology
+	10, // 5: koinos.broadcast.fork_heads.last_irreversible_block:type_name -> koinos.block_topology
+	10, // 6: koinos.broadcast.fork_heads.heads:type_name -> koinos.block_topology
+	7,  // [7:7] is the sub-list for method output_type
+	7,  // [7:7] is the sub-list for method input_type
+	7,  // [7:7] is the sub-list for extension type_name
+	7,  // [7:7] is the sub-list for extension extendee
+	0,  // [0:7] is the sub-list for field type_name
 }
 
 func init() { file_koinos_broadcast_broadcast_proto_init() }
@@ -448,6 +498,18 @@ func file_koinos_broadcast_broadcast_proto_init() {
 				return nil
 			}
 		}
+		file_koinos_broadcast_broadcast_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GossipStatus); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -455,7 +517,7 @@ func file_koinos_broadcast_broadcast_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_koinos_broadcast_broadcast_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
