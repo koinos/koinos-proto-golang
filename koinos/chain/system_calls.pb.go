@@ -111,6 +111,176 @@ func (SystemAuthorizationType) EnumDescriptor() ([]byte, []int) {
 	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{1}
 }
 
+type GetTransactionArguments struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *GetTransactionArguments) Reset() {
+	*x = GetTransactionArguments{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetTransactionArguments) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetTransactionArguments) ProtoMessage() {}
+
+func (x *GetTransactionArguments) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetTransactionArguments.ProtoReflect.Descriptor instead.
+func (*GetTransactionArguments) Descriptor() ([]byte, []int) {
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{0}
+}
+
+type GetTransactionResult struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Value *protocol.Transaction `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (x *GetTransactionResult) Reset() {
+	*x = GetTransactionResult{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetTransactionResult) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetTransactionResult) ProtoMessage() {}
+
+func (x *GetTransactionResult) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetTransactionResult.ProtoReflect.Descriptor instead.
+func (*GetTransactionResult) Descriptor() ([]byte, []int) {
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *GetTransactionResult) GetValue() *protocol.Transaction {
+	if x != nil {
+		return x.Value
+	}
+	return nil
+}
+
+type GetBlockArguments struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *GetBlockArguments) Reset() {
+	*x = GetBlockArguments{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetBlockArguments) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetBlockArguments) ProtoMessage() {}
+
+func (x *GetBlockArguments) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetBlockArguments.ProtoReflect.Descriptor instead.
+func (*GetBlockArguments) Descriptor() ([]byte, []int) {
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{2}
+}
+
+type GetBlockResult struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Value *protocol.Block `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (x *GetBlockResult) Reset() {
+	*x = GetBlockResult{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetBlockResult) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetBlockResult) ProtoMessage() {}
+
+func (x *GetBlockResult) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetBlockResult.ProtoReflect.Descriptor instead.
+func (*GetBlockResult) Descriptor() ([]byte, []int) {
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *GetBlockResult) GetValue() *protocol.Block {
+	if x != nil {
+		return x.Value
+	}
+	return nil
+}
+
 type AuthorizeSystemArguments struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -122,7 +292,7 @@ type AuthorizeSystemArguments struct {
 func (x *AuthorizeSystemArguments) Reset() {
 	*x = AuthorizeSystemArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[0]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -135,7 +305,7 @@ func (x *AuthorizeSystemArguments) String() string {
 func (*AuthorizeSystemArguments) ProtoMessage() {}
 
 func (x *AuthorizeSystemArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[0]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -148,7 +318,7 @@ func (x *AuthorizeSystemArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AuthorizeSystemArguments.ProtoReflect.Descriptor instead.
 func (*AuthorizeSystemArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{0}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *AuthorizeSystemArguments) GetType() SystemAuthorizationType {
@@ -169,7 +339,7 @@ type AuthorizeSystemResult struct {
 func (x *AuthorizeSystemResult) Reset() {
 	*x = AuthorizeSystemResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[1]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -182,7 +352,7 @@ func (x *AuthorizeSystemResult) String() string {
 func (*AuthorizeSystemResult) ProtoMessage() {}
 
 func (x *AuthorizeSystemResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[1]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -195,7 +365,7 @@ func (x *AuthorizeSystemResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AuthorizeSystemResult.ProtoReflect.Descriptor instead.
 func (*AuthorizeSystemResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{1}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *AuthorizeSystemResult) GetValue() bool {
@@ -219,7 +389,7 @@ type VerifySignatureArguments struct {
 func (x *VerifySignatureArguments) Reset() {
 	*x = VerifySignatureArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[2]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -232,7 +402,7 @@ func (x *VerifySignatureArguments) String() string {
 func (*VerifySignatureArguments) ProtoMessage() {}
 
 func (x *VerifySignatureArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[2]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -245,7 +415,7 @@ func (x *VerifySignatureArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifySignatureArguments.ProtoReflect.Descriptor instead.
 func (*VerifySignatureArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{2}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *VerifySignatureArguments) GetType() Dsa {
@@ -287,7 +457,7 @@ type VerifySignatureResult struct {
 func (x *VerifySignatureResult) Reset() {
 	*x = VerifySignatureResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[3]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -300,7 +470,7 @@ func (x *VerifySignatureResult) String() string {
 func (*VerifySignatureResult) ProtoMessage() {}
 
 func (x *VerifySignatureResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[3]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -313,7 +483,7 @@ func (x *VerifySignatureResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifySignatureResult.ProtoReflect.Descriptor instead.
 func (*VerifySignatureResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{3}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *VerifySignatureResult) GetValue() bool {
@@ -336,7 +506,7 @@ type RecoverPublicKeyArguments struct {
 func (x *RecoverPublicKeyArguments) Reset() {
 	*x = RecoverPublicKeyArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[4]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -349,7 +519,7 @@ func (x *RecoverPublicKeyArguments) String() string {
 func (*RecoverPublicKeyArguments) ProtoMessage() {}
 
 func (x *RecoverPublicKeyArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[4]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -362,7 +532,7 @@ func (x *RecoverPublicKeyArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RecoverPublicKeyArguments.ProtoReflect.Descriptor instead.
 func (*RecoverPublicKeyArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{4}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *RecoverPublicKeyArguments) GetType() Dsa {
@@ -397,7 +567,7 @@ type RecoverPublicKeyResult struct {
 func (x *RecoverPublicKeyResult) Reset() {
 	*x = RecoverPublicKeyResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[5]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -410,7 +580,7 @@ func (x *RecoverPublicKeyResult) String() string {
 func (*RecoverPublicKeyResult) ProtoMessage() {}
 
 func (x *RecoverPublicKeyResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[5]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -423,7 +593,7 @@ func (x *RecoverPublicKeyResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RecoverPublicKeyResult.ProtoReflect.Descriptor instead.
 func (*RecoverPublicKeyResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{5}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *RecoverPublicKeyResult) GetValue() []byte {
@@ -444,7 +614,7 @@ type GetTransactionFieldArguments struct {
 func (x *GetTransactionFieldArguments) Reset() {
 	*x = GetTransactionFieldArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[6]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -457,7 +627,7 @@ func (x *GetTransactionFieldArguments) String() string {
 func (*GetTransactionFieldArguments) ProtoMessage() {}
 
 func (x *GetTransactionFieldArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[6]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -470,7 +640,7 @@ func (x *GetTransactionFieldArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTransactionFieldArguments.ProtoReflect.Descriptor instead.
 func (*GetTransactionFieldArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{6}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *GetTransactionFieldArguments) GetField() string {
@@ -491,7 +661,7 @@ type GetTransactionFieldResult struct {
 func (x *GetTransactionFieldResult) Reset() {
 	*x = GetTransactionFieldResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[7]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -504,7 +674,7 @@ func (x *GetTransactionFieldResult) String() string {
 func (*GetTransactionFieldResult) ProtoMessage() {}
 
 func (x *GetTransactionFieldResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[7]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -517,7 +687,7 @@ func (x *GetTransactionFieldResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTransactionFieldResult.ProtoReflect.Descriptor instead.
 func (*GetTransactionFieldResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{7}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *GetTransactionFieldResult) GetValue() *protocol.ValueType {
@@ -538,7 +708,7 @@ type GetBlockFieldArguments struct {
 func (x *GetBlockFieldArguments) Reset() {
 	*x = GetBlockFieldArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[8]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -551,7 +721,7 @@ func (x *GetBlockFieldArguments) String() string {
 func (*GetBlockFieldArguments) ProtoMessage() {}
 
 func (x *GetBlockFieldArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[8]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -564,7 +734,7 @@ func (x *GetBlockFieldArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetBlockFieldArguments.ProtoReflect.Descriptor instead.
 func (*GetBlockFieldArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{8}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *GetBlockFieldArguments) GetField() string {
@@ -585,7 +755,7 @@ type GetBlockFieldResult struct {
 func (x *GetBlockFieldResult) Reset() {
 	*x = GetBlockFieldResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[9]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -598,7 +768,7 @@ func (x *GetBlockFieldResult) String() string {
 func (*GetBlockFieldResult) ProtoMessage() {}
 
 func (x *GetBlockFieldResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[9]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -611,7 +781,7 @@ func (x *GetBlockFieldResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetBlockFieldResult.ProtoReflect.Descriptor instead.
 func (*GetBlockFieldResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{9}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *GetBlockFieldResult) GetValue() *protocol.ValueType {
@@ -634,7 +804,7 @@ type EventArguments struct {
 func (x *EventArguments) Reset() {
 	*x = EventArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[10]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -647,7 +817,7 @@ func (x *EventArguments) String() string {
 func (*EventArguments) ProtoMessage() {}
 
 func (x *EventArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[10]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -660,7 +830,7 @@ func (x *EventArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EventArguments.ProtoReflect.Descriptor instead.
 func (*EventArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{10}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *EventArguments) GetName() string {
@@ -693,7 +863,7 @@ type EventResult struct {
 func (x *EventResult) Reset() {
 	*x = EventResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[11]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -706,7 +876,7 @@ func (x *EventResult) String() string {
 func (*EventResult) ProtoMessage() {}
 
 func (x *EventResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[11]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -719,7 +889,7 @@ func (x *EventResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EventResult.ProtoReflect.Descriptor instead.
 func (*EventResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{11}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{15}
 }
 
 type LogArguments struct {
@@ -733,7 +903,7 @@ type LogArguments struct {
 func (x *LogArguments) Reset() {
 	*x = LogArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[12]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -746,7 +916,7 @@ func (x *LogArguments) String() string {
 func (*LogArguments) ProtoMessage() {}
 
 func (x *LogArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[12]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -759,7 +929,7 @@ func (x *LogArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogArguments.ProtoReflect.Descriptor instead.
 func (*LogArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{12}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *LogArguments) GetMessage() string {
@@ -778,7 +948,7 @@ type LogResult struct {
 func (x *LogResult) Reset() {
 	*x = LogResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[13]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -791,7 +961,7 @@ func (x *LogResult) String() string {
 func (*LogResult) ProtoMessage() {}
 
 func (x *LogResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[13]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -804,7 +974,7 @@ func (x *LogResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogResult.ProtoReflect.Descriptor instead.
 func (*LogResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{13}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{17}
 }
 
 type ProcessBlockSignatureArguments struct {
@@ -820,7 +990,7 @@ type ProcessBlockSignatureArguments struct {
 func (x *ProcessBlockSignatureArguments) Reset() {
 	*x = ProcessBlockSignatureArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[14]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -833,7 +1003,7 @@ func (x *ProcessBlockSignatureArguments) String() string {
 func (*ProcessBlockSignatureArguments) ProtoMessage() {}
 
 func (x *ProcessBlockSignatureArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[14]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -846,7 +1016,7 @@ func (x *ProcessBlockSignatureArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProcessBlockSignatureArguments.ProtoReflect.Descriptor instead.
 func (*ProcessBlockSignatureArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{14}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *ProcessBlockSignatureArguments) GetDigest() []byte {
@@ -881,7 +1051,7 @@ type ProcessBlockSignatureResult struct {
 func (x *ProcessBlockSignatureResult) Reset() {
 	*x = ProcessBlockSignatureResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[15]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -894,7 +1064,7 @@ func (x *ProcessBlockSignatureResult) String() string {
 func (*ProcessBlockSignatureResult) ProtoMessage() {}
 
 func (x *ProcessBlockSignatureResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[15]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -907,7 +1077,7 @@ func (x *ProcessBlockSignatureResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProcessBlockSignatureResult.ProtoReflect.Descriptor instead.
 func (*ProcessBlockSignatureResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{15}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *ProcessBlockSignatureResult) GetValue() bool {
@@ -929,7 +1099,7 @@ type VerifyMerkleRootArguments struct {
 func (x *VerifyMerkleRootArguments) Reset() {
 	*x = VerifyMerkleRootArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[16]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -942,7 +1112,7 @@ func (x *VerifyMerkleRootArguments) String() string {
 func (*VerifyMerkleRootArguments) ProtoMessage() {}
 
 func (x *VerifyMerkleRootArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[16]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -955,7 +1125,7 @@ func (x *VerifyMerkleRootArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyMerkleRootArguments.ProtoReflect.Descriptor instead.
 func (*VerifyMerkleRootArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{16}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *VerifyMerkleRootArguments) GetRoot() []byte {
@@ -983,7 +1153,7 @@ type VerifyMerkleRootResult struct {
 func (x *VerifyMerkleRootResult) Reset() {
 	*x = VerifyMerkleRootResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[17]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -996,7 +1166,7 @@ func (x *VerifyMerkleRootResult) String() string {
 func (*VerifyMerkleRootResult) ProtoMessage() {}
 
 func (x *VerifyMerkleRootResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[17]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1009,7 +1179,7 @@ func (x *VerifyMerkleRootResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyMerkleRootResult.ProtoReflect.Descriptor instead.
 func (*VerifyMerkleRootResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{17}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *VerifyMerkleRootResult) GetValue() bool {
@@ -1030,7 +1200,7 @@ type ApplyBlockArguments struct {
 func (x *ApplyBlockArguments) Reset() {
 	*x = ApplyBlockArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[18]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1043,7 +1213,7 @@ func (x *ApplyBlockArguments) String() string {
 func (*ApplyBlockArguments) ProtoMessage() {}
 
 func (x *ApplyBlockArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[18]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1056,7 +1226,7 @@ func (x *ApplyBlockArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyBlockArguments.ProtoReflect.Descriptor instead.
 func (*ApplyBlockArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{18}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *ApplyBlockArguments) GetBlock() *protocol.Block {
@@ -1075,7 +1245,7 @@ type ApplyBlockResult struct {
 func (x *ApplyBlockResult) Reset() {
 	*x = ApplyBlockResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[19]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1088,7 +1258,7 @@ func (x *ApplyBlockResult) String() string {
 func (*ApplyBlockResult) ProtoMessage() {}
 
 func (x *ApplyBlockResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[19]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1101,7 +1271,7 @@ func (x *ApplyBlockResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyBlockResult.ProtoReflect.Descriptor instead.
 func (*ApplyBlockResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{19}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{23}
 }
 
 type ApplyTransactionArguments struct {
@@ -1115,7 +1285,7 @@ type ApplyTransactionArguments struct {
 func (x *ApplyTransactionArguments) Reset() {
 	*x = ApplyTransactionArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[20]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1128,7 +1298,7 @@ func (x *ApplyTransactionArguments) String() string {
 func (*ApplyTransactionArguments) ProtoMessage() {}
 
 func (x *ApplyTransactionArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[20]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1141,7 +1311,7 @@ func (x *ApplyTransactionArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyTransactionArguments.ProtoReflect.Descriptor instead.
 func (*ApplyTransactionArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{20}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *ApplyTransactionArguments) GetTransaction() *protocol.Transaction {
@@ -1160,7 +1330,7 @@ type ApplyTransactionResult struct {
 func (x *ApplyTransactionResult) Reset() {
 	*x = ApplyTransactionResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[21]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1173,7 +1343,7 @@ func (x *ApplyTransactionResult) String() string {
 func (*ApplyTransactionResult) ProtoMessage() {}
 
 func (x *ApplyTransactionResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[21]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1186,7 +1356,7 @@ func (x *ApplyTransactionResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyTransactionResult.ProtoReflect.Descriptor instead.
 func (*ApplyTransactionResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{21}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{25}
 }
 
 type ApplyUploadContractOperationArguments struct {
@@ -1200,7 +1370,7 @@ type ApplyUploadContractOperationArguments struct {
 func (x *ApplyUploadContractOperationArguments) Reset() {
 	*x = ApplyUploadContractOperationArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[22]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1213,7 +1383,7 @@ func (x *ApplyUploadContractOperationArguments) String() string {
 func (*ApplyUploadContractOperationArguments) ProtoMessage() {}
 
 func (x *ApplyUploadContractOperationArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[22]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1226,7 +1396,7 @@ func (x *ApplyUploadContractOperationArguments) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use ApplyUploadContractOperationArguments.ProtoReflect.Descriptor instead.
 func (*ApplyUploadContractOperationArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{22}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *ApplyUploadContractOperationArguments) GetOp() *protocol.UploadContractOperation {
@@ -1245,7 +1415,7 @@ type ApplyUploadContractOperationResult struct {
 func (x *ApplyUploadContractOperationResult) Reset() {
 	*x = ApplyUploadContractOperationResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[23]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1258,7 +1428,7 @@ func (x *ApplyUploadContractOperationResult) String() string {
 func (*ApplyUploadContractOperationResult) ProtoMessage() {}
 
 func (x *ApplyUploadContractOperationResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[23]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1271,7 +1441,7 @@ func (x *ApplyUploadContractOperationResult) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use ApplyUploadContractOperationResult.ProtoReflect.Descriptor instead.
 func (*ApplyUploadContractOperationResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{23}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{27}
 }
 
 type ApplyCallContractOperationArguments struct {
@@ -1285,7 +1455,7 @@ type ApplyCallContractOperationArguments struct {
 func (x *ApplyCallContractOperationArguments) Reset() {
 	*x = ApplyCallContractOperationArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[24]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1298,7 +1468,7 @@ func (x *ApplyCallContractOperationArguments) String() string {
 func (*ApplyCallContractOperationArguments) ProtoMessage() {}
 
 func (x *ApplyCallContractOperationArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[24]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1311,7 +1481,7 @@ func (x *ApplyCallContractOperationArguments) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use ApplyCallContractOperationArguments.ProtoReflect.Descriptor instead.
 func (*ApplyCallContractOperationArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{24}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *ApplyCallContractOperationArguments) GetOp() *protocol.CallContractOperation {
@@ -1330,7 +1500,7 @@ type ApplyCallContractOperationResult struct {
 func (x *ApplyCallContractOperationResult) Reset() {
 	*x = ApplyCallContractOperationResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[25]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1343,7 +1513,7 @@ func (x *ApplyCallContractOperationResult) String() string {
 func (*ApplyCallContractOperationResult) ProtoMessage() {}
 
 func (x *ApplyCallContractOperationResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[25]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1356,7 +1526,7 @@ func (x *ApplyCallContractOperationResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ApplyCallContractOperationResult.ProtoReflect.Descriptor instead.
 func (*ApplyCallContractOperationResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{25}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{29}
 }
 
 type ApplySetSystemCallOperationArguments struct {
@@ -1370,7 +1540,7 @@ type ApplySetSystemCallOperationArguments struct {
 func (x *ApplySetSystemCallOperationArguments) Reset() {
 	*x = ApplySetSystemCallOperationArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[26]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1383,7 +1553,7 @@ func (x *ApplySetSystemCallOperationArguments) String() string {
 func (*ApplySetSystemCallOperationArguments) ProtoMessage() {}
 
 func (x *ApplySetSystemCallOperationArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[26]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1396,7 +1566,7 @@ func (x *ApplySetSystemCallOperationArguments) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use ApplySetSystemCallOperationArguments.ProtoReflect.Descriptor instead.
 func (*ApplySetSystemCallOperationArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{26}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *ApplySetSystemCallOperationArguments) GetOp() *protocol.SetSystemCallOperation {
@@ -1415,7 +1585,7 @@ type ApplySetSystemCallOperationResult struct {
 func (x *ApplySetSystemCallOperationResult) Reset() {
 	*x = ApplySetSystemCallOperationResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[27]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1428,7 +1598,7 @@ func (x *ApplySetSystemCallOperationResult) String() string {
 func (*ApplySetSystemCallOperationResult) ProtoMessage() {}
 
 func (x *ApplySetSystemCallOperationResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[27]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1441,7 +1611,7 @@ func (x *ApplySetSystemCallOperationResult) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use ApplySetSystemCallOperationResult.ProtoReflect.Descriptor instead.
 func (*ApplySetSystemCallOperationResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{27}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{31}
 }
 
 type ApplySetSystemContractOperationArguments struct {
@@ -1455,7 +1625,7 @@ type ApplySetSystemContractOperationArguments struct {
 func (x *ApplySetSystemContractOperationArguments) Reset() {
 	*x = ApplySetSystemContractOperationArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[28]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1468,7 +1638,7 @@ func (x *ApplySetSystemContractOperationArguments) String() string {
 func (*ApplySetSystemContractOperationArguments) ProtoMessage() {}
 
 func (x *ApplySetSystemContractOperationArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[28]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1481,7 +1651,7 @@ func (x *ApplySetSystemContractOperationArguments) ProtoReflect() protoreflect.M
 
 // Deprecated: Use ApplySetSystemContractOperationArguments.ProtoReflect.Descriptor instead.
 func (*ApplySetSystemContractOperationArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{28}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *ApplySetSystemContractOperationArguments) GetOp() *protocol.SetSystemContractOperation {
@@ -1500,7 +1670,7 @@ type ApplySetSystemContractOperationResult struct {
 func (x *ApplySetSystemContractOperationResult) Reset() {
 	*x = ApplySetSystemContractOperationResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[29]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1513,7 +1683,7 @@ func (x *ApplySetSystemContractOperationResult) String() string {
 func (*ApplySetSystemContractOperationResult) ProtoMessage() {}
 
 func (x *ApplySetSystemContractOperationResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[29]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1526,7 +1696,7 @@ func (x *ApplySetSystemContractOperationResult) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use ApplySetSystemContractOperationResult.ProtoReflect.Descriptor instead.
 func (*ApplySetSystemContractOperationResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{29}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{33}
 }
 
 type PutObjectArguments struct {
@@ -1542,7 +1712,7 @@ type PutObjectArguments struct {
 func (x *PutObjectArguments) Reset() {
 	*x = PutObjectArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[30]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1555,7 +1725,7 @@ func (x *PutObjectArguments) String() string {
 func (*PutObjectArguments) ProtoMessage() {}
 
 func (x *PutObjectArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[30]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1568,7 +1738,7 @@ func (x *PutObjectArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PutObjectArguments.ProtoReflect.Descriptor instead.
 func (*PutObjectArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{30}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *PutObjectArguments) GetSpace() *ObjectSpace {
@@ -1603,7 +1773,7 @@ type PutObjectResult struct {
 func (x *PutObjectResult) Reset() {
 	*x = PutObjectResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[31]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[35]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1616,7 +1786,7 @@ func (x *PutObjectResult) String() string {
 func (*PutObjectResult) ProtoMessage() {}
 
 func (x *PutObjectResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[31]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[35]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1629,7 +1799,7 @@ func (x *PutObjectResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PutObjectResult.ProtoReflect.Descriptor instead.
 func (*PutObjectResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{31}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *PutObjectResult) GetValue() int32 {
@@ -1651,7 +1821,7 @@ type RemoveObjectArguments struct {
 func (x *RemoveObjectArguments) Reset() {
 	*x = RemoveObjectArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[32]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[36]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1664,7 +1834,7 @@ func (x *RemoveObjectArguments) String() string {
 func (*RemoveObjectArguments) ProtoMessage() {}
 
 func (x *RemoveObjectArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[32]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[36]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1677,7 +1847,7 @@ func (x *RemoveObjectArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RemoveObjectArguments.ProtoReflect.Descriptor instead.
 func (*RemoveObjectArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{32}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *RemoveObjectArguments) GetSpace() *ObjectSpace {
@@ -1703,7 +1873,7 @@ type RemoveObjectResult struct {
 func (x *RemoveObjectResult) Reset() {
 	*x = RemoveObjectResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[33]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[37]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1716,7 +1886,7 @@ func (x *RemoveObjectResult) String() string {
 func (*RemoveObjectResult) ProtoMessage() {}
 
 func (x *RemoveObjectResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[33]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[37]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1729,7 +1899,7 @@ func (x *RemoveObjectResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RemoveObjectResult.ProtoReflect.Descriptor instead.
 func (*RemoveObjectResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{33}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{37}
 }
 
 type GetObjectArguments struct {
@@ -1744,7 +1914,7 @@ type GetObjectArguments struct {
 func (x *GetObjectArguments) Reset() {
 	*x = GetObjectArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[34]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[38]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1757,7 +1927,7 @@ func (x *GetObjectArguments) String() string {
 func (*GetObjectArguments) ProtoMessage() {}
 
 func (x *GetObjectArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[34]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[38]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1770,7 +1940,7 @@ func (x *GetObjectArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetObjectArguments.ProtoReflect.Descriptor instead.
 func (*GetObjectArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{34}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{38}
 }
 
 func (x *GetObjectArguments) GetSpace() *ObjectSpace {
@@ -1800,7 +1970,7 @@ type DatabaseObject struct {
 func (x *DatabaseObject) Reset() {
 	*x = DatabaseObject{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[35]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[39]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1813,7 +1983,7 @@ func (x *DatabaseObject) String() string {
 func (*DatabaseObject) ProtoMessage() {}
 
 func (x *DatabaseObject) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[35]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[39]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1826,7 +1996,7 @@ func (x *DatabaseObject) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DatabaseObject.ProtoReflect.Descriptor instead.
 func (*DatabaseObject) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{35}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *DatabaseObject) GetExists() bool {
@@ -1861,7 +2031,7 @@ type GetObjectResult struct {
 func (x *GetObjectResult) Reset() {
 	*x = GetObjectResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[36]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[40]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1874,7 +2044,7 @@ func (x *GetObjectResult) String() string {
 func (*GetObjectResult) ProtoMessage() {}
 
 func (x *GetObjectResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[36]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[40]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1887,7 +2057,7 @@ func (x *GetObjectResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetObjectResult.ProtoReflect.Descriptor instead.
 func (*GetObjectResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{36}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *GetObjectResult) GetValue() *DatabaseObject {
@@ -1909,7 +2079,7 @@ type GetNextObjectArguments struct {
 func (x *GetNextObjectArguments) Reset() {
 	*x = GetNextObjectArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[37]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[41]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1922,7 +2092,7 @@ func (x *GetNextObjectArguments) String() string {
 func (*GetNextObjectArguments) ProtoMessage() {}
 
 func (x *GetNextObjectArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[37]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[41]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1935,7 +2105,7 @@ func (x *GetNextObjectArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetNextObjectArguments.ProtoReflect.Descriptor instead.
 func (*GetNextObjectArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{37}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *GetNextObjectArguments) GetSpace() *ObjectSpace {
@@ -1963,7 +2133,7 @@ type GetNextObjectResult struct {
 func (x *GetNextObjectResult) Reset() {
 	*x = GetNextObjectResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[38]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[42]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1976,7 +2146,7 @@ func (x *GetNextObjectResult) String() string {
 func (*GetNextObjectResult) ProtoMessage() {}
 
 func (x *GetNextObjectResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[38]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[42]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1989,7 +2159,7 @@ func (x *GetNextObjectResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetNextObjectResult.ProtoReflect.Descriptor instead.
 func (*GetNextObjectResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{38}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *GetNextObjectResult) GetValue() *DatabaseObject {
@@ -2011,7 +2181,7 @@ type GetPrevObjectArguments struct {
 func (x *GetPrevObjectArguments) Reset() {
 	*x = GetPrevObjectArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[39]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[43]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2024,7 +2194,7 @@ func (x *GetPrevObjectArguments) String() string {
 func (*GetPrevObjectArguments) ProtoMessage() {}
 
 func (x *GetPrevObjectArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[39]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[43]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2037,7 +2207,7 @@ func (x *GetPrevObjectArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetPrevObjectArguments.ProtoReflect.Descriptor instead.
 func (*GetPrevObjectArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{39}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *GetPrevObjectArguments) GetSpace() *ObjectSpace {
@@ -2065,7 +2235,7 @@ type GetPrevObjectResult struct {
 func (x *GetPrevObjectResult) Reset() {
 	*x = GetPrevObjectResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[40]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[44]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2078,7 +2248,7 @@ func (x *GetPrevObjectResult) String() string {
 func (*GetPrevObjectResult) ProtoMessage() {}
 
 func (x *GetPrevObjectResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[40]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[44]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2091,7 +2261,7 @@ func (x *GetPrevObjectResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetPrevObjectResult.ProtoReflect.Descriptor instead.
 func (*GetPrevObjectResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{40}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{44}
 }
 
 func (x *GetPrevObjectResult) GetValue() *DatabaseObject {
@@ -2114,7 +2284,7 @@ type CallContractArguments struct {
 func (x *CallContractArguments) Reset() {
 	*x = CallContractArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[41]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[45]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2127,7 +2297,7 @@ func (x *CallContractArguments) String() string {
 func (*CallContractArguments) ProtoMessage() {}
 
 func (x *CallContractArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[41]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[45]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2140,7 +2310,7 @@ func (x *CallContractArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CallContractArguments.ProtoReflect.Descriptor instead.
 func (*CallContractArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{41}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{45}
 }
 
 func (x *CallContractArguments) GetContractId() []byte {
@@ -2175,7 +2345,7 @@ type CallContractResult struct {
 func (x *CallContractResult) Reset() {
 	*x = CallContractResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[42]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[46]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2188,7 +2358,7 @@ func (x *CallContractResult) String() string {
 func (*CallContractResult) ProtoMessage() {}
 
 func (x *CallContractResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[42]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[46]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2201,7 +2371,7 @@ func (x *CallContractResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CallContractResult.ProtoReflect.Descriptor instead.
 func (*CallContractResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{42}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *CallContractResult) GetValue() []byte {
@@ -2220,7 +2390,7 @@ type GetEntryPointArguments struct {
 func (x *GetEntryPointArguments) Reset() {
 	*x = GetEntryPointArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[43]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[47]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2233,7 +2403,7 @@ func (x *GetEntryPointArguments) String() string {
 func (*GetEntryPointArguments) ProtoMessage() {}
 
 func (x *GetEntryPointArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[43]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[47]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2246,7 +2416,7 @@ func (x *GetEntryPointArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetEntryPointArguments.ProtoReflect.Descriptor instead.
 func (*GetEntryPointArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{43}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{47}
 }
 
 type GetEntryPointResult struct {
@@ -2260,7 +2430,7 @@ type GetEntryPointResult struct {
 func (x *GetEntryPointResult) Reset() {
 	*x = GetEntryPointResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[44]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[48]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2273,7 +2443,7 @@ func (x *GetEntryPointResult) String() string {
 func (*GetEntryPointResult) ProtoMessage() {}
 
 func (x *GetEntryPointResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[44]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[48]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2286,95 +2456,10 @@ func (x *GetEntryPointResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetEntryPointResult.ProtoReflect.Descriptor instead.
 func (*GetEntryPointResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{44}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{48}
 }
 
 func (x *GetEntryPointResult) GetValue() uint32 {
-	if x != nil {
-		return x.Value
-	}
-	return 0
-}
-
-type GetContractArgumentsSizeArguments struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *GetContractArgumentsSizeArguments) Reset() {
-	*x = GetContractArgumentsSizeArguments{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[45]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetContractArgumentsSizeArguments) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetContractArgumentsSizeArguments) ProtoMessage() {}
-
-func (x *GetContractArgumentsSizeArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[45]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetContractArgumentsSizeArguments.ProtoReflect.Descriptor instead.
-func (*GetContractArgumentsSizeArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{45}
-}
-
-type GetContractArgumentsSizeResult struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Value uint32 `protobuf:"varint,1,opt,name=value,proto3" json:"value,omitempty"`
-}
-
-func (x *GetContractArgumentsSizeResult) Reset() {
-	*x = GetContractArgumentsSizeResult{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[46]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetContractArgumentsSizeResult) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetContractArgumentsSizeResult) ProtoMessage() {}
-
-func (x *GetContractArgumentsSizeResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[46]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetContractArgumentsSizeResult.ProtoReflect.Descriptor instead.
-func (*GetContractArgumentsSizeResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{46}
-}
-
-func (x *GetContractArgumentsSizeResult) GetValue() uint32 {
 	if x != nil {
 		return x.Value
 	}
@@ -2390,7 +2475,7 @@ type GetContractArgumentsArguments struct {
 func (x *GetContractArgumentsArguments) Reset() {
 	*x = GetContractArgumentsArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[47]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[49]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2403,7 +2488,7 @@ func (x *GetContractArgumentsArguments) String() string {
 func (*GetContractArgumentsArguments) ProtoMessage() {}
 
 func (x *GetContractArgumentsArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[47]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[49]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2416,7 +2501,7 @@ func (x *GetContractArgumentsArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetContractArgumentsArguments.ProtoReflect.Descriptor instead.
 func (*GetContractArgumentsArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{47}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{49}
 }
 
 type GetContractArgumentsResult struct {
@@ -2430,7 +2515,7 @@ type GetContractArgumentsResult struct {
 func (x *GetContractArgumentsResult) Reset() {
 	*x = GetContractArgumentsResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[48]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[50]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2443,7 +2528,7 @@ func (x *GetContractArgumentsResult) String() string {
 func (*GetContractArgumentsResult) ProtoMessage() {}
 
 func (x *GetContractArgumentsResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[48]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[50]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2456,7 +2541,7 @@ func (x *GetContractArgumentsResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetContractArgumentsResult.ProtoReflect.Descriptor instead.
 func (*GetContractArgumentsResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{48}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{50}
 }
 
 func (x *GetContractArgumentsResult) GetValue() []byte {
@@ -2477,7 +2562,7 @@ type SetContractResultArguments struct {
 func (x *SetContractResultArguments) Reset() {
 	*x = SetContractResultArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[49]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[51]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2490,7 +2575,7 @@ func (x *SetContractResultArguments) String() string {
 func (*SetContractResultArguments) ProtoMessage() {}
 
 func (x *SetContractResultArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[49]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[51]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2503,7 +2588,7 @@ func (x *SetContractResultArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SetContractResultArguments.ProtoReflect.Descriptor instead.
 func (*SetContractResultArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{49}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{51}
 }
 
 func (x *SetContractResultArguments) GetValue() []byte {
@@ -2522,7 +2607,7 @@ type SetContractResultResult struct {
 func (x *SetContractResultResult) Reset() {
 	*x = SetContractResultResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[50]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[52]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2535,7 +2620,7 @@ func (x *SetContractResultResult) String() string {
 func (*SetContractResultResult) ProtoMessage() {}
 
 func (x *SetContractResultResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[50]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[52]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2548,7 +2633,7 @@ func (x *SetContractResultResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SetContractResultResult.ProtoReflect.Descriptor instead.
 func (*SetContractResultResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{50}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{52}
 }
 
 type ExitContractArguments struct {
@@ -2562,7 +2647,7 @@ type ExitContractArguments struct {
 func (x *ExitContractArguments) Reset() {
 	*x = ExitContractArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[51]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[53]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2575,7 +2660,7 @@ func (x *ExitContractArguments) String() string {
 func (*ExitContractArguments) ProtoMessage() {}
 
 func (x *ExitContractArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[51]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[53]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2588,7 +2673,7 @@ func (x *ExitContractArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExitContractArguments.ProtoReflect.Descriptor instead.
 func (*ExitContractArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{51}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{53}
 }
 
 func (x *ExitContractArguments) GetExitCode() uint32 {
@@ -2607,7 +2692,7 @@ type ExitContractResult struct {
 func (x *ExitContractResult) Reset() {
 	*x = ExitContractResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[52]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[54]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2620,7 +2705,7 @@ func (x *ExitContractResult) String() string {
 func (*ExitContractResult) ProtoMessage() {}
 
 func (x *ExitContractResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[52]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[54]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2633,7 +2718,7 @@ func (x *ExitContractResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExitContractResult.ProtoReflect.Descriptor instead.
 func (*ExitContractResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{52}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{54}
 }
 
 type GetHeadInfoArguments struct {
@@ -2645,7 +2730,7 @@ type GetHeadInfoArguments struct {
 func (x *GetHeadInfoArguments) Reset() {
 	*x = GetHeadInfoArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[53]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[55]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2658,7 +2743,7 @@ func (x *GetHeadInfoArguments) String() string {
 func (*GetHeadInfoArguments) ProtoMessage() {}
 
 func (x *GetHeadInfoArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[53]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[55]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2671,7 +2756,7 @@ func (x *GetHeadInfoArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetHeadInfoArguments.ProtoReflect.Descriptor instead.
 func (*GetHeadInfoArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{53}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{55}
 }
 
 type GetHeadInfoResult struct {
@@ -2685,7 +2770,7 @@ type GetHeadInfoResult struct {
 func (x *GetHeadInfoResult) Reset() {
 	*x = GetHeadInfoResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[54]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[56]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2698,7 +2783,7 @@ func (x *GetHeadInfoResult) String() string {
 func (*GetHeadInfoResult) ProtoMessage() {}
 
 func (x *GetHeadInfoResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[54]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[56]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2711,7 +2796,7 @@ func (x *GetHeadInfoResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetHeadInfoResult.ProtoReflect.Descriptor instead.
 func (*GetHeadInfoResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{54}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{56}
 }
 
 func (x *GetHeadInfoResult) GetValue() *HeadInfo {
@@ -2734,7 +2819,7 @@ type HashArguments struct {
 func (x *HashArguments) Reset() {
 	*x = HashArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[55]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[57]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2747,7 +2832,7 @@ func (x *HashArguments) String() string {
 func (*HashArguments) ProtoMessage() {}
 
 func (x *HashArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[55]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[57]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2760,7 +2845,7 @@ func (x *HashArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HashArguments.ProtoReflect.Descriptor instead.
 func (*HashArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{55}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{57}
 }
 
 func (x *HashArguments) GetCode() uint64 {
@@ -2795,7 +2880,7 @@ type HashResult struct {
 func (x *HashResult) Reset() {
 	*x = HashResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[56]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[58]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2808,7 +2893,7 @@ func (x *HashResult) String() string {
 func (*HashResult) ProtoMessage() {}
 
 func (x *HashResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[56]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[58]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2821,7 +2906,7 @@ func (x *HashResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HashResult.ProtoReflect.Descriptor instead.
 func (*HashResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{56}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{58}
 }
 
 func (x *HashResult) GetValue() []byte {
@@ -2842,7 +2927,7 @@ type GetAccountRcArguments struct {
 func (x *GetAccountRcArguments) Reset() {
 	*x = GetAccountRcArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[57]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[59]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2855,7 +2940,7 @@ func (x *GetAccountRcArguments) String() string {
 func (*GetAccountRcArguments) ProtoMessage() {}
 
 func (x *GetAccountRcArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[57]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[59]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2868,7 +2953,7 @@ func (x *GetAccountRcArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAccountRcArguments.ProtoReflect.Descriptor instead.
 func (*GetAccountRcArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{57}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{59}
 }
 
 func (x *GetAccountRcArguments) GetAccount() []byte {
@@ -2889,7 +2974,7 @@ type GetAccountRcResult struct {
 func (x *GetAccountRcResult) Reset() {
 	*x = GetAccountRcResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[58]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[60]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2902,7 +2987,7 @@ func (x *GetAccountRcResult) String() string {
 func (*GetAccountRcResult) ProtoMessage() {}
 
 func (x *GetAccountRcResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[58]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[60]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2915,7 +3000,7 @@ func (x *GetAccountRcResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAccountRcResult.ProtoReflect.Descriptor instead.
 func (*GetAccountRcResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{58}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{60}
 }
 
 func (x *GetAccountRcResult) GetValue() uint64 {
@@ -2937,7 +3022,7 @@ type ConsumeAccountRcArguments struct {
 func (x *ConsumeAccountRcArguments) Reset() {
 	*x = ConsumeAccountRcArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[59]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[61]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2950,7 +3035,7 @@ func (x *ConsumeAccountRcArguments) String() string {
 func (*ConsumeAccountRcArguments) ProtoMessage() {}
 
 func (x *ConsumeAccountRcArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[59]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[61]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2963,7 +3048,7 @@ func (x *ConsumeAccountRcArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConsumeAccountRcArguments.ProtoReflect.Descriptor instead.
 func (*ConsumeAccountRcArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{59}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{61}
 }
 
 func (x *ConsumeAccountRcArguments) GetAccount() []byte {
@@ -2991,7 +3076,7 @@ type ConsumeAccountRcResult struct {
 func (x *ConsumeAccountRcResult) Reset() {
 	*x = ConsumeAccountRcResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[60]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[62]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3004,7 +3089,7 @@ func (x *ConsumeAccountRcResult) String() string {
 func (*ConsumeAccountRcResult) ProtoMessage() {}
 
 func (x *ConsumeAccountRcResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[60]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[62]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3017,7 +3102,7 @@ func (x *ConsumeAccountRcResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConsumeAccountRcResult.ProtoReflect.Descriptor instead.
 func (*ConsumeAccountRcResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{60}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{62}
 }
 
 func (x *ConsumeAccountRcResult) GetValue() bool {
@@ -3036,7 +3121,7 @@ type GetResourceLimitsArguments struct {
 func (x *GetResourceLimitsArguments) Reset() {
 	*x = GetResourceLimitsArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[61]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[63]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3049,7 +3134,7 @@ func (x *GetResourceLimitsArguments) String() string {
 func (*GetResourceLimitsArguments) ProtoMessage() {}
 
 func (x *GetResourceLimitsArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[61]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[63]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3062,7 +3147,7 @@ func (x *GetResourceLimitsArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetResourceLimitsArguments.ProtoReflect.Descriptor instead.
 func (*GetResourceLimitsArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{61}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{63}
 }
 
 type GetResourceLimitsResult struct {
@@ -3076,7 +3161,7 @@ type GetResourceLimitsResult struct {
 func (x *GetResourceLimitsResult) Reset() {
 	*x = GetResourceLimitsResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[62]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[64]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3089,7 +3174,7 @@ func (x *GetResourceLimitsResult) String() string {
 func (*GetResourceLimitsResult) ProtoMessage() {}
 
 func (x *GetResourceLimitsResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[62]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[64]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3102,7 +3187,7 @@ func (x *GetResourceLimitsResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetResourceLimitsResult.ProtoReflect.Descriptor instead.
 func (*GetResourceLimitsResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{62}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{64}
 }
 
 func (x *GetResourceLimitsResult) GetValue() *ResourceLimitData {
@@ -3125,7 +3210,7 @@ type ConsumeBlockResourcesArguments struct {
 func (x *ConsumeBlockResourcesArguments) Reset() {
 	*x = ConsumeBlockResourcesArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[63]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[65]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3138,7 +3223,7 @@ func (x *ConsumeBlockResourcesArguments) String() string {
 func (*ConsumeBlockResourcesArguments) ProtoMessage() {}
 
 func (x *ConsumeBlockResourcesArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[63]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[65]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3151,7 +3236,7 @@ func (x *ConsumeBlockResourcesArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConsumeBlockResourcesArguments.ProtoReflect.Descriptor instead.
 func (*ConsumeBlockResourcesArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{63}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{65}
 }
 
 func (x *ConsumeBlockResourcesArguments) GetDiskStorageConsumed() uint64 {
@@ -3186,7 +3271,7 @@ type ConsumeBlockResourcesResult struct {
 func (x *ConsumeBlockResourcesResult) Reset() {
 	*x = ConsumeBlockResourcesResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[64]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[66]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3199,7 +3284,7 @@ func (x *ConsumeBlockResourcesResult) String() string {
 func (*ConsumeBlockResourcesResult) ProtoMessage() {}
 
 func (x *ConsumeBlockResourcesResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[64]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[66]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3212,7 +3297,7 @@ func (x *ConsumeBlockResourcesResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConsumeBlockResourcesResult.ProtoReflect.Descriptor instead.
 func (*ConsumeBlockResourcesResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{64}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{66}
 }
 
 func (x *ConsumeBlockResourcesResult) GetValue() bool {
@@ -3231,7 +3316,7 @@ type GetLastIrreversibleBlockArguments struct {
 func (x *GetLastIrreversibleBlockArguments) Reset() {
 	*x = GetLastIrreversibleBlockArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[65]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[67]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3244,7 +3329,7 @@ func (x *GetLastIrreversibleBlockArguments) String() string {
 func (*GetLastIrreversibleBlockArguments) ProtoMessage() {}
 
 func (x *GetLastIrreversibleBlockArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[65]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[67]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3257,7 +3342,7 @@ func (x *GetLastIrreversibleBlockArguments) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use GetLastIrreversibleBlockArguments.ProtoReflect.Descriptor instead.
 func (*GetLastIrreversibleBlockArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{65}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{67}
 }
 
 type GetLastIrreversibleBlockResult struct {
@@ -3271,7 +3356,7 @@ type GetLastIrreversibleBlockResult struct {
 func (x *GetLastIrreversibleBlockResult) Reset() {
 	*x = GetLastIrreversibleBlockResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[66]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[68]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3284,7 +3369,7 @@ func (x *GetLastIrreversibleBlockResult) String() string {
 func (*GetLastIrreversibleBlockResult) ProtoMessage() {}
 
 func (x *GetLastIrreversibleBlockResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[66]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[68]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3297,7 +3382,7 @@ func (x *GetLastIrreversibleBlockResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetLastIrreversibleBlockResult.ProtoReflect.Descriptor instead.
 func (*GetLastIrreversibleBlockResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{66}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{68}
 }
 
 func (x *GetLastIrreversibleBlockResult) GetValue() uint64 {
@@ -3316,7 +3401,7 @@ type GetCallerArguments struct {
 func (x *GetCallerArguments) Reset() {
 	*x = GetCallerArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[67]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[69]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3329,7 +3414,7 @@ func (x *GetCallerArguments) String() string {
 func (*GetCallerArguments) ProtoMessage() {}
 
 func (x *GetCallerArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[67]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[69]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3342,7 +3427,7 @@ func (x *GetCallerArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetCallerArguments.ProtoReflect.Descriptor instead.
 func (*GetCallerArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{67}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{69}
 }
 
 type GetCallerResult struct {
@@ -3356,7 +3441,7 @@ type GetCallerResult struct {
 func (x *GetCallerResult) Reset() {
 	*x = GetCallerResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[68]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[70]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3369,7 +3454,7 @@ func (x *GetCallerResult) String() string {
 func (*GetCallerResult) ProtoMessage() {}
 
 func (x *GetCallerResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[68]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[70]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3382,7 +3467,7 @@ func (x *GetCallerResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetCallerResult.ProtoReflect.Descriptor instead.
 func (*GetCallerResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{68}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{70}
 }
 
 func (x *GetCallerResult) GetValue() *CallerData {
@@ -3404,7 +3489,7 @@ type RequireAuthorityArguments struct {
 func (x *RequireAuthorityArguments) Reset() {
 	*x = RequireAuthorityArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[69]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[71]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3417,7 +3502,7 @@ func (x *RequireAuthorityArguments) String() string {
 func (*RequireAuthorityArguments) ProtoMessage() {}
 
 func (x *RequireAuthorityArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[69]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[71]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3430,7 +3515,7 @@ func (x *RequireAuthorityArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RequireAuthorityArguments.ProtoReflect.Descriptor instead.
 func (*RequireAuthorityArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{69}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{71}
 }
 
 func (x *RequireAuthorityArguments) GetType() AuthorizationType {
@@ -3456,7 +3541,7 @@ type RequireAuthorityResult struct {
 func (x *RequireAuthorityResult) Reset() {
 	*x = RequireAuthorityResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[70]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[72]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3469,7 +3554,7 @@ func (x *RequireAuthorityResult) String() string {
 func (*RequireAuthorityResult) ProtoMessage() {}
 
 func (x *RequireAuthorityResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[70]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[72]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3482,7 +3567,7 @@ func (x *RequireAuthorityResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RequireAuthorityResult.ProtoReflect.Descriptor instead.
 func (*RequireAuthorityResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{70}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{72}
 }
 
 type GetContractIdArguments struct {
@@ -3494,7 +3579,7 @@ type GetContractIdArguments struct {
 func (x *GetContractIdArguments) Reset() {
 	*x = GetContractIdArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[71]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[73]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3507,7 +3592,7 @@ func (x *GetContractIdArguments) String() string {
 func (*GetContractIdArguments) ProtoMessage() {}
 
 func (x *GetContractIdArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[71]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[73]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3520,7 +3605,7 @@ func (x *GetContractIdArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetContractIdArguments.ProtoReflect.Descriptor instead.
 func (*GetContractIdArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{71}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{73}
 }
 
 type GetContractIdResult struct {
@@ -3534,7 +3619,7 @@ type GetContractIdResult struct {
 func (x *GetContractIdResult) Reset() {
 	*x = GetContractIdResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[72]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[74]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3547,7 +3632,7 @@ func (x *GetContractIdResult) String() string {
 func (*GetContractIdResult) ProtoMessage() {}
 
 func (x *GetContractIdResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[72]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[74]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3560,7 +3645,7 @@ func (x *GetContractIdResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetContractIdResult.ProtoReflect.Descriptor instead.
 func (*GetContractIdResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{72}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{74}
 }
 
 func (x *GetContractIdResult) GetValue() []byte {
@@ -3581,7 +3666,7 @@ type GetAccountNonceArguments struct {
 func (x *GetAccountNonceArguments) Reset() {
 	*x = GetAccountNonceArguments{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[73]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[75]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3594,7 +3679,7 @@ func (x *GetAccountNonceArguments) String() string {
 func (*GetAccountNonceArguments) ProtoMessage() {}
 
 func (x *GetAccountNonceArguments) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[73]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[75]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3607,7 +3692,7 @@ func (x *GetAccountNonceArguments) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAccountNonceArguments.ProtoReflect.Descriptor instead.
 func (*GetAccountNonceArguments) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{73}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{75}
 }
 
 func (x *GetAccountNonceArguments) GetAccount() []byte {
@@ -3628,7 +3713,7 @@ type GetAccountNonceResult struct {
 func (x *GetAccountNonceResult) Reset() {
 	*x = GetAccountNonceResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_koinos_chain_system_calls_proto_msgTypes[74]
+		mi := &file_koinos_chain_system_calls_proto_msgTypes[76]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3641,7 +3726,7 @@ func (x *GetAccountNonceResult) String() string {
 func (*GetAccountNonceResult) ProtoMessage() {}
 
 func (x *GetAccountNonceResult) ProtoReflect() protoreflect.Message {
-	mi := &file_koinos_chain_system_calls_proto_msgTypes[74]
+	mi := &file_koinos_chain_system_calls_proto_msgTypes[76]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3654,7 +3739,7 @@ func (x *GetAccountNonceResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAccountNonceResult.ProtoReflect.Descriptor instead.
 func (*GetAccountNonceResult) Descriptor() ([]byte, []int) {
-	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{74}
+	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{76}
 }
 
 func (x *GetAccountNonceResult) GetValue() uint64 {
@@ -3679,330 +3764,336 @@ var file_koinos_chain_system_calls_proto_rawDesc = []byte{
 	0x74, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x18, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
 	0x2f, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2f, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x70, 0x72, 0x6f,
 	0x74, 0x6f, 0x1a, 0x18, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x63, 0x68, 0x61, 0x69, 0x6e,
-	0x2f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x59, 0x0a, 0x1a,
-	0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d,
-	0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3b, 0x0a, 0x04, 0x74, 0x79,
-	0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x27, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
-	0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x61,
-	0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x74, 0x79, 0x70,
-	0x65, 0x52, 0x04, 0x74, 0x79, 0x70, 0x65, 0x22, 0x2f, 0x0a, 0x17, 0x61, 0x75, 0x74, 0x68, 0x6f,
-	0x72, 0x69, 0x7a, 0x65, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x72, 0x65, 0x73, 0x75,
-	0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x08, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xaa, 0x01, 0x0a, 0x1a, 0x76, 0x65, 0x72,
-	0x69, 0x66, 0x79, 0x5f, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x5f, 0x61, 0x72,
-	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x25, 0x0a, 0x04, 0x74, 0x79, 0x70, 0x65, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63,
-	0x68, 0x61, 0x69, 0x6e, 0x2e, 0x64, 0x73, 0x61, 0x52, 0x04, 0x74, 0x79, 0x70, 0x65, 0x12, 0x23,
-	0x0a, 0x0a, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x00, 0x52, 0x09, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63,
-	0x4b, 0x65, 0x79, 0x12, 0x22, 0x0a, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65,
-	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x00, 0x52, 0x09, 0x73, 0x69,
-	0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x12, 0x1c, 0x0a, 0x06, 0x64, 0x69, 0x67, 0x65, 0x73,
-	0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x00, 0x52, 0x06, 0x64,
-	0x69, 0x67, 0x65, 0x73, 0x74, 0x22, 0x2f, 0x0a, 0x17, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x5f,
-	0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
-	0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x7b, 0x0a, 0x1c, 0x72, 0x65, 0x63, 0x6f, 0x76, 0x65,
-	0x72, 0x5f, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x6b, 0x65, 0x79, 0x5f, 0x61, 0x72, 0x67,
-	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x25, 0x0a, 0x04, 0x74, 0x79, 0x70, 0x65, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68,
-	0x61, 0x69, 0x6e, 0x2e, 0x64, 0x73, 0x61, 0x52, 0x04, 0x74, 0x79, 0x70, 0x65, 0x12, 0x1c, 0x0a,
-	0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c,
-	0x52, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x64,
-	0x69, 0x67, 0x65, 0x73, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x06, 0x64, 0x69, 0x67,
-	0x65, 0x73, 0x74, 0x22, 0x37, 0x0a, 0x19, 0x72, 0x65, 0x63, 0x6f, 0x76, 0x65, 0x72, 0x5f, 0x70,
-	0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x6b, 0x65, 0x79, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
-	0x12, 0x1a, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42,
-	0x04, 0x80, 0xb5, 0x18, 0x00, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x37, 0x0a, 0x1f,
+	0x2f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x1b, 0x0a, 0x19,
 	0x67, 0x65, 0x74, 0x5f, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x5f,
-	0x66, 0x69, 0x65, 0x6c, 0x64, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12,
-	0x14, 0x0a, 0x05, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05,
-	0x66, 0x69, 0x65, 0x6c, 0x64, 0x22, 0x4e, 0x0a, 0x1c, 0x67, 0x65, 0x74, 0x5f, 0x74, 0x72, 0x61,
-	0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x5f, 0x72,
-	0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x2e, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68,
-	0x61, 0x69, 0x6e, 0x2e, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x31, 0x0a, 0x19, 0x67, 0x65, 0x74, 0x5f, 0x62, 0x6c, 0x6f,
-	0x63, 0x6b, 0x5f, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e,
-	0x74, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x05, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x22, 0x48, 0x0a, 0x16, 0x67, 0x65, 0x74, 0x5f,
-	0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x5f, 0x72, 0x65, 0x73, 0x75,
-	0x6c, 0x74, 0x12, 0x2e, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x0b, 0x32, 0x18, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e,
-	0x2e, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x52, 0x05, 0x76, 0x61, 0x6c,
-	0x75, 0x65, 0x22, 0x5b, 0x0a, 0x0f, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75,
-	0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74,
-	0x61, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x12, 0x20, 0x0a,
-	0x08, 0x69, 0x6d, 0x70, 0x61, 0x63, 0x74, 0x65, 0x64, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0c, 0x42,
-	0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x08, 0x69, 0x6d, 0x70, 0x61, 0x63, 0x74, 0x65, 0x64, 0x22,
-	0x0e, 0x0a, 0x0c, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22,
-	0x29, 0x0a, 0x0d, 0x6c, 0x6f, 0x67, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73,
-	0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x0c, 0x0a, 0x0a, 0x6c, 0x6f,
-	0x67, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x90, 0x01, 0x0a, 0x21, 0x70, 0x72, 0x6f,
-	0x63, 0x65, 0x73, 0x73, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x73, 0x69, 0x67, 0x6e, 0x61,
-	0x74, 0x75, 0x72, 0x65, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x16,
-	0x0a, 0x06, 0x64, 0x69, 0x67, 0x65, 0x73, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x06,
-	0x64, 0x69, 0x67, 0x65, 0x73, 0x74, 0x12, 0x35, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72,
-	0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x68,
-	0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x1c, 0x0a,
-	0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c,
-	0x52, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x22, 0x36, 0x0a, 0x1e, 0x70,
-	0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x73, 0x69, 0x67,
-	0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x22, 0x4a, 0x0a, 0x1c, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x5f, 0x6d, 0x65,
-	0x72, 0x6b, 0x6c, 0x65, 0x5f, 0x72, 0x6f, 0x6f, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65,
-	0x6e, 0x74, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x72, 0x6f, 0x6f, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x0c, 0x52, 0x04, 0x72, 0x6f, 0x6f, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x68, 0x61, 0x73, 0x68, 0x65,
-	0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0c, 0x52, 0x06, 0x68, 0x61, 0x73, 0x68, 0x65, 0x73, 0x22,
-	0x31, 0x0a, 0x19, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x5f, 0x6d, 0x65, 0x72, 0x6b, 0x6c, 0x65,
-	0x5f, 0x72, 0x6f, 0x6f, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61, 0x6c,
-	0x75, 0x65, 0x22, 0x45, 0x0a, 0x15, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x62, 0x6c, 0x6f, 0x63,
-	0x6b, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x2c, 0x0a, 0x05, 0x62,
-	0x6c, 0x6f, 0x63, 0x6b, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x6b, 0x6f, 0x69,
-	0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x62, 0x6c, 0x6f,
-	0x63, 0x6b, 0x52, 0x05, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x22, 0x14, 0x0a, 0x12, 0x61, 0x70, 0x70,
-	0x6c, 0x79, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22,
-	0x5d, 0x0a, 0x1b, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63,
-	0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3e,
-	0x0a, 0x0b, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x52, 0x0b, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x1a,
-	0x0a, 0x18, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74,
-	0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x67, 0x0a, 0x29, 0x61, 0x70,
-	0x70, 0x6c, 0x79, 0x5f, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72,
-	0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x61, 0x72,
-	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3a, 0x0a, 0x02, 0x6f, 0x70, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x5f, 0x63, 0x6f, 0x6e,
-	0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52,
-	0x02, 0x6f, 0x70, 0x22, 0x28, 0x0a, 0x26, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x75, 0x70, 0x6c,
-	0x6f, 0x61, 0x64, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65,
-	0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x63, 0x0a,
-	0x27, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x63, 0x6f, 0x6e, 0x74,
-	0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x61,
-	0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x38, 0x0a, 0x02, 0x6f, 0x70, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x0b, 0x32, 0x28, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x63, 0x6f, 0x6e, 0x74,
-	0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x02,
-	0x6f, 0x70, 0x22, 0x26, 0x0a, 0x24, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x63, 0x61, 0x6c, 0x6c,
-	0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x67, 0x0a, 0x29, 0x61, 0x70,
-	0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63,
-	0x61, 0x6c, 0x6c, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x61, 0x72,
-	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3a, 0x0a, 0x02, 0x6f, 0x70, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d,
-	0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52,
-	0x02, 0x6f, 0x70, 0x22, 0x28, 0x0a, 0x26, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74,
-	0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x6f, 0x70, 0x65,
-	0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x6f, 0x0a,
-	0x2d, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65,
-	0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61,
-	0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3e,
-	0x0a, 0x02, 0x6f, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2e, 0x2e, 0x6b, 0x6f, 0x69,
-	0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x73, 0x65, 0x74,
-	0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
-	0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x02, 0x6f, 0x70, 0x22, 0x2c,
-	0x0a, 0x2a, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74,
-	0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72,
-	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x6c, 0x0a, 0x14,
-	0x70, 0x75, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d,
-	0x65, 0x6e, 0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61,
-	0x69, 0x6e, 0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63, 0x65, 0x52,
-	0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6f, 0x62, 0x6a, 0x18,
-	0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6f, 0x62, 0x6a, 0x22, 0x29, 0x0a, 0x11, 0x70, 0x75,
-	0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12,
-	0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x5d, 0x0a, 0x17, 0x72, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x5f,
-	0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73,
-	0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
-	0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x6f,
-	0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63, 0x65, 0x52, 0x05, 0x73, 0x70, 0x61,
-	0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x52,
-	0x03, 0x6b, 0x65, 0x79, 0x22, 0x16, 0x0a, 0x14, 0x72, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x5f, 0x6f,
-	0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x5a, 0x0a, 0x14,
-	0x67, 0x65, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d,
-	0x65, 0x6e, 0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61,
-	0x69, 0x6e, 0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63, 0x65, 0x52,
-	0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x51, 0x0a, 0x0f, 0x64, 0x61, 0x74, 0x61,
-	0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x65,
-	0x78, 0x69, 0x73, 0x74, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x06, 0x65, 0x78, 0x69,
-	0x73, 0x74, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x0c, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79,
-	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x48, 0x0a, 0x11, 0x67,
-	0x65, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
-	0x12, 0x33, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
-	0x1d, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x64,
-	0x61, 0x74, 0x61, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x5f, 0x0a, 0x19, 0x67, 0x65, 0x74, 0x5f, 0x6e, 0x65, 0x78,
-	0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e,
-	0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e,
-	0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63, 0x65, 0x52, 0x05, 0x73,
-	0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20, 0x01, 0x28,
-	0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x4d, 0x0a, 0x16, 0x67, 0x65, 0x74, 0x5f, 0x6e, 0x65,
-	0x78, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
-	0x12, 0x33, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
-	0x1d, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x64,
-	0x61, 0x74, 0x61, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x5f, 0x0a, 0x19, 0x67, 0x65, 0x74, 0x5f, 0x70, 0x72, 0x65,
-	0x76, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e,
-	0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e,
-	0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63, 0x65, 0x52, 0x05, 0x73,
-	0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20, 0x01, 0x28,
-	0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x4d, 0x0a, 0x16, 0x67, 0x65, 0x74, 0x5f, 0x70, 0x72,
-	0x65, 0x76, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
-	0x12, 0x33, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
-	0x1d, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x64,
-	0x61, 0x74, 0x61, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x75, 0x0a, 0x17, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x63, 0x6f,
-	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73,
-	0x12, 0x25, 0x0a, 0x0b, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x69, 0x64, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x05, 0x52, 0x0a, 0x63, 0x6f, 0x6e,
-	0x74, 0x72, 0x61, 0x63, 0x74, 0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b, 0x65, 0x6e, 0x74, 0x72, 0x79,
-	0x5f, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x0a, 0x65, 0x6e,
-	0x74, 0x72, 0x79, 0x50, 0x6f, 0x69, 0x6e, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x73,
-	0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x61, 0x72, 0x67, 0x73, 0x22, 0x2c, 0x0a, 0x14,
-	0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x72, 0x65,
-	0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0c, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x1b, 0x0a, 0x19, 0x67, 0x65,
-	0x74, 0x5f, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5f, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x5f, 0x61, 0x72,
-	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x2e, 0x0a, 0x16, 0x67, 0x65, 0x74, 0x5f, 0x65,
-	0x6e, 0x74, 0x72, 0x79, 0x5f, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c,
-	0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d,
-	0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x27, 0x0a, 0x25, 0x67, 0x65, 0x74, 0x5f, 0x63,
-	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74,
-	0x73, 0x5f, 0x73, 0x69, 0x7a, 0x65, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73,
-	0x22, 0x3a, 0x0a, 0x22, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
-	0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x5f, 0x73, 0x69, 0x7a, 0x65, 0x5f,
+	0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x4c, 0x0a, 0x16, 0x67, 0x65, 0x74,
+	0x5f, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x12, 0x32, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e,
+	0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x15, 0x0a, 0x13, 0x67, 0x65, 0x74, 0x5f, 0x62,
+	0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x40,
+	0x0a, 0x10, 0x67, 0x65, 0x74, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65, 0x73, 0x75,
+	0x6c, 0x74, 0x12, 0x2c, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x16, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x63, 0x6f, 0x6c, 0x2e, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
+	0x22, 0x59, 0x0a, 0x1a, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x5f, 0x73, 0x79,
+	0x73, 0x74, 0x65, 0x6d, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3b,
+	0x0a, 0x04, 0x74, 0x79, 0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x27, 0x2e, 0x6b,
+	0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x73, 0x79, 0x73, 0x74,
+	0x65, 0x6d, 0x5f, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+	0x5f, 0x74, 0x79, 0x70, 0x65, 0x52, 0x04, 0x74, 0x79, 0x70, 0x65, 0x22, 0x2f, 0x0a, 0x17, 0x61,
+	0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a, 0x65, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f,
 	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x22, 0x0a, 0x20,
-	0x67, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67,
-	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73,
-	0x22, 0x35, 0x0a, 0x1d, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
-	0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c,
-	0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c,
-	0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x35, 0x0a, 0x1d, 0x73, 0x65, 0x74, 0x5f, 0x63,
-	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x5f, 0x61,
-	0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75,
-	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x1c,
-	0x0a, 0x1a, 0x73, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x72,
-	0x65, 0x73, 0x75, 0x6c, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x36, 0x0a, 0x17,
-	0x65, 0x78, 0x69, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x72,
-	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x1b, 0x0a, 0x09, 0x65, 0x78, 0x69, 0x74, 0x5f,
-	0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x08, 0x65, 0x78, 0x69, 0x74,
-	0x43, 0x6f, 0x64, 0x65, 0x22, 0x16, 0x0a, 0x14, 0x65, 0x78, 0x69, 0x74, 0x5f, 0x63, 0x6f, 0x6e,
-	0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x19, 0x0a, 0x17,
-	0x67, 0x65, 0x74, 0x5f, 0x68, 0x65, 0x61, 0x64, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x5f, 0x61, 0x72,
-	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x45, 0x0a, 0x14, 0x67, 0x65, 0x74, 0x5f, 0x68,
-	0x65, 0x61, 0x64, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12,
-	0x2d, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x17,
-	0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x68, 0x65,
-	0x61, 0x64, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x52,
-	0x0a, 0x0e, 0x68, 0x61, 0x73, 0x68, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73,
-	0x12, 0x16, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02,
-	0x30, 0x01, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6f, 0x62, 0x6a, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6f, 0x62, 0x6a, 0x12, 0x16, 0x0a, 0x04, 0x73, 0x69,
-	0x7a, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x04, 0x73, 0x69,
-	0x7a, 0x65, 0x22, 0x23, 0x0a, 0x0b, 0x68, 0x61, 0x73, 0x68, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c,
-	0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c,
-	0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x3a, 0x0a, 0x18, 0x67, 0x65, 0x74, 0x5f, 0x61,
-	0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x72, 0x63, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65,
-	0x6e, 0x74, 0x73, 0x12, 0x1e, 0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61, 0x63, 0x63, 0x6f,
-	0x75, 0x6e, 0x74, 0x22, 0x31, 0x0a, 0x15, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75,
-	0x6e, 0x74, 0x5f, 0x72, 0x63, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x18, 0x0a, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x58, 0x0a, 0x1c, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d,
-	0x65, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x72, 0x63, 0x5f, 0x61, 0x72, 0x67,
-	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x1e, 0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e,
-	0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61,
-	0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x22, 0x31, 0x0a, 0x19, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x5f, 0x61, 0x63, 0x63, 0x6f,
-	0x75, 0x6e, 0x74, 0x5f, 0x72, 0x63, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61,
-	0x6c, 0x75, 0x65, 0x22, 0x1f, 0x0a, 0x1d, 0x67, 0x65, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x6f, 0x75,
-	0x72, 0x63, 0x65, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d,
-	0x65, 0x6e, 0x74, 0x73, 0x22, 0x55, 0x0a, 0x1a, 0x67, 0x65, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x6f,
-	0x75, 0x72, 0x63, 0x65, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75,
-	0x6c, 0x74, 0x12, 0x37, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x0b, 0x32, 0x21, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e,
-	0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x5f,
-	0x64, 0x61, 0x74, 0x61, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xdf, 0x01, 0x0a, 0x21,
-	0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65,
-	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74,
-	0x73, 0x12, 0x36, 0x0a, 0x15, 0x64, 0x69, 0x73, 0x6b, 0x5f, 0x73, 0x74, 0x6f, 0x72, 0x61, 0x67,
-	0x65, 0x5f, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04,
-	0x42, 0x02, 0x30, 0x01, 0x52, 0x13, 0x64, 0x69, 0x73, 0x6b, 0x53, 0x74, 0x6f, 0x72, 0x61, 0x67,
-	0x65, 0x43, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x12, 0x40, 0x0a, 0x1a, 0x6e, 0x65, 0x74,
-	0x77, 0x6f, 0x72, 0x6b, 0x5f, 0x62, 0x61, 0x6e, 0x64, 0x77, 0x69, 0x64, 0x74, 0x68, 0x5f, 0x63,
-	0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30,
-	0x01, 0x52, 0x18, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x42, 0x61, 0x6e, 0x64, 0x77, 0x69,
-	0x64, 0x74, 0x68, 0x43, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x12, 0x40, 0x0a, 0x1a, 0x63,
-	0x6f, 0x6d, 0x70, 0x75, 0x74, 0x65, 0x5f, 0x62, 0x61, 0x6e, 0x64, 0x77, 0x69, 0x64, 0x74, 0x68,
-	0x5f, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x04, 0x42,
-	0x02, 0x30, 0x01, 0x52, 0x18, 0x63, 0x6f, 0x6d, 0x70, 0x75, 0x74, 0x65, 0x42, 0x61, 0x6e, 0x64,
-	0x77, 0x69, 0x64, 0x74, 0x68, 0x43, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x22, 0x36, 0x0a,
-	0x1e, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72,
-	0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12,
-	0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x27, 0x0a, 0x25, 0x67, 0x65, 0x74, 0x5f, 0x6c, 0x61, 0x73,
-	0x74, 0x5f, 0x69, 0x72, 0x72, 0x65, 0x76, 0x65, 0x72, 0x73, 0x69, 0x62, 0x6c, 0x65, 0x5f, 0x62,
-	0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x3e,
-	0x0a, 0x22, 0x67, 0x65, 0x74, 0x5f, 0x6c, 0x61, 0x73, 0x74, 0x5f, 0x69, 0x72, 0x72, 0x65, 0x76,
-	0x65, 0x72, 0x73, 0x69, 0x62, 0x6c, 0x65, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65,
-	0x73, 0x75, 0x6c, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x16,
-	0x0a, 0x14, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x65, 0x72, 0x5f, 0x61, 0x72, 0x67,
-	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x44, 0x0a, 0x11, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x61,
-	0x6c, 0x6c, 0x65, 0x72, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x2f, 0x0a, 0x05, 0x76,
-	0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x19, 0x2e, 0x6b, 0x6f, 0x69,
-	0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x63, 0x61, 0x6c, 0x6c, 0x65, 0x72,
-	0x5f, 0x64, 0x61, 0x74, 0x61, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x73, 0x0a, 0x1b,
-	0x72, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x5f, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74,
-	0x79, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x34, 0x0a, 0x04, 0x74,
-	0x79, 0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x20, 0x2e, 0x6b, 0x6f, 0x69, 0x6e,
-	0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69,
-	0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x52, 0x04, 0x74, 0x79, 0x70,
-	0x65, 0x12, 0x1e, 0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e,
-	0x74, 0x22, 0x1a, 0x0a, 0x18, 0x72, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x5f, 0x61, 0x75, 0x74,
-	0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x1b, 0x0a,
-	0x19, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x69, 0x64,
-	0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x34, 0x0a, 0x16, 0x67, 0x65,
-	0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x69, 0x64, 0x5f, 0x72, 0x65,
+	0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xaa, 0x01, 0x0a,
+	0x1a, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x5f, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72,
+	0x65, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x25, 0x0a, 0x04, 0x74,
+	0x79, 0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x6b, 0x6f, 0x69, 0x6e,
+	0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x64, 0x73, 0x61, 0x52, 0x04, 0x74, 0x79,
+	0x70, 0x65, 0x12, 0x23, 0x0a, 0x0a, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x6b, 0x65, 0x79,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x00, 0x52, 0x09, 0x70, 0x75,
+	0x62, 0x6c, 0x69, 0x63, 0x4b, 0x65, 0x79, 0x12, 0x22, 0x0a, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61,
+	0x74, 0x75, 0x72, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x00,
+	0x52, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x12, 0x1c, 0x0a, 0x06, 0x64,
+	0x69, 0x67, 0x65, 0x73, 0x74, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18,
+	0x00, 0x52, 0x06, 0x64, 0x69, 0x67, 0x65, 0x73, 0x74, 0x22, 0x2f, 0x0a, 0x17, 0x76, 0x65, 0x72,
+	0x69, 0x66, 0x79, 0x5f, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x5f, 0x72, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x7b, 0x0a, 0x1c, 0x72, 0x65,
+	0x63, 0x6f, 0x76, 0x65, 0x72, 0x5f, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x6b, 0x65, 0x79,
+	0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x25, 0x0a, 0x04, 0x74, 0x79,
+	0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
+	0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x64, 0x73, 0x61, 0x52, 0x04, 0x74, 0x79, 0x70,
+	0x65, 0x12, 0x1c, 0x0a, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0c, 0x52, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x12,
+	0x16, 0x0a, 0x06, 0x64, 0x69, 0x67, 0x65, 0x73, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52,
+	0x06, 0x64, 0x69, 0x67, 0x65, 0x73, 0x74, 0x22, 0x37, 0x0a, 0x19, 0x72, 0x65, 0x63, 0x6f, 0x76,
+	0x65, 0x72, 0x5f, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x6b, 0x65, 0x79, 0x5f, 0x72, 0x65,
 	0x73, 0x75, 0x6c, 0x74, 0x12, 0x1a, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x05, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
-	0x22, 0x3d, 0x0a, 0x1b, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f,
-	0x6e, 0x6f, 0x6e, 0x63, 0x65, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12,
-	0x1e, 0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c,
-	0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x22,
-	0x34, 0x0a, 0x18, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x6e,
-	0x6f, 0x6e, 0x63, 0x65, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76,
+	0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x00, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
+	0x22, 0x37, 0x0a, 0x1f, 0x67, 0x65, 0x74, 0x5f, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x5f, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65,
+	0x6e, 0x74, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x05, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x22, 0x4e, 0x0a, 0x1c, 0x67, 0x65, 0x74,
+	0x5f, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x66, 0x69, 0x65,
+	0x6c, 0x64, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x2e, 0x0a, 0x05, 0x76, 0x61, 0x6c,
+	0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
+	0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74, 0x79,
+	0x70, 0x65, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x31, 0x0a, 0x19, 0x67, 0x65, 0x74,
+	0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x5f, 0x61, 0x72, 0x67,
+	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x22, 0x48, 0x0a, 0x16,
+	0x67, 0x65, 0x74, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x5f,
+	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x2e, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63,
+	0x68, 0x61, 0x69, 0x6e, 0x2e, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x52,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x5b, 0x0a, 0x0f, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x5f,
+	0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a,
+	0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74,
+	0x61, 0x12, 0x20, 0x0a, 0x08, 0x69, 0x6d, 0x70, 0x61, 0x63, 0x74, 0x65, 0x64, 0x18, 0x03, 0x20,
+	0x03, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x08, 0x69, 0x6d, 0x70, 0x61, 0x63,
+	0x74, 0x65, 0x64, 0x22, 0x0e, 0x0a, 0x0c, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x5f, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x22, 0x29, 0x0a, 0x0d, 0x6c, 0x6f, 0x67, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d,
+	0x65, 0x6e, 0x74, 0x73, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x0c,
+	0x0a, 0x0a, 0x6c, 0x6f, 0x67, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x90, 0x01, 0x0a,
+	0x21, 0x70, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x73,
+	0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e,
+	0x74, 0x73, 0x12, 0x16, 0x0a, 0x06, 0x64, 0x69, 0x67, 0x65, 0x73, 0x74, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0c, 0x52, 0x06, 0x64, 0x69, 0x67, 0x65, 0x73, 0x74, 0x12, 0x35, 0x0a, 0x06, 0x68, 0x65,
+	0x61, 0x64, 0x65, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x6b, 0x6f, 0x69,
+	0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x62, 0x6c, 0x6f,
+	0x63, 0x6b, 0x5f, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65,
+	0x72, 0x12, 0x1c, 0x0a, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x0c, 0x52, 0x09, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x22,
+	0x36, 0x0a, 0x1e, 0x70, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b,
+	0x5f, 0x73, 0x69, 0x67, 0x6e, 0x61, 0x74, 0x75, 0x72, 0x65, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08,
+	0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x4a, 0x0a, 0x1c, 0x76, 0x65, 0x72, 0x69, 0x66,
+	0x79, 0x5f, 0x6d, 0x65, 0x72, 0x6b, 0x6c, 0x65, 0x5f, 0x72, 0x6f, 0x6f, 0x74, 0x5f, 0x61, 0x72,
+	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x72, 0x6f, 0x6f, 0x74, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x72, 0x6f, 0x6f, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x68,
+	0x61, 0x73, 0x68, 0x65, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0c, 0x52, 0x06, 0x68, 0x61, 0x73,
+	0x68, 0x65, 0x73, 0x22, 0x31, 0x0a, 0x19, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x5f, 0x6d, 0x65,
+	0x72, 0x6b, 0x6c, 0x65, 0x5f, 0x72, 0x6f, 0x6f, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
+	0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x45, 0x0a, 0x15, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f,
+	0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12,
+	0x2c, 0x0a, 0x05, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16,
+	0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
+	0x2e, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x52, 0x05, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x22, 0x14, 0x0a,
+	0x12, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x22, 0x5d, 0x0a, 0x1b, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x74, 0x72, 0x61,
+	0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e,
+	0x74, 0x73, 0x12, 0x3e, 0x0a, 0x0b, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f,
+	0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61,
+	0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x0b, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69,
+	0x6f, 0x6e, 0x22, 0x1a, 0x0a, 0x18, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x74, 0x72, 0x61, 0x6e,
+	0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x67,
+	0x0a, 0x29, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x5f, 0x63,
+	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3a, 0x0a, 0x02, 0x6f,
+	0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64,
+	0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x52, 0x02, 0x6f, 0x70, 0x22, 0x28, 0x0a, 0x26, 0x61, 0x70, 0x70, 0x6c, 0x79,
+	0x5f, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
+	0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x22, 0x63, 0x0a, 0x27, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f,
+	0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x38, 0x0a, 0x02,
+	0x6f, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x28, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
+	0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x63, 0x61, 0x6c, 0x6c, 0x5f,
+	0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x52, 0x02, 0x6f, 0x70, 0x22, 0x26, 0x0a, 0x24, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f,
+	0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70,
+	0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x67,
+	0x0a, 0x29, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74,
+	0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x3a, 0x0a, 0x02, 0x6f,
+	0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79,
+	0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x52, 0x02, 0x6f, 0x70, 0x22, 0x28, 0x0a, 0x26, 0x61, 0x70, 0x70, 0x6c, 0x79,
+	0x5f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c,
+	0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x22, 0x6f, 0x0a, 0x2d, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74, 0x5f, 0x73,
+	0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f,
+	0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e,
+	0x74, 0x73, 0x12, 0x3e, 0x0a, 0x02, 0x6f, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2e,
+	0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
+	0x2e, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74,
+	0x72, 0x61, 0x63, 0x74, 0x5f, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x02,
+	0x6f, 0x70, 0x22, 0x2c, 0x0a, 0x2a, 0x61, 0x70, 0x70, 0x6c, 0x79, 0x5f, 0x73, 0x65, 0x74, 0x5f,
+	0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f,
+	0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
+	0x22, 0x6c, 0x0a, 0x14, 0x70, 0x75, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61,
+	0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70,
+	0x61, 0x63, 0x65, 0x52, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65,
+	0x79, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x10, 0x0a, 0x03,
+	0x6f, 0x62, 0x6a, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6f, 0x62, 0x6a, 0x22, 0x29,
+	0x0a, 0x11, 0x70, 0x75, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x05, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x5d, 0x0a, 0x17, 0x72, 0x65, 0x6d,
+	0x6f, 0x76, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d,
+	0x65, 0x6e, 0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61,
+	0x69, 0x6e, 0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63, 0x65, 0x52,
+	0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x16, 0x0a, 0x14, 0x72, 0x65, 0x6d, 0x6f,
+	0x76, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
+	0x22, 0x5a, 0x0a, 0x14, 0x67, 0x65, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61,
+	0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70,
+	0x61, 0x63, 0x65, 0x52, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65,
+	0x79, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x51, 0x0a, 0x0f,
+	0x64, 0x61, 0x74, 0x61, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x12,
+	0x16, 0x0a, 0x06, 0x65, 0x78, 0x69, 0x73, 0x74, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52,
+	0x06, 0x65, 0x78, 0x69, 0x73, 0x74, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x12, 0x10, 0x0a,
+	0x03, 0x6b, 0x65, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22,
+	0x48, 0x0a, 0x11, 0x67, 0x65, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x12, 0x33, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61,
+	0x69, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65,
+	0x63, 0x74, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x5f, 0x0a, 0x19, 0x67, 0x65, 0x74,
+	0x5f, 0x6e, 0x65, 0x78, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67,
+	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63,
+	0x68, 0x61, 0x69, 0x6e, 0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63,
+	0x65, 0x52, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x4d, 0x0a, 0x16, 0x67, 0x65,
+	0x74, 0x5f, 0x6e, 0x65, 0x78, 0x74, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x12, 0x33, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61,
+	0x69, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65,
+	0x63, 0x74, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x5f, 0x0a, 0x19, 0x67, 0x65, 0x74,
+	0x5f, 0x70, 0x72, 0x65, 0x76, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67,
+	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x30, 0x0a, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63,
+	0x68, 0x61, 0x69, 0x6e, 0x2e, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x73, 0x70, 0x61, 0x63,
+	0x65, 0x52, 0x05, 0x73, 0x70, 0x61, 0x63, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x4d, 0x0a, 0x16, 0x67, 0x65,
+	0x74, 0x5f, 0x70, 0x72, 0x65, 0x76, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x5f, 0x72, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x12, 0x33, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61,
+	0x69, 0x6e, 0x2e, 0x64, 0x61, 0x74, 0x61, 0x62, 0x61, 0x73, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65,
+	0x63, 0x74, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x75, 0x0a, 0x17, 0x63, 0x61, 0x6c,
+	0x6c, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d,
+	0x65, 0x6e, 0x74, 0x73, 0x12, 0x25, 0x0a, 0x0b, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
+	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x05, 0x52,
+	0x0a, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x49, 0x64, 0x12, 0x1f, 0x0a, 0x0b, 0x65,
+	0x6e, 0x74, 0x72, 0x79, 0x5f, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0d,
+	0x52, 0x0a, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x50, 0x6f, 0x69, 0x6e, 0x74, 0x12, 0x12, 0x0a, 0x04,
+	0x61, 0x72, 0x67, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x61, 0x72, 0x67, 0x73,
+	0x22, 0x2c, 0x0a, 0x14, 0x63, 0x61, 0x6c, 0x6c, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63,
+	0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x1b,
+	0x0a, 0x19, 0x67, 0x65, 0x74, 0x5f, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5f, 0x70, 0x6f, 0x69, 0x6e,
+	0x74, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x2e, 0x0a, 0x16, 0x67,
+	0x65, 0x74, 0x5f, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5f, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x5f, 0x72,
+	0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x0d, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x22, 0x0a, 0x20, 0x67,
+	0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67, 0x75,
+	0x6d, 0x65, 0x6e, 0x74, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22,
+	0x35, 0x0a, 0x1d, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f,
+	0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
+	0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x35, 0x0a, 0x1d, 0x73, 0x65, 0x74, 0x5f, 0x63, 0x6f,
+	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x5f, 0x61, 0x72,
+	0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x1c, 0x0a,
+	0x1a, 0x73, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x72, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x36, 0x0a, 0x17, 0x65,
+	0x78, 0x69, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x72, 0x67,
+	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x1b, 0x0a, 0x09, 0x65, 0x78, 0x69, 0x74, 0x5f, 0x63,
+	0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x08, 0x65, 0x78, 0x69, 0x74, 0x43,
+	0x6f, 0x64, 0x65, 0x22, 0x16, 0x0a, 0x14, 0x65, 0x78, 0x69, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74,
+	0x72, 0x61, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x19, 0x0a, 0x17, 0x67,
+	0x65, 0x74, 0x5f, 0x68, 0x65, 0x61, 0x64, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x5f, 0x61, 0x72, 0x67,
+	0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x45, 0x0a, 0x14, 0x67, 0x65, 0x74, 0x5f, 0x68, 0x65,
+	0x61, 0x64, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x2d,
+	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x17, 0x2e,
+	0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x68, 0x65, 0x61,
+	0x64, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x52, 0x0a,
+	0x0e, 0x68, 0x61, 0x73, 0x68, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12,
+	0x16, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30,
+	0x01, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6f, 0x62, 0x6a, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0c, 0x52, 0x03, 0x6f, 0x62, 0x6a, 0x12, 0x16, 0x0a, 0x04, 0x73, 0x69, 0x7a,
+	0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x04, 0x73, 0x69, 0x7a,
+	0x65, 0x22, 0x23, 0x0a, 0x0b, 0x68, 0x61, 0x73, 0x68, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74,
+	0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x3a, 0x0a, 0x18, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x63,
+	0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x72, 0x63, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e,
+	0x74, 0x73, 0x12, 0x1e, 0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75,
+	0x6e, 0x74, 0x22, 0x31, 0x0a, 0x15, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e,
+	0x74, 0x5f, 0x72, 0x63, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76,
 	0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x2a, 0x1a, 0x0a, 0x03, 0x64, 0x73, 0x61, 0x12, 0x13, 0x0a, 0x0f,
-	0x65, 0x63, 0x64, 0x73, 0x61, 0x5f, 0x73, 0x65, 0x63, 0x70, 0x32, 0x35, 0x36, 0x6b, 0x31, 0x10,
-	0x00, 0x2a, 0x49, 0x0a, 0x19, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x61, 0x75, 0x74, 0x68,
-	0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x12, 0x17,
-	0x0a, 0x13, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e,
-	0x74, 0x72, 0x61, 0x63, 0x74, 0x10, 0x00, 0x12, 0x13, 0x0a, 0x0f, 0x73, 0x65, 0x74, 0x5f, 0x73,
-	0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x10, 0x01, 0x42, 0x34, 0x5a, 0x32,
-	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
-	0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67,
-	0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x63, 0x68, 0x61,
-	0x69, 0x6e, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x58, 0x0a, 0x1c, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65,
+	0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x72, 0x63, 0x5f, 0x61, 0x72, 0x67, 0x75,
+	0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x1e, 0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61, 0x63,
+	0x63, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22,
+	0x31, 0x0a, 0x19, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75,
+	0x6e, 0x74, 0x5f, 0x72, 0x63, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14, 0x0a, 0x05,
+	0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61, 0x6c,
+	0x75, 0x65, 0x22, 0x1f, 0x0a, 0x1d, 0x67, 0x65, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
+	0x63, 0x65, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65,
+	0x6e, 0x74, 0x73, 0x22, 0x55, 0x0a, 0x1a, 0x67, 0x65, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x6f, 0x75,
+	0x72, 0x63, 0x65, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x12, 0x37, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x21, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e,
+	0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x5f, 0x64,
+	0x61, 0x74, 0x61, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xdf, 0x01, 0x0a, 0x21, 0x63,
+	0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65, 0x73,
+	0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73,
+	0x12, 0x36, 0x0a, 0x15, 0x64, 0x69, 0x73, 0x6b, 0x5f, 0x73, 0x74, 0x6f, 0x72, 0x61, 0x67, 0x65,
+	0x5f, 0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x42,
+	0x02, 0x30, 0x01, 0x52, 0x13, 0x64, 0x69, 0x73, 0x6b, 0x53, 0x74, 0x6f, 0x72, 0x61, 0x67, 0x65,
+	0x43, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x12, 0x40, 0x0a, 0x1a, 0x6e, 0x65, 0x74, 0x77,
+	0x6f, 0x72, 0x6b, 0x5f, 0x62, 0x61, 0x6e, 0x64, 0x77, 0x69, 0x64, 0x74, 0x68, 0x5f, 0x63, 0x6f,
+	0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01,
+	0x52, 0x18, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x42, 0x61, 0x6e, 0x64, 0x77, 0x69, 0x64,
+	0x74, 0x68, 0x43, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x12, 0x40, 0x0a, 0x1a, 0x63, 0x6f,
+	0x6d, 0x70, 0x75, 0x74, 0x65, 0x5f, 0x62, 0x61, 0x6e, 0x64, 0x77, 0x69, 0x64, 0x74, 0x68, 0x5f,
+	0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02,
+	0x30, 0x01, 0x52, 0x18, 0x63, 0x6f, 0x6d, 0x70, 0x75, 0x74, 0x65, 0x42, 0x61, 0x6e, 0x64, 0x77,
+	0x69, 0x64, 0x74, 0x68, 0x43, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x64, 0x22, 0x36, 0x0a, 0x1e,
+	0x63, 0x6f, 0x6e, 0x73, 0x75, 0x6d, 0x65, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65,
+	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x14,
+	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76,
+	0x61, 0x6c, 0x75, 0x65, 0x22, 0x27, 0x0a, 0x25, 0x67, 0x65, 0x74, 0x5f, 0x6c, 0x61, 0x73, 0x74,
+	0x5f, 0x69, 0x72, 0x72, 0x65, 0x76, 0x65, 0x72, 0x73, 0x69, 0x62, 0x6c, 0x65, 0x5f, 0x62, 0x6c,
+	0x6f, 0x63, 0x6b, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x3e, 0x0a,
+	0x22, 0x67, 0x65, 0x74, 0x5f, 0x6c, 0x61, 0x73, 0x74, 0x5f, 0x69, 0x72, 0x72, 0x65, 0x76, 0x65,
+	0x72, 0x73, 0x69, 0x62, 0x6c, 0x65, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x5f, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x16, 0x0a,
+	0x14, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x65, 0x72, 0x5f, 0x61, 0x72, 0x67, 0x75,
+	0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x44, 0x0a, 0x11, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x61, 0x6c,
+	0x6c, 0x65, 0x72, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x2f, 0x0a, 0x05, 0x76, 0x61,
+	0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x19, 0x2e, 0x6b, 0x6f, 0x69, 0x6e,
+	0x6f, 0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x63, 0x61, 0x6c, 0x6c, 0x65, 0x72, 0x5f,
+	0x64, 0x61, 0x74, 0x61, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x73, 0x0a, 0x1b, 0x72,
+	0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x5f, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79,
+	0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x34, 0x0a, 0x04, 0x74, 0x79,
+	0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x20, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
+	0x73, 0x2e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x7a,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x52, 0x04, 0x74, 0x79, 0x70, 0x65,
+	0x12, 0x1e, 0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74,
+	0x22, 0x1a, 0x0a, 0x18, 0x72, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x5f, 0x61, 0x75, 0x74, 0x68,
+	0x6f, 0x72, 0x69, 0x74, 0x79, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x1b, 0x0a, 0x19,
+	0x67, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x69, 0x64, 0x5f,
+	0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x22, 0x34, 0x0a, 0x16, 0x67, 0x65, 0x74,
+	0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x69, 0x64, 0x5f, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x12, 0x1a, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x05, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22,
+	0x3d, 0x0a, 0x1b, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x6e,
+	0x6f, 0x6e, 0x63, 0x65, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x1e,
+	0x0a, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42,
+	0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x22, 0x34,
+	0x0a, 0x18, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x6e, 0x6f,
+	0x6e, 0x63, 0x65, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x18, 0x0a, 0x05, 0x76, 0x61,
+	0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76,
+	0x61, 0x6c, 0x75, 0x65, 0x2a, 0x1a, 0x0a, 0x03, 0x64, 0x73, 0x61, 0x12, 0x13, 0x0a, 0x0f, 0x65,
+	0x63, 0x64, 0x73, 0x61, 0x5f, 0x73, 0x65, 0x63, 0x70, 0x32, 0x35, 0x36, 0x6b, 0x31, 0x10, 0x00,
+	0x2a, 0x49, 0x0a, 0x19, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x61, 0x75, 0x74, 0x68, 0x6f,
+	0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x12, 0x17, 0x0a,
+	0x13, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x6f, 0x6e, 0x74,
+	0x72, 0x61, 0x63, 0x74, 0x10, 0x00, 0x12, 0x13, 0x0a, 0x0f, 0x73, 0x65, 0x74, 0x5f, 0x73, 0x79,
+	0x73, 0x74, 0x65, 0x6d, 0x5f, 0x63, 0x61, 0x6c, 0x6c, 0x10, 0x01, 0x42, 0x34, 0x5a, 0x32, 0x67,
+	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
+	0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f,
+	0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x63, 0x68, 0x61, 0x69,
+	0x6e, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -4018,129 +4109,133 @@ func file_koinos_chain_system_calls_proto_rawDescGZIP() []byte {
 }
 
 var file_koinos_chain_system_calls_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_koinos_chain_system_calls_proto_msgTypes = make([]protoimpl.MessageInfo, 75)
+var file_koinos_chain_system_calls_proto_msgTypes = make([]protoimpl.MessageInfo, 77)
 var file_koinos_chain_system_calls_proto_goTypes = []interface{}{
 	(Dsa)(0),                                         // 0: koinos.chain.dsa
 	(SystemAuthorizationType)(0),                     // 1: koinos.chain.system_authorization_type
-	(*AuthorizeSystemArguments)(nil),                 // 2: koinos.chain.authorize_system_arguments
-	(*AuthorizeSystemResult)(nil),                    // 3: koinos.chain.authorize_system_result
-	(*VerifySignatureArguments)(nil),                 // 4: koinos.chain.verify_signature_arguments
-	(*VerifySignatureResult)(nil),                    // 5: koinos.chain.verify_signature_result
-	(*RecoverPublicKeyArguments)(nil),                // 6: koinos.chain.recover_public_key_arguments
-	(*RecoverPublicKeyResult)(nil),                   // 7: koinos.chain.recover_public_key_result
-	(*GetTransactionFieldArguments)(nil),             // 8: koinos.chain.get_transaction_field_arguments
-	(*GetTransactionFieldResult)(nil),                // 9: koinos.chain.get_transaction_field_result
-	(*GetBlockFieldArguments)(nil),                   // 10: koinos.chain.get_block_field_arguments
-	(*GetBlockFieldResult)(nil),                      // 11: koinos.chain.get_block_field_result
-	(*EventArguments)(nil),                           // 12: koinos.chain.event_arguments
-	(*EventResult)(nil),                              // 13: koinos.chain.event_result
-	(*LogArguments)(nil),                             // 14: koinos.chain.log_arguments
-	(*LogResult)(nil),                                // 15: koinos.chain.log_result
-	(*ProcessBlockSignatureArguments)(nil),           // 16: koinos.chain.process_block_signature_arguments
-	(*ProcessBlockSignatureResult)(nil),              // 17: koinos.chain.process_block_signature_result
-	(*VerifyMerkleRootArguments)(nil),                // 18: koinos.chain.verify_merkle_root_arguments
-	(*VerifyMerkleRootResult)(nil),                   // 19: koinos.chain.verify_merkle_root_result
-	(*ApplyBlockArguments)(nil),                      // 20: koinos.chain.apply_block_arguments
-	(*ApplyBlockResult)(nil),                         // 21: koinos.chain.apply_block_result
-	(*ApplyTransactionArguments)(nil),                // 22: koinos.chain.apply_transaction_arguments
-	(*ApplyTransactionResult)(nil),                   // 23: koinos.chain.apply_transaction_result
-	(*ApplyUploadContractOperationArguments)(nil),    // 24: koinos.chain.apply_upload_contract_operation_arguments
-	(*ApplyUploadContractOperationResult)(nil),       // 25: koinos.chain.apply_upload_contract_operation_result
-	(*ApplyCallContractOperationArguments)(nil),      // 26: koinos.chain.apply_call_contract_operation_arguments
-	(*ApplyCallContractOperationResult)(nil),         // 27: koinos.chain.apply_call_contract_operation_result
-	(*ApplySetSystemCallOperationArguments)(nil),     // 28: koinos.chain.apply_set_system_call_operation_arguments
-	(*ApplySetSystemCallOperationResult)(nil),        // 29: koinos.chain.apply_set_system_call_operation_result
-	(*ApplySetSystemContractOperationArguments)(nil), // 30: koinos.chain.apply_set_system_contract_operation_arguments
-	(*ApplySetSystemContractOperationResult)(nil),    // 31: koinos.chain.apply_set_system_contract_operation_result
-	(*PutObjectArguments)(nil),                       // 32: koinos.chain.put_object_arguments
-	(*PutObjectResult)(nil),                          // 33: koinos.chain.put_object_result
-	(*RemoveObjectArguments)(nil),                    // 34: koinos.chain.remove_object_arguments
-	(*RemoveObjectResult)(nil),                       // 35: koinos.chain.remove_object_result
-	(*GetObjectArguments)(nil),                       // 36: koinos.chain.get_object_arguments
-	(*DatabaseObject)(nil),                           // 37: koinos.chain.database_object
-	(*GetObjectResult)(nil),                          // 38: koinos.chain.get_object_result
-	(*GetNextObjectArguments)(nil),                   // 39: koinos.chain.get_next_object_arguments
-	(*GetNextObjectResult)(nil),                      // 40: koinos.chain.get_next_object_result
-	(*GetPrevObjectArguments)(nil),                   // 41: koinos.chain.get_prev_object_arguments
-	(*GetPrevObjectResult)(nil),                      // 42: koinos.chain.get_prev_object_result
-	(*CallContractArguments)(nil),                    // 43: koinos.chain.call_contract_arguments
-	(*CallContractResult)(nil),                       // 44: koinos.chain.call_contract_result
-	(*GetEntryPointArguments)(nil),                   // 45: koinos.chain.get_entry_point_arguments
-	(*GetEntryPointResult)(nil),                      // 46: koinos.chain.get_entry_point_result
-	(*GetContractArgumentsSizeArguments)(nil),        // 47: koinos.chain.get_contract_arguments_size_arguments
-	(*GetContractArgumentsSizeResult)(nil),           // 48: koinos.chain.get_contract_arguments_size_result
-	(*GetContractArgumentsArguments)(nil),            // 49: koinos.chain.get_contract_arguments_arguments
-	(*GetContractArgumentsResult)(nil),               // 50: koinos.chain.get_contract_arguments_result
-	(*SetContractResultArguments)(nil),               // 51: koinos.chain.set_contract_result_arguments
-	(*SetContractResultResult)(nil),                  // 52: koinos.chain.set_contract_result_result
-	(*ExitContractArguments)(nil),                    // 53: koinos.chain.exit_contract_arguments
-	(*ExitContractResult)(nil),                       // 54: koinos.chain.exit_contract_result
-	(*GetHeadInfoArguments)(nil),                     // 55: koinos.chain.get_head_info_arguments
-	(*GetHeadInfoResult)(nil),                        // 56: koinos.chain.get_head_info_result
-	(*HashArguments)(nil),                            // 57: koinos.chain.hash_arguments
-	(*HashResult)(nil),                               // 58: koinos.chain.hash_result
-	(*GetAccountRcArguments)(nil),                    // 59: koinos.chain.get_account_rc_arguments
-	(*GetAccountRcResult)(nil),                       // 60: koinos.chain.get_account_rc_result
-	(*ConsumeAccountRcArguments)(nil),                // 61: koinos.chain.consume_account_rc_arguments
-	(*ConsumeAccountRcResult)(nil),                   // 62: koinos.chain.consume_account_rc_result
-	(*GetResourceLimitsArguments)(nil),               // 63: koinos.chain.get_resource_limits_arguments
-	(*GetResourceLimitsResult)(nil),                  // 64: koinos.chain.get_resource_limits_result
-	(*ConsumeBlockResourcesArguments)(nil),           // 65: koinos.chain.consume_block_resources_arguments
-	(*ConsumeBlockResourcesResult)(nil),              // 66: koinos.chain.consume_block_resources_result
-	(*GetLastIrreversibleBlockArguments)(nil),        // 67: koinos.chain.get_last_irreversible_block_arguments
-	(*GetLastIrreversibleBlockResult)(nil),           // 68: koinos.chain.get_last_irreversible_block_result
-	(*GetCallerArguments)(nil),                       // 69: koinos.chain.get_caller_arguments
-	(*GetCallerResult)(nil),                          // 70: koinos.chain.get_caller_result
-	(*RequireAuthorityArguments)(nil),                // 71: koinos.chain.require_authority_arguments
-	(*RequireAuthorityResult)(nil),                   // 72: koinos.chain.require_authority_result
-	(*GetContractIdArguments)(nil),                   // 73: koinos.chain.get_contract_id_arguments
-	(*GetContractIdResult)(nil),                      // 74: koinos.chain.get_contract_id_result
-	(*GetAccountNonceArguments)(nil),                 // 75: koinos.chain.get_account_nonce_arguments
-	(*GetAccountNonceResult)(nil),                    // 76: koinos.chain.get_account_nonce_result
-	(*protocol.ValueType)(nil),                       // 77: koinos.chain.value_type
-	(*protocol.BlockHeader)(nil),                     // 78: koinos.protocol.block_header
-	(*protocol.Block)(nil),                           // 79: koinos.protocol.block
-	(*protocol.Transaction)(nil),                     // 80: koinos.protocol.transaction
-	(*protocol.UploadContractOperation)(nil),         // 81: koinos.protocol.upload_contract_operation
-	(*protocol.CallContractOperation)(nil),           // 82: koinos.protocol.call_contract_operation
-	(*protocol.SetSystemCallOperation)(nil),          // 83: koinos.protocol.set_system_call_operation
-	(*protocol.SetSystemContractOperation)(nil),      // 84: koinos.protocol.set_system_contract_operation
-	(*ObjectSpace)(nil),                              // 85: koinos.chain.object_space
-	(*HeadInfo)(nil),                                 // 86: koinos.chain.head_info
-	(*ResourceLimitData)(nil),                        // 87: koinos.chain.resource_limit_data
-	(*CallerData)(nil),                               // 88: koinos.chain.caller_data
-	(AuthorizationType)(0),                           // 89: koinos.chain.authorization_type
+	(*GetTransactionArguments)(nil),                  // 2: koinos.chain.get_transaction_arguments
+	(*GetTransactionResult)(nil),                     // 3: koinos.chain.get_transaction_result
+	(*GetBlockArguments)(nil),                        // 4: koinos.chain.get_block_arguments
+	(*GetBlockResult)(nil),                           // 5: koinos.chain.get_block_result
+	(*AuthorizeSystemArguments)(nil),                 // 6: koinos.chain.authorize_system_arguments
+	(*AuthorizeSystemResult)(nil),                    // 7: koinos.chain.authorize_system_result
+	(*VerifySignatureArguments)(nil),                 // 8: koinos.chain.verify_signature_arguments
+	(*VerifySignatureResult)(nil),                    // 9: koinos.chain.verify_signature_result
+	(*RecoverPublicKeyArguments)(nil),                // 10: koinos.chain.recover_public_key_arguments
+	(*RecoverPublicKeyResult)(nil),                   // 11: koinos.chain.recover_public_key_result
+	(*GetTransactionFieldArguments)(nil),             // 12: koinos.chain.get_transaction_field_arguments
+	(*GetTransactionFieldResult)(nil),                // 13: koinos.chain.get_transaction_field_result
+	(*GetBlockFieldArguments)(nil),                   // 14: koinos.chain.get_block_field_arguments
+	(*GetBlockFieldResult)(nil),                      // 15: koinos.chain.get_block_field_result
+	(*EventArguments)(nil),                           // 16: koinos.chain.event_arguments
+	(*EventResult)(nil),                              // 17: koinos.chain.event_result
+	(*LogArguments)(nil),                             // 18: koinos.chain.log_arguments
+	(*LogResult)(nil),                                // 19: koinos.chain.log_result
+	(*ProcessBlockSignatureArguments)(nil),           // 20: koinos.chain.process_block_signature_arguments
+	(*ProcessBlockSignatureResult)(nil),              // 21: koinos.chain.process_block_signature_result
+	(*VerifyMerkleRootArguments)(nil),                // 22: koinos.chain.verify_merkle_root_arguments
+	(*VerifyMerkleRootResult)(nil),                   // 23: koinos.chain.verify_merkle_root_result
+	(*ApplyBlockArguments)(nil),                      // 24: koinos.chain.apply_block_arguments
+	(*ApplyBlockResult)(nil),                         // 25: koinos.chain.apply_block_result
+	(*ApplyTransactionArguments)(nil),                // 26: koinos.chain.apply_transaction_arguments
+	(*ApplyTransactionResult)(nil),                   // 27: koinos.chain.apply_transaction_result
+	(*ApplyUploadContractOperationArguments)(nil),    // 28: koinos.chain.apply_upload_contract_operation_arguments
+	(*ApplyUploadContractOperationResult)(nil),       // 29: koinos.chain.apply_upload_contract_operation_result
+	(*ApplyCallContractOperationArguments)(nil),      // 30: koinos.chain.apply_call_contract_operation_arguments
+	(*ApplyCallContractOperationResult)(nil),         // 31: koinos.chain.apply_call_contract_operation_result
+	(*ApplySetSystemCallOperationArguments)(nil),     // 32: koinos.chain.apply_set_system_call_operation_arguments
+	(*ApplySetSystemCallOperationResult)(nil),        // 33: koinos.chain.apply_set_system_call_operation_result
+	(*ApplySetSystemContractOperationArguments)(nil), // 34: koinos.chain.apply_set_system_contract_operation_arguments
+	(*ApplySetSystemContractOperationResult)(nil),    // 35: koinos.chain.apply_set_system_contract_operation_result
+	(*PutObjectArguments)(nil),                       // 36: koinos.chain.put_object_arguments
+	(*PutObjectResult)(nil),                          // 37: koinos.chain.put_object_result
+	(*RemoveObjectArguments)(nil),                    // 38: koinos.chain.remove_object_arguments
+	(*RemoveObjectResult)(nil),                       // 39: koinos.chain.remove_object_result
+	(*GetObjectArguments)(nil),                       // 40: koinos.chain.get_object_arguments
+	(*DatabaseObject)(nil),                           // 41: koinos.chain.database_object
+	(*GetObjectResult)(nil),                          // 42: koinos.chain.get_object_result
+	(*GetNextObjectArguments)(nil),                   // 43: koinos.chain.get_next_object_arguments
+	(*GetNextObjectResult)(nil),                      // 44: koinos.chain.get_next_object_result
+	(*GetPrevObjectArguments)(nil),                   // 45: koinos.chain.get_prev_object_arguments
+	(*GetPrevObjectResult)(nil),                      // 46: koinos.chain.get_prev_object_result
+	(*CallContractArguments)(nil),                    // 47: koinos.chain.call_contract_arguments
+	(*CallContractResult)(nil),                       // 48: koinos.chain.call_contract_result
+	(*GetEntryPointArguments)(nil),                   // 49: koinos.chain.get_entry_point_arguments
+	(*GetEntryPointResult)(nil),                      // 50: koinos.chain.get_entry_point_result
+	(*GetContractArgumentsArguments)(nil),            // 51: koinos.chain.get_contract_arguments_arguments
+	(*GetContractArgumentsResult)(nil),               // 52: koinos.chain.get_contract_arguments_result
+	(*SetContractResultArguments)(nil),               // 53: koinos.chain.set_contract_result_arguments
+	(*SetContractResultResult)(nil),                  // 54: koinos.chain.set_contract_result_result
+	(*ExitContractArguments)(nil),                    // 55: koinos.chain.exit_contract_arguments
+	(*ExitContractResult)(nil),                       // 56: koinos.chain.exit_contract_result
+	(*GetHeadInfoArguments)(nil),                     // 57: koinos.chain.get_head_info_arguments
+	(*GetHeadInfoResult)(nil),                        // 58: koinos.chain.get_head_info_result
+	(*HashArguments)(nil),                            // 59: koinos.chain.hash_arguments
+	(*HashResult)(nil),                               // 60: koinos.chain.hash_result
+	(*GetAccountRcArguments)(nil),                    // 61: koinos.chain.get_account_rc_arguments
+	(*GetAccountRcResult)(nil),                       // 62: koinos.chain.get_account_rc_result
+	(*ConsumeAccountRcArguments)(nil),                // 63: koinos.chain.consume_account_rc_arguments
+	(*ConsumeAccountRcResult)(nil),                   // 64: koinos.chain.consume_account_rc_result
+	(*GetResourceLimitsArguments)(nil),               // 65: koinos.chain.get_resource_limits_arguments
+	(*GetResourceLimitsResult)(nil),                  // 66: koinos.chain.get_resource_limits_result
+	(*ConsumeBlockResourcesArguments)(nil),           // 67: koinos.chain.consume_block_resources_arguments
+	(*ConsumeBlockResourcesResult)(nil),              // 68: koinos.chain.consume_block_resources_result
+	(*GetLastIrreversibleBlockArguments)(nil),        // 69: koinos.chain.get_last_irreversible_block_arguments
+	(*GetLastIrreversibleBlockResult)(nil),           // 70: koinos.chain.get_last_irreversible_block_result
+	(*GetCallerArguments)(nil),                       // 71: koinos.chain.get_caller_arguments
+	(*GetCallerResult)(nil),                          // 72: koinos.chain.get_caller_result
+	(*RequireAuthorityArguments)(nil),                // 73: koinos.chain.require_authority_arguments
+	(*RequireAuthorityResult)(nil),                   // 74: koinos.chain.require_authority_result
+	(*GetContractIdArguments)(nil),                   // 75: koinos.chain.get_contract_id_arguments
+	(*GetContractIdResult)(nil),                      // 76: koinos.chain.get_contract_id_result
+	(*GetAccountNonceArguments)(nil),                 // 77: koinos.chain.get_account_nonce_arguments
+	(*GetAccountNonceResult)(nil),                    // 78: koinos.chain.get_account_nonce_result
+	(*protocol.Transaction)(nil),                     // 79: koinos.protocol.transaction
+	(*protocol.Block)(nil),                           // 80: koinos.protocol.block
+	(*protocol.ValueType)(nil),                       // 81: koinos.chain.value_type
+	(*protocol.BlockHeader)(nil),                     // 82: koinos.protocol.block_header
+	(*protocol.UploadContractOperation)(nil),         // 83: koinos.protocol.upload_contract_operation
+	(*protocol.CallContractOperation)(nil),           // 84: koinos.protocol.call_contract_operation
+	(*protocol.SetSystemCallOperation)(nil),          // 85: koinos.protocol.set_system_call_operation
+	(*protocol.SetSystemContractOperation)(nil),      // 86: koinos.protocol.set_system_contract_operation
+	(*ObjectSpace)(nil),                              // 87: koinos.chain.object_space
+	(*HeadInfo)(nil),                                 // 88: koinos.chain.head_info
+	(*ResourceLimitData)(nil),                        // 89: koinos.chain.resource_limit_data
+	(*CallerData)(nil),                               // 90: koinos.chain.caller_data
+	(AuthorizationType)(0),                           // 91: koinos.chain.authorization_type
 }
 var file_koinos_chain_system_calls_proto_depIdxs = []int32{
-	1,  // 0: koinos.chain.authorize_system_arguments.type:type_name -> koinos.chain.system_authorization_type
-	0,  // 1: koinos.chain.verify_signature_arguments.type:type_name -> koinos.chain.dsa
-	0,  // 2: koinos.chain.recover_public_key_arguments.type:type_name -> koinos.chain.dsa
-	77, // 3: koinos.chain.get_transaction_field_result.value:type_name -> koinos.chain.value_type
-	77, // 4: koinos.chain.get_block_field_result.value:type_name -> koinos.chain.value_type
-	78, // 5: koinos.chain.process_block_signature_arguments.header:type_name -> koinos.protocol.block_header
-	79, // 6: koinos.chain.apply_block_arguments.block:type_name -> koinos.protocol.block
-	80, // 7: koinos.chain.apply_transaction_arguments.transaction:type_name -> koinos.protocol.transaction
-	81, // 8: koinos.chain.apply_upload_contract_operation_arguments.op:type_name -> koinos.protocol.upload_contract_operation
-	82, // 9: koinos.chain.apply_call_contract_operation_arguments.op:type_name -> koinos.protocol.call_contract_operation
-	83, // 10: koinos.chain.apply_set_system_call_operation_arguments.op:type_name -> koinos.protocol.set_system_call_operation
-	84, // 11: koinos.chain.apply_set_system_contract_operation_arguments.op:type_name -> koinos.protocol.set_system_contract_operation
-	85, // 12: koinos.chain.put_object_arguments.space:type_name -> koinos.chain.object_space
-	85, // 13: koinos.chain.remove_object_arguments.space:type_name -> koinos.chain.object_space
-	85, // 14: koinos.chain.get_object_arguments.space:type_name -> koinos.chain.object_space
-	37, // 15: koinos.chain.get_object_result.value:type_name -> koinos.chain.database_object
-	85, // 16: koinos.chain.get_next_object_arguments.space:type_name -> koinos.chain.object_space
-	37, // 17: koinos.chain.get_next_object_result.value:type_name -> koinos.chain.database_object
-	85, // 18: koinos.chain.get_prev_object_arguments.space:type_name -> koinos.chain.object_space
-	37, // 19: koinos.chain.get_prev_object_result.value:type_name -> koinos.chain.database_object
-	86, // 20: koinos.chain.get_head_info_result.value:type_name -> koinos.chain.head_info
-	87, // 21: koinos.chain.get_resource_limits_result.value:type_name -> koinos.chain.resource_limit_data
-	88, // 22: koinos.chain.get_caller_result.value:type_name -> koinos.chain.caller_data
-	89, // 23: koinos.chain.require_authority_arguments.type:type_name -> koinos.chain.authorization_type
-	24, // [24:24] is the sub-list for method output_type
-	24, // [24:24] is the sub-list for method input_type
-	24, // [24:24] is the sub-list for extension type_name
-	24, // [24:24] is the sub-list for extension extendee
-	0,  // [0:24] is the sub-list for field type_name
+	79, // 0: koinos.chain.get_transaction_result.value:type_name -> koinos.protocol.transaction
+	80, // 1: koinos.chain.get_block_result.value:type_name -> koinos.protocol.block
+	1,  // 2: koinos.chain.authorize_system_arguments.type:type_name -> koinos.chain.system_authorization_type
+	0,  // 3: koinos.chain.verify_signature_arguments.type:type_name -> koinos.chain.dsa
+	0,  // 4: koinos.chain.recover_public_key_arguments.type:type_name -> koinos.chain.dsa
+	81, // 5: koinos.chain.get_transaction_field_result.value:type_name -> koinos.chain.value_type
+	81, // 6: koinos.chain.get_block_field_result.value:type_name -> koinos.chain.value_type
+	82, // 7: koinos.chain.process_block_signature_arguments.header:type_name -> koinos.protocol.block_header
+	80, // 8: koinos.chain.apply_block_arguments.block:type_name -> koinos.protocol.block
+	79, // 9: koinos.chain.apply_transaction_arguments.transaction:type_name -> koinos.protocol.transaction
+	83, // 10: koinos.chain.apply_upload_contract_operation_arguments.op:type_name -> koinos.protocol.upload_contract_operation
+	84, // 11: koinos.chain.apply_call_contract_operation_arguments.op:type_name -> koinos.protocol.call_contract_operation
+	85, // 12: koinos.chain.apply_set_system_call_operation_arguments.op:type_name -> koinos.protocol.set_system_call_operation
+	86, // 13: koinos.chain.apply_set_system_contract_operation_arguments.op:type_name -> koinos.protocol.set_system_contract_operation
+	87, // 14: koinos.chain.put_object_arguments.space:type_name -> koinos.chain.object_space
+	87, // 15: koinos.chain.remove_object_arguments.space:type_name -> koinos.chain.object_space
+	87, // 16: koinos.chain.get_object_arguments.space:type_name -> koinos.chain.object_space
+	41, // 17: koinos.chain.get_object_result.value:type_name -> koinos.chain.database_object
+	87, // 18: koinos.chain.get_next_object_arguments.space:type_name -> koinos.chain.object_space
+	41, // 19: koinos.chain.get_next_object_result.value:type_name -> koinos.chain.database_object
+	87, // 20: koinos.chain.get_prev_object_arguments.space:type_name -> koinos.chain.object_space
+	41, // 21: koinos.chain.get_prev_object_result.value:type_name -> koinos.chain.database_object
+	88, // 22: koinos.chain.get_head_info_result.value:type_name -> koinos.chain.head_info
+	89, // 23: koinos.chain.get_resource_limits_result.value:type_name -> koinos.chain.resource_limit_data
+	90, // 24: koinos.chain.get_caller_result.value:type_name -> koinos.chain.caller_data
+	91, // 25: koinos.chain.require_authority_arguments.type:type_name -> koinos.chain.authorization_type
+	26, // [26:26] is the sub-list for method output_type
+	26, // [26:26] is the sub-list for method input_type
+	26, // [26:26] is the sub-list for extension type_name
+	26, // [26:26] is the sub-list for extension extendee
+	0,  // [0:26] is the sub-list for field type_name
 }
 
 func init() { file_koinos_chain_system_calls_proto_init() }
@@ -4152,7 +4247,7 @@ func file_koinos_chain_system_calls_proto_init() {
 	file_koinos_chain_chain_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_koinos_chain_system_calls_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AuthorizeSystemArguments); i {
+			switch v := v.(*GetTransactionArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4164,7 +4259,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AuthorizeSystemResult); i {
+			switch v := v.(*GetTransactionResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4176,7 +4271,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VerifySignatureArguments); i {
+			switch v := v.(*GetBlockArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4188,7 +4283,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VerifySignatureResult); i {
+			switch v := v.(*GetBlockResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4200,7 +4295,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RecoverPublicKeyArguments); i {
+			switch v := v.(*AuthorizeSystemArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4212,7 +4307,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RecoverPublicKeyResult); i {
+			switch v := v.(*AuthorizeSystemResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4224,7 +4319,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTransactionFieldArguments); i {
+			switch v := v.(*VerifySignatureArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4236,7 +4331,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTransactionFieldResult); i {
+			switch v := v.(*VerifySignatureResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4248,7 +4343,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetBlockFieldArguments); i {
+			switch v := v.(*RecoverPublicKeyArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4260,7 +4355,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetBlockFieldResult); i {
+			switch v := v.(*RecoverPublicKeyResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4272,7 +4367,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*EventArguments); i {
+			switch v := v.(*GetTransactionFieldArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4284,7 +4379,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*EventResult); i {
+			switch v := v.(*GetTransactionFieldResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4296,7 +4391,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*LogArguments); i {
+			switch v := v.(*GetBlockFieldArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4308,7 +4403,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*LogResult); i {
+			switch v := v.(*GetBlockFieldResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4320,7 +4415,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ProcessBlockSignatureArguments); i {
+			switch v := v.(*EventArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4332,7 +4427,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ProcessBlockSignatureResult); i {
+			switch v := v.(*EventResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4344,7 +4439,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VerifyMerkleRootArguments); i {
+			switch v := v.(*LogArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4356,7 +4451,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VerifyMerkleRootResult); i {
+			switch v := v.(*LogResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4368,7 +4463,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyBlockArguments); i {
+			switch v := v.(*ProcessBlockSignatureArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4380,7 +4475,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyBlockResult); i {
+			switch v := v.(*ProcessBlockSignatureResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4392,7 +4487,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyTransactionArguments); i {
+			switch v := v.(*VerifyMerkleRootArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4404,7 +4499,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyTransactionResult); i {
+			switch v := v.(*VerifyMerkleRootResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4416,7 +4511,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyUploadContractOperationArguments); i {
+			switch v := v.(*ApplyBlockArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4428,7 +4523,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyUploadContractOperationResult); i {
+			switch v := v.(*ApplyBlockResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4440,7 +4535,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyCallContractOperationArguments); i {
+			switch v := v.(*ApplyTransactionArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4452,7 +4547,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyCallContractOperationResult); i {
+			switch v := v.(*ApplyTransactionResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4464,7 +4559,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplySetSystemCallOperationArguments); i {
+			switch v := v.(*ApplyUploadContractOperationArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4476,7 +4571,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplySetSystemCallOperationResult); i {
+			switch v := v.(*ApplyUploadContractOperationResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4488,7 +4583,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplySetSystemContractOperationArguments); i {
+			switch v := v.(*ApplyCallContractOperationArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4500,7 +4595,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplySetSystemContractOperationResult); i {
+			switch v := v.(*ApplyCallContractOperationResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4512,7 +4607,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PutObjectArguments); i {
+			switch v := v.(*ApplySetSystemCallOperationArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4524,7 +4619,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PutObjectResult); i {
+			switch v := v.(*ApplySetSystemCallOperationResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4536,7 +4631,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RemoveObjectArguments); i {
+			switch v := v.(*ApplySetSystemContractOperationArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4548,7 +4643,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RemoveObjectResult); i {
+			switch v := v.(*ApplySetSystemContractOperationResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4560,7 +4655,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetObjectArguments); i {
+			switch v := v.(*PutObjectArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4572,7 +4667,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DatabaseObject); i {
+			switch v := v.(*PutObjectResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4584,7 +4679,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetObjectResult); i {
+			switch v := v.(*RemoveObjectArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4596,7 +4691,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetNextObjectArguments); i {
+			switch v := v.(*RemoveObjectResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4608,7 +4703,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetNextObjectResult); i {
+			switch v := v.(*GetObjectArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4620,7 +4715,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetPrevObjectArguments); i {
+			switch v := v.(*DatabaseObject); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4632,7 +4727,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetPrevObjectResult); i {
+			switch v := v.(*GetObjectResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4644,7 +4739,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CallContractArguments); i {
+			switch v := v.(*GetNextObjectArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4656,7 +4751,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CallContractResult); i {
+			switch v := v.(*GetNextObjectResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4668,7 +4763,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetEntryPointArguments); i {
+			switch v := v.(*GetPrevObjectArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4680,7 +4775,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetEntryPointResult); i {
+			switch v := v.(*GetPrevObjectResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4692,7 +4787,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetContractArgumentsSizeArguments); i {
+			switch v := v.(*CallContractArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4704,7 +4799,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetContractArgumentsSizeResult); i {
+			switch v := v.(*CallContractResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4716,7 +4811,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetContractArgumentsArguments); i {
+			switch v := v.(*GetEntryPointArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4728,7 +4823,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetContractArgumentsResult); i {
+			switch v := v.(*GetEntryPointResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4740,7 +4835,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SetContractResultArguments); i {
+			switch v := v.(*GetContractArgumentsArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4752,7 +4847,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SetContractResultResult); i {
+			switch v := v.(*GetContractArgumentsResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4764,7 +4859,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ExitContractArguments); i {
+			switch v := v.(*SetContractResultArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4776,7 +4871,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[52].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ExitContractResult); i {
+			switch v := v.(*SetContractResultResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4788,7 +4883,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[53].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetHeadInfoArguments); i {
+			switch v := v.(*ExitContractArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4800,7 +4895,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[54].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetHeadInfoResult); i {
+			switch v := v.(*ExitContractResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4812,7 +4907,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[55].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HashArguments); i {
+			switch v := v.(*GetHeadInfoArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4824,7 +4919,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HashResult); i {
+			switch v := v.(*GetHeadInfoResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4836,7 +4931,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[57].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetAccountRcArguments); i {
+			switch v := v.(*HashArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4848,7 +4943,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[58].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetAccountRcResult); i {
+			switch v := v.(*HashResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4860,7 +4955,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[59].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConsumeAccountRcArguments); i {
+			switch v := v.(*GetAccountRcArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4872,7 +4967,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[60].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConsumeAccountRcResult); i {
+			switch v := v.(*GetAccountRcResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4884,7 +4979,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[61].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetResourceLimitsArguments); i {
+			switch v := v.(*ConsumeAccountRcArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4896,7 +4991,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[62].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetResourceLimitsResult); i {
+			switch v := v.(*ConsumeAccountRcResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4908,7 +5003,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[63].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConsumeBlockResourcesArguments); i {
+			switch v := v.(*GetResourceLimitsArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4920,7 +5015,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[64].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ConsumeBlockResourcesResult); i {
+			switch v := v.(*GetResourceLimitsResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4932,7 +5027,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[65].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetLastIrreversibleBlockArguments); i {
+			switch v := v.(*ConsumeBlockResourcesArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4944,7 +5039,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[66].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetLastIrreversibleBlockResult); i {
+			switch v := v.(*ConsumeBlockResourcesResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4956,7 +5051,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[67].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetCallerArguments); i {
+			switch v := v.(*GetLastIrreversibleBlockArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4968,7 +5063,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[68].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetCallerResult); i {
+			switch v := v.(*GetLastIrreversibleBlockResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4980,7 +5075,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[69].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RequireAuthorityArguments); i {
+			switch v := v.(*GetCallerArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4992,7 +5087,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[70].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RequireAuthorityResult); i {
+			switch v := v.(*GetCallerResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -5004,7 +5099,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[71].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetContractIdArguments); i {
+			switch v := v.(*RequireAuthorityArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -5016,7 +5111,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[72].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetContractIdResult); i {
+			switch v := v.(*RequireAuthorityResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -5028,7 +5123,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[73].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetAccountNonceArguments); i {
+			switch v := v.(*GetContractIdArguments); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -5040,6 +5135,30 @@ func file_koinos_chain_system_calls_proto_init() {
 			}
 		}
 		file_koinos_chain_system_calls_proto_msgTypes[74].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetContractIdResult); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_koinos_chain_system_calls_proto_msgTypes[75].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetAccountNonceArguments); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_koinos_chain_system_calls_proto_msgTypes[76].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetAccountNonceResult); i {
 			case 0:
 				return &v.state
@@ -5058,7 +5177,7 @@ func file_koinos_chain_system_calls_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_koinos_chain_system_calls_proto_rawDesc,
 			NumEnums:      2,
-			NumMessages:   75,
+			NumMessages:   77,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
