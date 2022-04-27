@@ -22,8 +22,8 @@ func TestCanonicalSerialization(t *testing.T) {
 
 	// Ensure we can deserialize it
 	bt2 := koinos.BlockTopology{}
-	err := proto.Unmarshal(b, &bt2)
-	assert.Equal(err, nil)
+	err = proto.Unmarshal(b, &bt2)
+	assert.Equal(t, err, nil)
 	assert.Equal(t, bt.Height, bt2.Height)
 	assert.True(t, bytes.Equal(bt.Id, bt2.Id))
 	assert.True(t, bytes.Equal(bt.Previous, bt2.Previous))
