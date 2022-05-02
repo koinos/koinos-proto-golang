@@ -108,26 +108,38 @@ var (
 		},
 	}
 
-	// KoinosMarshalOptions are the default Koinos JSON Marshal Options
+	// KoinosMarshalOptions are the default Koinos text Marshal Options
 	KoinosMarshalOptions = prototext.MarshalOptions{
 		Multiline:      false,
 		Indent:         "",
 		FieldOverrides: KoinosFieldOverrides,
 	}
 
-	// KoinosUnmarshalOptions are the default Koinos JSON Unmarshal Options
+	// KoinosMarshalPrettyOptions are text marshal options with indentation
+	KoinosMarshalPrettyOptions = prototext.MarshalOptions{
+		Multiline:      true,
+		Indent:         "  ",
+		FieldOverrides: KoinosFieldOverrides,
+	}
+
+	// KoinosUnmarshalOptions are the default Koinos text Unmarshal Options
 	KoinosUnmarshalOptions = prototext.UnmarshalOptions{
 		DiscardUnknown: true,
 		FieldOverrides: KoinosFieldOverrides,
 	}
 )
 
-// Marshal encodes to JSON using KoinosMarshalOptions
+// Marshal encodes to text using KoinosMarshalOptions
 func Marshal(m proto.Message) ([]byte, error) {
 	return KoinosMarshalOptions.Marshal(m)
 }
 
-// Unmarshal decods from JSON using KoinosUnmarshalOptions
+// MarshalPretty encodes to text using KoinosMarshalPrettyOptions
+func MarshalPretty(m proto.Message) ([]byte, error) {
+	return KoinosMarshalPrettyOptions.Marshal(m)
+}
+
+// Unmarshal decods from text using KoinosUnmarshalOptions
 func Unmarshal(b []byte, m proto.Message) error {
 	return KoinosUnmarshalOptions.Unmarshal(b, m)
 }
