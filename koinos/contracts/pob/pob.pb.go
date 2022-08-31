@@ -849,6 +849,91 @@ func (x *GetPublicKeyResult) GetValue() []byte {
 	return nil
 }
 
+type UpdateConsensusParametersArguments struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Value *ConsensusParameters `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (x *UpdateConsensusParametersArguments) Reset() {
+	*x = UpdateConsensusParametersArguments{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_contracts_pob_pob_proto_msgTypes[16]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UpdateConsensusParametersArguments) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateConsensusParametersArguments) ProtoMessage() {}
+
+func (x *UpdateConsensusParametersArguments) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_contracts_pob_pob_proto_msgTypes[16]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateConsensusParametersArguments.ProtoReflect.Descriptor instead.
+func (*UpdateConsensusParametersArguments) Descriptor() ([]byte, []int) {
+	return file_koinos_contracts_pob_pob_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *UpdateConsensusParametersArguments) GetValue() *ConsensusParameters {
+	if x != nil {
+		return x.Value
+	}
+	return nil
+}
+
+type UpdateConsensusParametersResult struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *UpdateConsensusParametersResult) Reset() {
+	*x = UpdateConsensusParametersResult{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_koinos_contracts_pob_pob_proto_msgTypes[17]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UpdateConsensusParametersResult) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateConsensusParametersResult) ProtoMessage() {}
+
+func (x *UpdateConsensusParametersResult) ProtoReflect() protoreflect.Message {
+	mi := &file_koinos_contracts_pob_pob_proto_msgTypes[17]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateConsensusParametersResult.ProtoReflect.Descriptor instead.
+func (*UpdateConsensusParametersResult) Descriptor() ([]byte, []int) {
+	return file_koinos_contracts_pob_pob_proto_rawDescGZIP(), []int{17}
+}
+
 var File_koinos_contracts_pob_pob_proto protoreflect.FileDescriptor
 
 var file_koinos_contracts_pob_pob_proto_rawDesc = []byte{
@@ -946,12 +1031,21 @@ var file_koinos_contracts_pob_pob_proto_rawDesc = []byte{
 	0x6f, 0x64, 0x75, 0x63, 0x65, 0x72, 0x22, 0x33, 0x0a, 0x15, 0x67, 0x65, 0x74, 0x5f, 0x70, 0x75,
 	0x62, 0x6c, 0x69, 0x63, 0x5f, 0x6b, 0x65, 0x79, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12,
 	0x1a, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04,
-	0x80, 0xb5, 0x18, 0x00, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x3c, 0x5a, 0x3a, 0x67,
-	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73,
-	0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f,
-	0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x63, 0x6f, 0x6e, 0x74,
-	0x72, 0x61, 0x63, 0x74, 0x73, 0x2f, 0x70, 0x6f, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x80, 0xb5, 0x18, 0x00, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x69, 0x0a, 0x25, 0x75,
+	0x70, 0x64, 0x61, 0x74, 0x65, 0x5f, 0x63, 0x6f, 0x6e, 0x73, 0x65, 0x6e, 0x73, 0x75, 0x73, 0x5f,
+	0x70, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d,
+	0x65, 0x6e, 0x74, 0x73, 0x12, 0x40, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x63, 0x6f, 0x6e,
+	0x74, 0x72, 0x61, 0x63, 0x74, 0x73, 0x2e, 0x70, 0x6f, 0x62, 0x2e, 0x63, 0x6f, 0x6e, 0x73, 0x65,
+	0x6e, 0x73, 0x75, 0x73, 0x5f, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x73, 0x52,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x24, 0x0a, 0x22, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65,
+	0x5f, 0x63, 0x6f, 0x6e, 0x73, 0x65, 0x6e, 0x73, 0x75, 0x73, 0x5f, 0x70, 0x61, 0x72, 0x61, 0x6d,
+	0x65, 0x74, 0x65, 0x72, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x42, 0x3c, 0x5a, 0x3a,
+	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
+	0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67,
+	0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x63, 0x6f, 0x6e,
+	0x74, 0x72, 0x61, 0x63, 0x74, 0x73, 0x2f, 0x70, 0x6f, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x33,
 }
 
 var (
@@ -966,33 +1060,36 @@ func file_koinos_contracts_pob_pob_proto_rawDescGZIP() []byte {
 	return file_koinos_contracts_pob_pob_proto_rawDescData
 }
 
-var file_koinos_contracts_pob_pob_proto_msgTypes = make([]protoimpl.MessageInfo, 16)
+var file_koinos_contracts_pob_pob_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
 var file_koinos_contracts_pob_pob_proto_goTypes = []interface{}{
-	(*ConsensusParameters)(nil),             // 0: koinos.contracts.pob.consensus_parameters
-	(*PublicKeyRecord)(nil),                 // 1: koinos.contracts.pob.public_key_record
-	(*Metadata)(nil),                        // 2: koinos.contracts.pob.metadata
-	(*SignatureData)(nil),                   // 3: koinos.contracts.pob.signature_data
-	(*VrfPayload)(nil),                      // 4: koinos.contracts.pob.vrf_payload
-	(*RegisterPublicKeyArguments)(nil),      // 5: koinos.contracts.pob.register_public_key_arguments
-	(*RegisterPublicKeyResult)(nil),         // 6: koinos.contracts.pob.register_public_key_result
-	(*BurnArguments)(nil),                   // 7: koinos.contracts.pob.burn_arguments
-	(*BurnResult)(nil),                      // 8: koinos.contracts.pob.burn_result
-	(*GetConsensusParametersArguments)(nil), // 9: koinos.contracts.pob.get_consensus_parameters_arguments
-	(*GetConsensusParametersResult)(nil),    // 10: koinos.contracts.pob.get_consensus_parameters_result
-	(*GetMetadataArguments)(nil),            // 11: koinos.contracts.pob.get_metadata_arguments
-	(*GetMetadataResult)(nil),               // 12: koinos.contracts.pob.get_metadata_result
-	(*RegisterPublicKeyEvent)(nil),          // 13: koinos.contracts.pob.register_public_key_event
-	(*GetPublicKeyArguments)(nil),           // 14: koinos.contracts.pob.get_public_key_arguments
-	(*GetPublicKeyResult)(nil),              // 15: koinos.contracts.pob.get_public_key_result
+	(*ConsensusParameters)(nil),                // 0: koinos.contracts.pob.consensus_parameters
+	(*PublicKeyRecord)(nil),                    // 1: koinos.contracts.pob.public_key_record
+	(*Metadata)(nil),                           // 2: koinos.contracts.pob.metadata
+	(*SignatureData)(nil),                      // 3: koinos.contracts.pob.signature_data
+	(*VrfPayload)(nil),                         // 4: koinos.contracts.pob.vrf_payload
+	(*RegisterPublicKeyArguments)(nil),         // 5: koinos.contracts.pob.register_public_key_arguments
+	(*RegisterPublicKeyResult)(nil),            // 6: koinos.contracts.pob.register_public_key_result
+	(*BurnArguments)(nil),                      // 7: koinos.contracts.pob.burn_arguments
+	(*BurnResult)(nil),                         // 8: koinos.contracts.pob.burn_result
+	(*GetConsensusParametersArguments)(nil),    // 9: koinos.contracts.pob.get_consensus_parameters_arguments
+	(*GetConsensusParametersResult)(nil),       // 10: koinos.contracts.pob.get_consensus_parameters_result
+	(*GetMetadataArguments)(nil),               // 11: koinos.contracts.pob.get_metadata_arguments
+	(*GetMetadataResult)(nil),                  // 12: koinos.contracts.pob.get_metadata_result
+	(*RegisterPublicKeyEvent)(nil),             // 13: koinos.contracts.pob.register_public_key_event
+	(*GetPublicKeyArguments)(nil),              // 14: koinos.contracts.pob.get_public_key_arguments
+	(*GetPublicKeyResult)(nil),                 // 15: koinos.contracts.pob.get_public_key_result
+	(*UpdateConsensusParametersArguments)(nil), // 16: koinos.contracts.pob.update_consensus_parameters_arguments
+	(*UpdateConsensusParametersResult)(nil),    // 17: koinos.contracts.pob.update_consensus_parameters_result
 }
 var file_koinos_contracts_pob_pob_proto_depIdxs = []int32{
 	0, // 0: koinos.contracts.pob.get_consensus_parameters_result.value:type_name -> koinos.contracts.pob.consensus_parameters
 	2, // 1: koinos.contracts.pob.get_metadata_result.value:type_name -> koinos.contracts.pob.metadata
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	0, // 2: koinos.contracts.pob.update_consensus_parameters_arguments.value:type_name -> koinos.contracts.pob.consensus_parameters
+	3, // [3:3] is the sub-list for method output_type
+	3, // [3:3] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_koinos_contracts_pob_pob_proto_init() }
@@ -1193,6 +1290,30 @@ func file_koinos_contracts_pob_pob_proto_init() {
 				return nil
 			}
 		}
+		file_koinos_contracts_pob_pob_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UpdateConsensusParametersArguments); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_koinos_contracts_pob_pob_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UpdateConsensusParametersResult); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -1200,7 +1321,7 @@ func file_koinos_contracts_pob_pob_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_koinos_contracts_pob_pob_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   16,
+			NumMessages:   18,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
