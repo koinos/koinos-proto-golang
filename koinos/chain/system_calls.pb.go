@@ -1329,7 +1329,7 @@ type GetTransactionFieldResult struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Value *protocol.ValueType `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+	Value *ValueType `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
 }
 
 func (x *GetTransactionFieldResult) Reset() {
@@ -1364,7 +1364,7 @@ func (*GetTransactionFieldResult) Descriptor() ([]byte, []int) {
 	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{31}
 }
 
-func (x *GetTransactionFieldResult) GetValue() *protocol.ValueType {
+func (x *GetTransactionFieldResult) GetValue() *ValueType {
 	if x != nil {
 		return x.Value
 	}
@@ -1508,7 +1508,7 @@ type GetBlockFieldResult struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Value *protocol.ValueType `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+	Value *ValueType `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
 }
 
 func (x *GetBlockFieldResult) Reset() {
@@ -1543,7 +1543,7 @@ func (*GetBlockFieldResult) Descriptor() ([]byte, []int) {
 	return file_koinos_chain_system_calls_proto_rawDescGZIP(), []int{35}
 }
 
-func (x *GetBlockFieldResult) GetValue() *protocol.ValueType {
+func (x *GetBlockFieldResult) GetValue() *ValueType {
 	if x != nil {
 		return x.Value
 	}
@@ -4891,7 +4891,7 @@ var file_koinos_chain_system_calls_proto_goTypes = []interface{}{
 	(*protocol.SetSystemCallOperation)(nil),          // 98: koinos.protocol.set_system_call_operation
 	(*protocol.SetSystemContractOperation)(nil),      // 99: koinos.protocol.set_system_contract_operation
 	(*protocol.BlockHeader)(nil),                     // 100: koinos.protocol.block_header
-	(*protocol.ValueType)(nil),                       // 101: koinos.chain.value_type
+	(*ValueType)(nil),                                // 101: koinos.chain.value_type
 	(*protocol.Operation)(nil),                       // 102: koinos.protocol.operation
 	(*ResourceLimitData)(nil),                        // 103: koinos.chain.resource_limit_data
 	(*ObjectSpace)(nil),                              // 104: koinos.chain.object_space
@@ -4945,6 +4945,7 @@ func file_koinos_chain_system_calls_proto_init() {
 	}
 	file_koinos_chain_authority_proto_init()
 	file_koinos_chain_chain_proto_init()
+	file_koinos_chain_value_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_koinos_chain_system_calls_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NopArguments); i {
