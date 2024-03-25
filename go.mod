@@ -1,4 +1,4 @@
-module github.com/koinos/koinos-proto-golang
+module github.com/koinos/koinos-proto-golang/v2
 
 go 1.16
 
