@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/koinos/koinos-proto-golang/koinos"
-	"github.com/koinos/koinos-proto-golang/koinos/protocol"
-	"github.com/koinos/koinos-proto-golang/koinos/rpc/block_store"
+	"github.com/koinos/koinos-proto-golang/v2/koinos"
+	"github.com/koinos/koinos-proto-golang/v2/koinos/protocol"
+	"github.com/koinos/koinos-proto-golang/v2/koinos/rpc/block_store"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/proto"
 )
