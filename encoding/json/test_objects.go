@@ -7,7 +7,7 @@
 package json
 
 import (
-	_ "github.com/koinos/koinos-proto-golang/koinos"
+	_ "github.com/koinos/koinos-proto-golang/v2/koinos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

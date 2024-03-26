@@ -12,7 +12,7 @@ import (
 	"google.golang.org/protobuf/types/descriptorpb"
 
 	"github.com/btcsuite/btcutil/base58"
-	"github.com/koinos/koinos-proto-golang/koinos"
+	"github.com/koinos/koinos-proto-golang/v2/koinos"
 )
 
 var (
