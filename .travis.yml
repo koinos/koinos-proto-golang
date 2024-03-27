@@ -21,7 +21,7 @@ install:
   - go get ./...
 
 script:
-  - go test -v github.com/koinos/koinos-proto-golang/koinos/canonical -coverprofile=canonical.out -coverpkg=./koinos/canonical
+  - go test -v github.com/koinos/v2/koinos-proto-golang/koinos/canonical -coverprofile=canonical.out -coverpkg=./koinos/canonical
   - golangci-lint run ./...
 
 after_success:
