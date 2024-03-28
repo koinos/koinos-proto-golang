@@ -5,23 +5,28 @@ go:
 
 addons:
   apt:
+    update: true
     packages:
-      - ruby-full
-  update: true
+      - ruby
 
 jobs:
   include:
     - os: linux
-      dist: focal
+      dist: jammy
 
 install:
-  - source ci/install.sh
+  - sudo gem install coveralls-lcov
+  - go install github.com/jandelgado/gcov2lcov@latest
+  - curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.45.2
+  - go get ./...
 
 script:
-  - ci/build.sh && ci/test.sh
+  - go test -v github.com/koinos/koinos-proto-golang/v2/koinos/canonical -coverprofile=canonical.out -coverpkg=./koinos/canonical
+  - golangci-lint run ./...
 
 after_success:
-  - ci/after_success.sh
+  - gcov2lcov -infile=canonical.out -outfile=canonical.info
+  - coveralls-lcov --repo-token "$COVERALLS_REPO_TOKEN" --service-name travis-pro canonical.info
 
 notifications:
   slack:
