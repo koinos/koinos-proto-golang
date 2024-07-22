@@ -21,52 +21,6 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type Direction int32
-
-const (
-	Direction_ascending  Direction = 0
-	Direction_descending Direction = 1
-)
-
-// Enum value maps for Direction.
-var (
-	Direction_name = map[int32]string{
-		0: "ascending",
-		1: "descending",
-	}
-	Direction_value = map[string]int32{
-		"ascending":  0,
-		"descending": 1,
-	}
-)
-
-func (x Direction) Enum() *Direction {
-	p := new(Direction)
-	*p = x
-	return p
-}
-
-func (x Direction) String() string {
-	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
-}
-
-func (Direction) Descriptor() protoreflect.EnumDescriptor {
-	return file_koinos_standards_kcs4_proto_enumTypes[0].Descriptor()
-}
-
-func (Direction) Type() protoreflect.EnumType {
-	return &file_koinos_standards_kcs4_proto_enumTypes[0]
-}
-
-func (x Direction) Number() protoreflect.EnumNumber {
-	return protoreflect.EnumNumber(x)
-}
-
-// Deprecated: Use Direction.Descriptor instead.
-func (Direction) EnumDescriptor() ([]byte, []int) {
-	return file_koinos_standards_kcs4_proto_rawDescGZIP(), []int{0}
-}
-
 type NameArguments struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -764,10 +718,10 @@ type GetAllowancesArguments struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Owner     []byte    `protobuf:"bytes,1,opt,name=owner,proto3" json:"owner,omitempty"`
-	Start     []byte    `protobuf:"bytes,2,opt,name=start,proto3" json:"start,omitempty"`
-	Limit     int32     `protobuf:"varint,3,opt,name=limit,proto3" json:"limit,omitempty"`
-	Direction Direction `protobuf:"varint,4,opt,name=direction,proto3,enum=koinos.standards.kcs4.Direction" json:"direction,omitempty"`
+	Owner      []byte `protobuf:"bytes,1,opt,name=owner,proto3" json:"owner,omitempty"`
+	Start      []byte `protobuf:"bytes,2,opt,name=start,proto3" json:"start,omitempty"`
+	Limit      int32  `protobuf:"varint,3,opt,name=limit,proto3" json:"limit,omitempty"`
+	Descending bool   `protobuf:"varint,4,opt,name=descending,proto3" json:"descending,omitempty"`
 }
 
 func (x *GetAllowancesArguments) Reset() {
@@ -823,11 +777,11 @@ func (x *GetAllowancesArguments) GetLimit() int32 {
 	return 0
 }
 
-func (x *GetAllowancesArguments) GetDirection() Direction {
+func (x *GetAllowancesArguments) GetDescending() bool {
 	if x != nil {
-		return x.Direction
+		return x.Descending
 	}
-	return Direction_ascending
+	return false
 }
 
 type GetAllowancesResult struct {
@@ -1621,18 +1575,16 @@ var file_koinos_standards_kcs4_proto_rawDesc = []byte{
 	0x73, 0x70, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80,
 	0xb5, 0x18, 0x06, 0x52, 0x07, 0x73, 0x70, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x12, 0x18, 0x0a, 0x05,
 	0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52,
-	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xa8, 0x01, 0x0a, 0x18, 0x67, 0x65, 0x74, 0x5f, 0x61,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x88, 0x01, 0x0a, 0x18, 0x67, 0x65, 0x74, 0x5f, 0x61,
 	0x6c, 0x6c, 0x6f, 0x77, 0x61, 0x6e, 0x63, 0x65, 0x73, 0x5f, 0x61, 0x72, 0x67, 0x75, 0x6d, 0x65,
 	0x6e, 0x74, 0x73, 0x12, 0x1a, 0x0a, 0x05, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52, 0x05, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x12,
 	0x1a, 0x0a, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04,
 	0x80, 0xb5, 0x18, 0x06, 0x52, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x6c,
 	0x69, 0x6d, 0x69, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x05, 0x6c, 0x69, 0x6d, 0x69,
-	0x74, 0x12, 0x3e, 0x0a, 0x09, 0x64, 0x69, 0x72, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x04,
-	0x20, 0x01, 0x28, 0x0e, 0x32, 0x20, 0x2e, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2e, 0x73, 0x74,
-	0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2e, 0x6b, 0x63, 0x73, 0x34, 0x2e, 0x64, 0x69, 0x72,
-	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x09, 0x64, 0x69, 0x72, 0x65, 0x63, 0x74, 0x69, 0x6f,
-	0x6e, 0x22, 0x79, 0x0a, 0x15, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x6c, 0x6c, 0x6f, 0x77, 0x61, 0x6e,
+	0x74, 0x12, 0x1e, 0x0a, 0x0a, 0x64, 0x65, 0x73, 0x63, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x18,
+	0x04, 0x20, 0x01, 0x28, 0x08, 0x52, 0x0a, 0x64, 0x65, 0x73, 0x63, 0x65, 0x6e, 0x64, 0x69, 0x6e,
+	0x67, 0x22, 0x79, 0x0a, 0x15, 0x67, 0x65, 0x74, 0x5f, 0x61, 0x6c, 0x6c, 0x6f, 0x77, 0x61, 0x6e,
 	0x63, 0x65, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x1a, 0x0a, 0x05, 0x6f, 0x77,
 	0x6e, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x42, 0x04, 0x80, 0xb5, 0x18, 0x06, 0x52,
 	0x05, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x12, 0x44, 0x0a, 0x0a, 0x61, 0x6c, 0x6c, 0x6f, 0x77, 0x61,
@@ -1690,14 +1642,12 @@ var file_koinos_standards_kcs4_proto_rawDesc = []byte{
 	0x28, 0x04, 0x42, 0x02, 0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x2a, 0x0a,
 	0x0e, 0x62, 0x61, 0x6c, 0x61, 0x6e, 0x63, 0x65, 0x5f, 0x6f, 0x62, 0x6a, 0x65, 0x63, 0x74, 0x12,
 	0x18, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x42, 0x02,
-	0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x2a, 0x2a, 0x0a, 0x09, 0x64, 0x69, 0x72,
-	0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x0d, 0x0a, 0x09, 0x61, 0x73, 0x63, 0x65, 0x6e, 0x64,
-	0x69, 0x6e, 0x67, 0x10, 0x00, 0x12, 0x0e, 0x0a, 0x0a, 0x64, 0x65, 0x73, 0x63, 0x65, 0x6e, 0x64,
-	0x69, 0x6e, 0x67, 0x10, 0x01, 0x42, 0x40, 0x5a, 0x3e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
-	0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f,
-	0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2f, 0x76,
-	0x32, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x73, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72,
-	0x64, 0x73, 0x2f, 0x6b, 0x63, 0x73, 0x34, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x30, 0x01, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x42, 0x40, 0x5a, 0x3e, 0x67, 0x69, 0x74,
+	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x6b,
+	0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2d, 0x67, 0x6f, 0x6c, 0x61,
+	0x6e, 0x67, 0x2f, 0x76, 0x32, 0x2f, 0x6b, 0x6f, 0x69, 0x6e, 0x6f, 0x73, 0x2f, 0x73, 0x74, 0x61,
+	0x6e, 0x64, 0x61, 0x72, 0x64, 0x73, 0x2f, 0x6b, 0x63, 0x73, 0x34, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1712,49 +1662,46 @@ func file_koinos_standards_kcs4_proto_rawDescGZIP() []byte {
 	return file_koinos_standards_kcs4_proto_rawDescData
 }
 
-var file_koinos_standards_kcs4_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_koinos_standards_kcs4_proto_msgTypes = make([]protoimpl.MessageInfo, 30)
 var file_koinos_standards_kcs4_proto_goTypes = []interface{}{
-	(Direction)(0),                 // 0: koinos.standards.kcs4.direction
-	(*NameArguments)(nil),          // 1: koinos.standards.kcs4.name_arguments
-	(*NameResult)(nil),             // 2: koinos.standards.kcs4.name_result
-	(*SymbolArguments)(nil),        // 3: koinos.standards.kcs4.symbol_arguments
-	(*SymbolResult)(nil),           // 4: koinos.standards.kcs4.symbol_result
-	(*DecimalsArguments)(nil),      // 5: koinos.standards.kcs4.decimals_arguments
-	(*DecimalsResult)(nil),         // 6: koinos.standards.kcs4.decimals_result
-	(*TotalSupplyArguments)(nil),   // 7: koinos.standards.kcs4.total_supply_arguments
-	(*TotalSupplyResult)(nil),      // 8: koinos.standards.kcs4.total_supply_result
-	(*BalanceOfArguments)(nil),     // 9: koinos.standards.kcs4.balance_of_arguments
-	(*BalanceOfResult)(nil),        // 10: koinos.standards.kcs4.balance_of_result
-	(*GetInfoArguments)(nil),       // 11: koinos.standards.kcs4.get_info_arguments
-	(*GetInfoResult)(nil),          // 12: koinos.standards.kcs4.get_info_result
-	(*AllowanceArguments)(nil),     // 13: koinos.standards.kcs4.allowance_arguments
-	(*AllowanceResult)(nil),        // 14: koinos.standards.kcs4.allowance_result
-	(*SpenderValue)(nil),           // 15: koinos.standards.kcs4.spender_value
-	(*GetAllowancesArguments)(nil), // 16: koinos.standards.kcs4.get_allowances_arguments
-	(*GetAllowancesResult)(nil),    // 17: koinos.standards.kcs4.get_allowances_result
-	(*TransferArguments)(nil),      // 18: koinos.standards.kcs4.transfer_arguments
-	(*TransferResult)(nil),         // 19: koinos.standards.kcs4.transfer_result
-	(*MintArguments)(nil),          // 20: koinos.standards.kcs4.mint_arguments
-	(*MintResult)(nil),             // 21: koinos.standards.kcs4.mint_result
-	(*BurnArguments)(nil),          // 22: koinos.standards.kcs4.burn_arguments
-	(*BurnResult)(nil),             // 23: koinos.standards.kcs4.burn_result
-	(*ApproveArguments)(nil),       // 24: koinos.standards.kcs4.approve_arguments
-	(*ApproveResult)(nil),          // 25: koinos.standards.kcs4.approve_result
-	(*BurnEvent)(nil),              // 26: koinos.standards.kcs4.burn_event
-	(*MintEvent)(nil),              // 27: koinos.standards.kcs4.mint_event
-	(*TransferEvent)(nil),          // 28: koinos.standards.kcs4.transfer_event
-	(*ApproveEvent)(nil),           // 29: koinos.standards.kcs4.approve_event
-	(*BalanceObject)(nil),          // 30: koinos.standards.kcs4.balance_object
+	(*NameArguments)(nil),          // 0: koinos.standards.kcs4.name_arguments
+	(*NameResult)(nil),             // 1: koinos.standards.kcs4.name_result
+	(*SymbolArguments)(nil),        // 2: koinos.standards.kcs4.symbol_arguments
+	(*SymbolResult)(nil),           // 3: koinos.standards.kcs4.symbol_result
+	(*DecimalsArguments)(nil),      // 4: koinos.standards.kcs4.decimals_arguments
+	(*DecimalsResult)(nil),         // 5: koinos.standards.kcs4.decimals_result
+	(*TotalSupplyArguments)(nil),   // 6: koinos.standards.kcs4.total_supply_arguments
+	(*TotalSupplyResult)(nil),      // 7: koinos.standards.kcs4.total_supply_result
+	(*BalanceOfArguments)(nil),     // 8: koinos.standards.kcs4.balance_of_arguments
+	(*BalanceOfResult)(nil),        // 9: koinos.standards.kcs4.balance_of_result
+	(*GetInfoArguments)(nil),       // 10: koinos.standards.kcs4.get_info_arguments
+	(*GetInfoResult)(nil),          // 11: koinos.standards.kcs4.get_info_result
+	(*AllowanceArguments)(nil),     // 12: koinos.standards.kcs4.allowance_arguments
+	(*AllowanceResult)(nil),        // 13: koinos.standards.kcs4.allowance_result
+	(*SpenderValue)(nil),           // 14: koinos.standards.kcs4.spender_value
+	(*GetAllowancesArguments)(nil), // 15: koinos.standards.kcs4.get_allowances_arguments
+	(*GetAllowancesResult)(nil),    // 16: koinos.standards.kcs4.get_allowances_result
+	(*TransferArguments)(nil),      // 17: koinos.standards.kcs4.transfer_arguments
+	(*TransferResult)(nil),         // 18: koinos.standards.kcs4.transfer_result
+	(*MintArguments)(nil),          // 19: koinos.standards.kcs4.mint_arguments
+	(*MintResult)(nil),             // 20: koinos.standards.kcs4.mint_result
+	(*BurnArguments)(nil),          // 21: koinos.standards.kcs4.burn_arguments
+	(*BurnResult)(nil),             // 22: koinos.standards.kcs4.burn_result
+	(*ApproveArguments)(nil),       // 23: koinos.standards.kcs4.approve_arguments
+	(*ApproveResult)(nil),          // 24: koinos.standards.kcs4.approve_result
+	(*BurnEvent)(nil),              // 25: koinos.standards.kcs4.burn_event
+	(*MintEvent)(nil),              // 26: koinos.standards.kcs4.mint_event
+	(*TransferEvent)(nil),          // 27: koinos.standards.kcs4.transfer_event
+	(*ApproveEvent)(nil),           // 28: koinos.standards.kcs4.approve_event
+	(*BalanceObject)(nil),          // 29: koinos.standards.kcs4.balance_object
 }
 var file_koinos_standards_kcs4_proto_depIdxs = []int32{
-	0,  // 0: koinos.standards.kcs4.get_allowances_arguments.direction:type_name -> koinos.standards.kcs4.direction
-	15, // 1: koinos.standards.kcs4.get_allowances_result.allowances:type_name -> koinos.standards.kcs4.spender_value
-	2,  // [2:2] is the sub-list for method output_type
-	2,  // [2:2] is the sub-list for method input_type
-	2,  // [2:2] is the sub-list for extension type_name
-	2,  // [2:2] is the sub-list for extension extendee
-	0,  // [0:2] is the sub-list for field type_name
+	14, // 0: koinos.standards.kcs4.get_allowances_result.allowances:type_name -> koinos.standards.kcs4.spender_value
+	1,  // [1:1] is the sub-list for method output_type
+	1,  // [1:1] is the sub-list for method input_type
+	1,  // [1:1] is the sub-list for extension type_name
+	1,  // [1:1] is the sub-list for extension extendee
+	0,  // [0:1] is the sub-list for field type_name
 }
 
 func init() { file_koinos_standards_kcs4_proto_init() }
@@ -2129,14 +2076,13 @@ func file_koinos_standards_kcs4_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_koinos_standards_kcs4_proto_rawDesc,
-			NumEnums:      1,
+			NumEnums:      0,
 			NumMessages:   30,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
 		GoTypes:           file_koinos_standards_kcs4_proto_goTypes,
 		DependencyIndexes: file_koinos_standards_kcs4_proto_depIdxs,
-		EnumInfos:         file_koinos_standards_kcs4_proto_enumTypes,
 		MessageInfos:      file_koinos_standards_kcs4_proto_msgTypes,
 	}.Build()
 	File_koinos_standards_kcs4_proto = out.File
