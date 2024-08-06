@@ -524,6 +524,7 @@ type MempoolRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Request:
+	//
 	//	*MempoolRequest_Reserved
 	//	*MempoolRequest_CheckPendingAccountResources
 	//	*MempoolRequest_GetPendingTransactions
@@ -646,6 +647,7 @@ type MempoolResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Response:
+	//
 	//	*MempoolResponse_Reserved
 	//	*MempoolResponse_Error
 	//	*MempoolResponse_CheckPendingAccountResources

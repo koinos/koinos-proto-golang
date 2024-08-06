@@ -443,6 +443,7 @@ type BlockStoreRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Request:
+	//
 	//	*BlockStoreRequest_Reserved
 	//	*BlockStoreRequest_GetBlocksById
 	//	*BlockStoreRequest_GetBlocksByHeight
@@ -565,6 +566,7 @@ type BlockStoreResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Response:
+	//
 	//	*BlockStoreResponse_Reserved
 	//	*BlockStoreResponse_Error
 	//	*BlockStoreResponse_GetBlocksById

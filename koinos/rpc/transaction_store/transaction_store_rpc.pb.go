@@ -123,6 +123,7 @@ type TransactionStoreRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Request:
+	//
 	//	*TransactionStoreRequest_Reserved
 	//	*TransactionStoreRequest_GetTransactionsById
 	Request isTransactionStoreRequest_Request `protobuf_oneof:"request"`
@@ -203,6 +204,7 @@ type TransactionStoreResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Response:
+	//
 	//	*TransactionStoreResponse_Reserved
 	//	*TransactionStoreResponse_Error
 	//	*TransactionStoreResponse_GetTransactionsById

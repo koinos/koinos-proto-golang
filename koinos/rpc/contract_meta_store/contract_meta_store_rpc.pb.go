@@ -123,6 +123,7 @@ type ContractMetaStoreRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Request:
+	//
 	//	*ContractMetaStoreRequest_Reserved
 	//	*ContractMetaStoreRequest_GetContractMeta
 	Request isContractMetaStoreRequest_Request `protobuf_oneof:"request"`
@@ -203,6 +204,7 @@ type ContractMetaStoreResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Response:
+	//
 	//	*ContractMetaStoreResponse_Reserved
 	//	*ContractMetaStoreResponse_Error
 	//	*ContractMetaStoreResponse_GetContractMeta

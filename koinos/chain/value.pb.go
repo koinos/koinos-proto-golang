@@ -27,6 +27,7 @@ type ValueType struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Kind:
+	//
 	//	*ValueType_MessageValue
 	//	*ValueType_Int32Value
 	//	*ValueType_Int64Value
