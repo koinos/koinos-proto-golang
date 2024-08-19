@@ -163,6 +163,7 @@ type Result struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Value:
+	//
 	//	*Result_Object
 	//	*Result_Error
 	Value isResult_Value `protobuf_oneof:"value"`

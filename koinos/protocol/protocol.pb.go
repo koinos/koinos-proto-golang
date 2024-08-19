@@ -224,6 +224,7 @@ type SystemCallTarget struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Target:
+	//
 	//	*SystemCallTarget_ThunkId
 	//	*SystemCallTarget_SystemCallBundle
 	Target isSystemCallTarget_Target `protobuf_oneof:"target"`
@@ -564,6 +565,7 @@ type Operation struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Op:
+	//
 	//	*Operation_UploadContract
 	//	*Operation_CallContract
 	//	*Operation_SetSystemCall

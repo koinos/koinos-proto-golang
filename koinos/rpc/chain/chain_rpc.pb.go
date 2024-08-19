@@ -904,6 +904,7 @@ type InvokeSystemCallRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to SystemCall:
+	//
 	//	*InvokeSystemCallRequest_Id
 	//	*InvokeSystemCallRequest_Name
 	SystemCall isInvokeSystemCallRequest_SystemCall `protobuf_oneof:"system_call"`
@@ -1149,6 +1150,7 @@ type ChainRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Request:
+	//
 	//	*ChainRequest_Reserved
 	//	*ChainRequest_SubmitBlock
 	//	*ChainRequest_SubmitTransaction
@@ -1369,6 +1371,7 @@ type ChainResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Response:
+	//
 	//	*ChainResponse_Reserved
 	//	*ChainResponse_Error
 	//	*ChainResponse_SubmitBlock

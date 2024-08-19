@@ -30,6 +30,7 @@ type AccountHistoryEntry struct {
 
 	SeqNum uint64 `protobuf:"varint,1,opt,name=seq_num,json=seqNum,proto3" json:"seq_num,omitempty"`
 	// Types that are assignable to Record:
+	//
 	//	*AccountHistoryEntry_Trx
 	//	*AccountHistoryEntry_Block
 	Record isAccountHistoryEntry_Record `protobuf_oneof:"record"`
@@ -243,6 +244,7 @@ type AccountHistoryRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Request:
+	//
 	//	*AccountHistoryRequest_Reserved
 	//	*AccountHistoryRequest_GetAccountHistory
 	Request isAccountHistoryRequest_Request `protobuf_oneof:"request"`
@@ -323,6 +325,7 @@ type AccountHistoryResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Response:
+	//
 	//	*AccountHistoryResponse_Reserved
 	//	*AccountHistoryResponse_Error
 	//	*AccountHistoryResponse_GetAccountHistory

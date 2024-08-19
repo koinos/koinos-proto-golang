@@ -112,6 +112,7 @@ type P2PRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Request:
+	//
 	//	*P2PRequest_Reserved
 	//	*P2PRequest_GetGossipStatus
 	Request isP2PRequest_Request `protobuf_oneof:"request"`
@@ -192,6 +193,7 @@ type P2PResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Response:
+	//
 	//	*P2PResponse_Reserved
 	//	*P2PResponse_Error
 	//	*P2PResponse_GetGossipStatus

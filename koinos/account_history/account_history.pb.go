@@ -240,6 +240,7 @@ type HistoryRecord struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Record:
+	//
 	//	*HistoryRecord_Trx
 	//	*HistoryRecord_Block
 	Record isHistoryRecord_Record `protobuf_oneof:"record"`
